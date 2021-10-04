@@ -1,4 +1,4 @@
-# **The-Kicks-Fix**
+# **The Kicks Fix**
 
 ***Image goes here***
 
@@ -21,18 +21,41 @@ Anyways, thank you for checking my final project out and I really hope you love 
 ---
 
 ## Table of contents 
-
-
-
-
-
-
-
+- [**UX**](#ux)
+  * [**User Goals**](#user-goals)
+  * [**User Stories**](#user-stories)
+  * [**Site Owner Goals**](#site-owner-goals-)
+  * [**User Requirements and Expectations**](#user-requirements-and-expectations)
+    + [Requirements](#requirements)
+    + [Expectations](#expectations)
+  * [**Design Choices**](#design-choices)
+    + [Fonts](#fonts)
+    + [Icons](#icons)
+    + [Colours](#colours)
+- [**Wireframes**](#wireframes)
+- [**Features**](#features)
+  * [**Existing Features**](#existing-features)
+  * [**Features To Be Implemented**](#features-to-be-implemented)
+- [**Technologies Utilised**](#technologies-utilised)
+  * [**Languages**](#languages)
+  * [**Tools and Libraries**](#tools-and-libraries)
+- [**Testing**](#testing)
+- [**Bugs**](#bugs)
+- [**Deployment**](#deployment)
+  * [Local Deployment](#local-deployment)
+  * [Heroku Deployment](#heroku-deployment)
+- [**Conclusion**](#conclusion)
+- [**Credits**](#credits)
 
 
 ## **UX**
+---
 
 ### **User Goals**
+* The website will have to work well on all devices
+* Navigate around the website with ease and pleasure
+* An aesthetically pleasing and visually appealing website
+
 
 ### **User Stories**
 

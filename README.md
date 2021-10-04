@@ -16,7 +16,131 @@ One of the first things my mentor ever said to me was design the website based o
 I have a serious Kicks Addiction, hence my project name, and cannot stop buying them ha ha, even if I never wear them which also drives me crazy. I hate the fact that they
 might get dirty but eventully I'll give in and wear them ..... the odd time and in dry weather too which means about two days a year in Ireland, lol. 
 
-Anyways, thank you for checking my final project out and I really hope you love the overall feel of the my website :)
+Anyways, thank you for checking my final project out and I really hope you love the overall feel of my website :)
 
 ---
 
+## Table of contents 
+
+
+
+
+
+
+
+
+
+## **UX**
+
+### **User Goals**
+
+### **User Stories**
+
+### **Site Owner Goals**
+
+[Back to Top](#table-of-contents)
+
+### **User Requirements and Expectations**
+
+#### Requirements 
+
+#### Expectations
+
+### **Design Choices**
+
+#### Fonts
+
+#### Icons
+
+#### Colours
+
+[Back to Top](#table-of-contents)
+
+## **Wireframes**
+---
+
+#### Mobile Wireframes
+#### Tablet Wireframes
+#### Desktop Wireframes
+
+[Back to Top](#table-of-contents)
+
+## **Features**
+---
+
+### **Existing Features**
+
+### **Features To Be Implemented**
+
+[Back to Top](#table-of-contents)
+
+## **Technologies Utilised**
+---
+
+### **Languages**
+
+### **Tools and Libraries**
+
+[Back to Top](#table-of-contents)
+
+## **Testing**
+---
+
+### Heading 1
+
+#### User Story : Number 1
+
+* **Plan**
+* **Implementation**
+* **Test**  
+* **Result**
+* **Verdict**
+
+
+
+
+### **Validation Checks**
+
+### **User Questionnaire And Overall Feedback**
+
+[Back to Top](#table-of-contents)
+
+
+## **Bugs**
+---
+
+### **BUG Title 1**
+
+* **Bug**
+* **Fix**
+* **Verdict**
+
+
+[Back to Top](#table-of-contents)
+
+
+## **Deployment**
+---
+### Local Deployment
+
+### Heroku Deployment 
+
+
+## **Conclusion**
+---
+
+
+## **Credits**
+---
+
+**Code Credits**
+
+**Image Credits**
+
+**Special Shout Outs**
+
+
+
+**This site is mainly for educational purposes only**
+
+[Back to Top](#table-of-contents)

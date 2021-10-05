@@ -3,11 +3,12 @@
 ***Image goes here***
 
 ## **Goal for this project**
-Welcome to The Kicks Fix, your one stop destination for trainers, sneakers, gutties or kicks as I like to call them.
+
+Welcome to The Kicks Fix, your one stop destination for trainers, sneakers, gutties or kicks, as I like to call them.
 Navigate through the website and see if you can find the kicks that are meant for you from the wide selection available.
 After you find the perfect pair, like Cinderella at the Ball, why not choose some accessories or invest in some TLC - Trainers Loving Care products
 to maintain your purchase for as long as possible.
-So come have a look and don't forget to register an account, for discounts and promotions !!!
+So come have a look and don't forget to register for an account .... to take advantage of tailored discounts and promotions !!!
 
 Unfortunately, this is my final project which means I will have finished my course and this saddens me to be honest but I know this is my springboard to a better future.
 I love coding and learning new things so for the last time, I am going to throw everything into this one and I hope you will all love it.
@@ -15,6 +16,12 @@ I have combined my love for Djing, retro games and vinyls into my first three pr
 One of the first things my mentor ever said to me was design the website based on something that makes you happy which I have stuck to thus far.
 I have a serious Kicks Addiction, hence my project name, and cannot stop buying them ha ha, even if I never wear them which also drives me crazy. I hate the fact that they
 might get dirty but eventully I'll give in and wear them ..... the odd time and in dry weather too which means about two days a year in Ireland, lol. 
+
+And just so you know depending on your location around the world, you may have a different name for your athletic / casual footwear as mentioned above
+so for the purposes of this project I will be calling them KICKS ! 
+I know that in the UK they are generally called Trainers and in America they are generally called Sneakers or if you're really oldskool, like 19th century oldskool, you may call them Gutties .... which is what I grew up calling them to be honest but this is because I'm Irish ha ha. 
+
+Sorry but I felt I had to clarify this before I continue, just to eliminate any confusion plus I feel **KICKS** is more universal and more down with the kids, nowadays !
 
 Anyways, thank you for checking my final project out and I really hope you love the overall feel of my website :)
 
@@ -58,6 +65,7 @@ Anyways, thank you for checking my final project out and I really hope you love 
 * An aesthetically pleasing and visually appealing website
 * Be able to make a purchase with ease
 * A chilled out site so that they will want to come back again and again
+* Free delivery once a certain amount has been spent, depending on location
 
 
 ### **User Stories**
@@ -85,13 +93,35 @@ As admin:
 
 ### **Site Owner Goals**
 
+As an owner:
+* I want users and therefore potential buyers feel at home within my site first and foremost
+* I want to offer value for money compared to other kicks / trainers sites
+* I want to be able add special discount options to ANY item within my stock
+* I want the ability to see stock levels and possibly sales figures for the day or week
+* I want to be able to ADD new products easily and quickly
+* I want to be able to EDIT any products easily and quickly
+* I want to be able to DELETE products easily and quickly (if they become sold out for example)
+
 [Back to Top](#table-of-contents)
 
 ### **User Requirements and Expectations**
 
 #### Requirements 
 
+* A landing page that when the user sees it they automatically think .... I need to see more please !!!
+* Easy navigation by utilising a responsive navbar and a personal designed unique logo, with homepage link attached
+* The ability to purchase a product or a multitude of products, in the simpliest but safest possible way
+* Contact information like an email and phone number or possible a helpline for assistance
+* A history of previous purchases within the users personal space
+* A wishlist of saved products within the users personal space
+* A little uniqueness to hopefully stand out a little bit more from other Kick sites
+
 #### Expectations
+
+* I expect ALL navigation links to function correctly
+* I expect a comfirmation email of my details and my purchases made
+* I expect the user to be able to see any product easily on any device of their choice
+* 
 
 ### **Design Choices**
 

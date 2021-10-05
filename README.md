@@ -52,12 +52,36 @@ Anyways, thank you for checking my final project out and I really hope you love 
 ---
 
 ### **User Goals**
+* An enticing landing page that will make any user enthralled to delve deeper into my website
 * The website will have to work well on all devices
 * Navigate around the website with ease and pleasure
 * An aesthetically pleasing and visually appealing website
+* Be able to make a purchase with ease
+* A chilled out site so that they will want to come back again and again
 
 
 ### **User Stories**
+
+As a user:
+* I want to be able to register for an account so that I can have access to unique promotions and discounts for users
+* I want to be able to login and logout with ease
+* I want my own personal space after registering by means of a profile page
+* I want to be able purchase any product I desire
+* I want be able to search / filter the products by various options like male, female, kids, sizes, brands and so on
+* I want to see my total spend as I continue my shopping spree within the site
+* I want to be able to see all products with ease as I scroll down the items
+* I want to be able to see individual products with one click and their various unique details like description, price, available sizes and so on
+* I want to ba able to create a wishlist of products for future purchasing
+* I want to be able to add my payment details with ease and possibly store them safely, for future usage (only as a registered user obviously)
+* I want confirmation of my order by an instant pop up and a follow up email
+* I want to be able to contact the site owner, in case I have any issues or payment queries
+
+As admin:
+* I want to be able to ADD products easily
+* I want to be able to EDIT products and prices
+* I want be able to DELETE products as and when required
+* I want be able to add offers and promotions as and when required like Christmas or personal Birthday Treats for example.
+
 
 ### **Site Owner Goals**
 

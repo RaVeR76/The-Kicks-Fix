@@ -127,7 +127,19 @@ As an owner:
 
 #### Fonts
 
+I think for fonts I need to keep this fairly simple because my website is going to be available to all ages so I need the font to be
+really legible especially for kids. As per usual I have delved into my main source for fonts, the glorious [Google Fonts](https://fonts.google.com/).
+From the multitude of fonts I have settled on [Lora](https://fonts.google.com/specimen/Lora) for my titles / main headings and [Poppins](https://fonts.google.com/specimen/Poppins) for my main content. I just love the combination of these two which is the most important factor but their names come a close second for me.
+
+Below is an example of my fonts where the title is in ***Lora*** and the text is in ***Poppins*** .....
+
+![The-Kicks-Fix Fonts](****)
+
 #### Icons
+
+[Font Awesome](https://fontawesome.com/) will be the main source for any icons that I require. 
+I will deffo be using the various basic icons and some shopping based icons on my website.
+Other than that, we will just have to see what suits and fits the web page layout perfectly.
 
 #### Colours
 

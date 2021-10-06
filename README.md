@@ -133,7 +133,7 @@ From the multitude of fonts I have settled on [Lora](https://fonts.google.com/sp
 
 Below is an example of my fonts where the title is in ***Lora*** and the text is in ***Poppins*** .....
 
-![The-Kicks-Fix Fonts](****)
+![The-Kicks-Fix Fonts](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/images-readme/fonts.png)
 
 #### Icons
 
@@ -160,7 +160,8 @@ So the colours I have mainly settled for are :
 
 Below is an image of the chosen colours .....
 
-![The-Kicks-Fix Colours](****)
+![The-Kicks-Fix Colours](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/images-readme/colour-scheme.png)
+
 
 [Back to Top](#table-of-contents)
 

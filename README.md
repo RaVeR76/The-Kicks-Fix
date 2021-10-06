@@ -143,6 +143,25 @@ Other than that, we will just have to see what suits and fits the web page layou
 
 #### Colours
 
+I have used the [Coolors](https://coolors.co/) website to come up with my colour scheme for this project and I love this wee website, as it has amazing combinations
+already there for developers to utilise them.
+As always though, I want to go for fairly bright colours as I want my website to be lively and standout but not too bright that it will hurt thy old eyes.
+I deffo do not want boring colours that smell of depression or prison either !
+Therefore, I went for the typical white and black but versions that are just slightly off colour. I also settled on a red and a yellow to brighten up the overall feel as mentioned above.
+
+So the colours I have mainly settled for are :
+
+|Name                  |Hex Code   |Basic Description  |Usage                           |
+|:--------------------:|:---------:|:-----------------:|:------------------------------:|
+|***Cultured***        |#F5F5F5    |Off White          |Body background, text & titles  |
+|***Minion Yellow***   |#FEE440    |Bright Yellow      |Body background                 |
+|***Imperial Red***    |#E63746    |Brightish Red      |Body background                 |
+|***Eerie Black***     |#121416    |Off Black          |Body background, text & titles  |
+
+Below is an image of the chosen colours .....
+
+![The-Kicks-Fix Colours](****)
+
 [Back to Top](#table-of-contents)
 
 ## **Wireframes**

@@ -167,10 +167,43 @@ Below is an image of the chosen colours .....
 
 ## **Wireframes**
 ---
+The software that I used for my wireframes was Balsamiq. This was the fourth time I used this software & I really enjoy designing my project layouts using this. The software allows you design the basic layout of your website on devices such as a desktop, tablet and mobile. They are just simple 2D sketches but I now understand how important these really are :) 
+I think my wireframes look good & deffo give me a great starting point for the design process !
+
+Anyway, you can have a wee look at my wireframes below:
 
 #### Mobile Wireframes
+- [Mobile Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/mobile-home.pdf)
+
+- [Mobile Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/mobile-login.pdf)
+
+- [Mobile Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/mobile-register.pdf)
+
+- [Mobile Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/mobile-main.pdf)
+
+- [Mobile Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/mobile-checkout.pdf)
+
 #### Tablet Wireframes
+- [Tablet Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/tablet-home.pdf)
+
+- [Tablet Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/tablet-login.pdf)
+
+- [Tablet Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/tablet-register.pdf)
+
+- [Tablet Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/tablet-main.pdf)
+
+- [Tablet Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/tablet-checkout.pdf)
+
 #### Desktop Wireframes
+- [Desktop Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/desktop-home.pdf)
+
+- [Desktop Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/desktop-login.pdf)
+
+- [Desktop Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/desktop-register.pdf)
+
+- [Desktop Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/desktop-main.pdf)
+
+- [Desktop Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/master/wireframes/desktop-checkout.pdf)
 
 [Back to Top](#table-of-contents)
 

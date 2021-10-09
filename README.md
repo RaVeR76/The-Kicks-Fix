@@ -130,7 +130,7 @@ From the multitude of fonts I have settled on [Lora](https://fonts.google.com/sp
 
 Below is an example of my fonts where the title is in ***Lora*** and the text is in ***Poppins*** .....
 
-![The-Kicks-Fix Fonts](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/images-readme/fonts.png)
+![The-Kicks-Fix Fonts](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/fonts.png)
 
 #### Icons
 
@@ -148,7 +148,7 @@ Therefore, I went for the typical white and black but versions that are just sli
 
 Below is an image of the chosen colours .....
 
-![The-Kicks-Fix Colours](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/images-readme/colour-scheme.png)
+![The-Kicks-Fix Colours](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/colour-scheme.png)
 
 So a better breakdown of the colours are shown below:
 
@@ -170,37 +170,37 @@ I think my wireframes look good & deffo give me a great starting point for the d
 Anyway, you can have a wee look at my wireframes below:
 
 #### Mobile Wireframes
-- [Mobile Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/mobile-home.pdf)
+- [Mobile Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/mobile-home.pdf)
 
-- [Mobile Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/mobile-login.pdf)
+- [Mobile Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/mobile-login.pdf)
 
-- [Mobile Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/mobile-register.pdf)
+- [Mobile Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/mobile-register.pdf)
 
-- [Mobile Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/mobile-main.pdf)
+- [Mobile Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/mobile-main.pdf)
 
-- [Mobile Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/mobile-checkout.pdf)
+- [Mobile Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/mobile-checkout.pdf)
 
 #### Tablet Wireframes
-- [Tablet Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/tablet-home.pdf)
+- [Tablet Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/tablet-home.pdf)
 
-- [Tablet Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/tablet-login.pdf)
+- [Tablet Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/tablet-login.pdf)
 
-- [Tablet Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/tablet-register.pdf)
+- [Tablet Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/tablet-register.pdf)
 
-- [Tablet Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/tablet-main.pdf)
+- [Tablet Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/tablet-main.pdf)
 
-- [Tablet Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/tablet-checkout.pdf)
+- [Tablet Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/tablet-checkout.pdf)
 
 #### Desktop Wireframes
-- [Desktop Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/desktop-home.pdf)
+- [Desktop Home Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/desktop-home.pdf)
 
-- [Desktop Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/desktop-login.pdf)
+- [Desktop Login Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/desktop-login.pdf)
 
-- [Desktop Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/desktop-register.pdf)
+- [Desktop Register Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/desktop-register.pdf)
 
-- [Desktop Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/desktop-main.pdf)
+- [Desktop Main Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/desktop-main.pdf)
 
-- [Desktop Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/wireframes/desktop-checkout.pdf)
+- [Desktop Checkout Wireframe](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/desktop-checkout.pdf)
 
 
 [Back to Top](#table-of-contents)

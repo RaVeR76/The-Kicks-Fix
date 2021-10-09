@@ -70,37 +70,34 @@ Anyways, thank you for checking my final project out and I really hope you love 
 
 ### **User Stories**
 
-As a user:
-* I want to be able to register for an account so that I can have access to unique promotions and discounts for users
-* I want to be able to login and logout with ease
-* I want my own personal space after registering by means of a profile page
-* I want to be able purchase any product I desire
-* I want be able to search / filter the products by various options like male, female, kids, sizes, brands and so on
-* I want to see my total spend as I continue my shopping spree within the site
-* I want to be able to see all products with ease as I scroll down the items
-* I want to be able to see individual products with one click and their various unique details like description, price, available sizes and so on
-* I want to ba able to create a wishlist of products for future purchasing
-* I want to be able to add my payment details with ease and possibly store them safely, for future usage (only as a registered user obviously)
-* I want confirmation of my order by an instant pop up and a follow up email
-* I want to be able to contact the site owner, in case I have any issues or payment queries
+* As a user I want to be able to register for an account so that I can have access to unique promotions and discounts
+* As a user I want to be able to login and logout with ease
+* As a user I want my own personal space after registering by means of a profile page
+* As a user I want to be able purchase any product I desire
+* As a user I want be able to search / filter the products by various options like male, female, kids, sizes, brands and so on
+* As a user I want to see my total spend as I continue my shopping spree within the site
+* As a user I want to be able to see all products with ease as I scroll down the items
+* As a user I want to be able to see individual products with one click and their various unique details like description, price, available sizes and so on
+* As a user I want to be able to create a wishlist of products for future purchasing
+* As a user I want to be able to add my payment details with ease and possibly store them safely, for future usage (only as a registered user obviously)
+* As a user I want confirmation of my order by an instant pop up and a follow up email
+* As a user I want to be able to contact the site owner, in case I have any issues or payment queries
 
-As admin:
-* I want to be able to ADD products easily
-* I want to be able to EDIT products and prices
-* I want be able to DELETE products as and when required
-* I want be able to add offers and promotions as and when required like Christmas or personal Birthday Treats for example.
+* As admin I want to be able to ADD products easily
+* As admin I want to be able to EDIT products and prices
+* As admin I want be able to DELETE products as and when required
+* As admin I want be able to add offers and promotions as and when required like Christmas or personal Birthday Treats for example.
 
 
 ### **Site Owner Goals**
 
-As an owner:
-* I want users and therefore potential buyers feel at home within my site first and foremost
-* I want to offer value for money compared to other kicks / trainers sites
-* I want to be able add special discount options to ANY item within my stock
-* I want the ability to see stock levels and possibly sales figures for the day or week
-* I want to be able to ADD new products easily and quickly
-* I want to be able to EDIT any products easily and quickly
-* I want to be able to DELETE products easily and quickly (if they become sold out for example)
+* As an owner I want users and therefore potential buyers feel at home within my site first and foremost
+* As an owner I want to offer value for money compared to other kicks / trainers sites
+* As an owner I want to be able add special discount options to ANY item within my stock
+* As an owner I want the ability to see stock levels and possibly sales figures for the day or week
+* As an owner I want to be able to ADD new products easily and quickly
+* As an owner I want to be able to EDIT any products easily and quickly
+* As an owner I want to be able to DELETE products easily and quickly (if they become sold out for example)
 
 [Back to Top](#table-of-contents)
 
@@ -149,7 +146,11 @@ As always though, I want to go for fairly bright colours as I want my website to
 I deffo do not want boring colours that smell of depression or prison either !
 Therefore, I went for the typical white and black but versions that are just slightly off colour. I also settled on a red and a yellow to brighten up the overall feel as mentioned above.
 
-So the colours I have mainly settled for are :
+Below is an image of the chosen colours .....
+
+![The-Kicks-Fix Colours](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/images-readme/colour-scheme.png)
+
+So a better breakdown of the colours are shown below:
 
 |Name                  |Hex Code   |Basic Description  |Usage                           |
 |:--------------------:|:---------:|:-----------------:|:------------------------------:|
@@ -157,10 +158,6 @@ So the colours I have mainly settled for are :
 |***Minion Yellow***   |#FEE440    |Bright Yellow      |Body background                 |
 |***Imperial Red***    |#E63746    |Brightish Red      |Body background                 |
 |***Eerie Black***     |#121416    |Off Black          |Body background, text & titles  |
-
-Below is an image of the chosen colours .....
-
-![The-Kicks-Fix Colours](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/images-readme/colour-scheme.png)
 
 
 [Back to Top](#table-of-contents)
@@ -279,6 +276,8 @@ Anyway, you can have a wee look at my wireframes below:
 **Code Credits**
 
 **Image Credits**
+
+Wireframe Kick Icon - https://www.flaticon.com/search?author_id=292&style_id=983&type=standard&word=sneaker
 
 **Special Shout Outs**
 

@@ -275,6 +275,8 @@ Anyway, you can have a wee look at my wireframes below:
 
 **Code Credits**
 
+Code Institue Course Material
+
 **Image Credits**
 
 Wireframe Kick Icon - https://www.flaticon.com/search?author_id=292&style_id=983&type=standard&word=sneaker

@@ -283,6 +283,15 @@ Code Institue Course Material
 
 Wireframe Kick Icon - https://www.flaticon.com/search?author_id=292&style_id=983&type=standard&word=sneaker
 
+Test Image - Photo by Loc Dang from Pexels
+Test Image 2  - Photo by Kaique Rocha from Pexels
+Photo by Kaique Rocha from Pexels
+Photo by Martin Péchy from Pexels
+Photo by Sides Imagery from Pexels
+
+Make your own logo using kicks
+Make your own cover using kicks plus a heart shape out of the laces
+
 **Special Shout Outs**
 
 

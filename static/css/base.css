@@ -1,0 +1,28 @@
+html {
+    height: 100%
+}
+
+body {
+    background: url('/media/home_dark_hero.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #F5F5F5 ;
+    font-family: 'Poppins';
+}
+
+/* My Colours */
+.my-white-back {
+    background-color: #F5F5F5;
+}
+
+.my-black-back {
+    background-color: #121416;
+}
+
+.my-yellow-back {
+    background-color: #FEE440;
+}
+
+.my-red-back {
+    background-color: #E63746;
+}

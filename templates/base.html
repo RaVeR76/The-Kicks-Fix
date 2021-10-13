@@ -37,7 +37,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="mainnav" class="row my-white-back pt-lg-2 d-none d-lg-flex">
+        <div id="mainnav" class="row my-black-back pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-50">
@@ -45,31 +45,30 @@
                         <div class="input-group-append">
                           <button class="form-control btn border rounded-0" type="submit">
                               <span class="icon">
-                                  <i class="fas fa-search"></i>
+                                  <i class="fas fa-search my-yellow-text"></i>
                               </span>
                           </button>
                         </div>
                     </div>
-
                 </form>
             </div>
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center">
-              <a href="{% url 'home' %}" class="nav-link">
-                  <h2 class="my-0">The <strong>Kicks</strong> Fix</h2>    <!-- Will substitute logo image once I have it designed -->
-              </a>
+                <a href="{% url 'home' %}" class="nav-link">
+                    <h2 class="my-yellow-text my-0">The <strong>Kicks</strong> Fix</h2>    <!-- Will substitute logo image once I have it designed -->
+                </a>
             </div>
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a href="#" class="nav-link" id="user-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
+                            <div class="text-center my-yellow-text">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-account">
+                        <div class="dropdown-menu border-0 my-yellow-back" aria-labelledby="user-account">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                   <a href="" class="dropdown-item">Product Management</a>
@@ -83,7 +82,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a href="" class="{% if grand_total %}text-info font-weight-bold{% else %}text-success{% endif %} nav-link">
+                        <a href="" class="{% if grand_total %}text-info font-weight-bold{% else %}my-yellow-text{% endif %} nav-link">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">

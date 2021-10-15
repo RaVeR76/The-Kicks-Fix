@@ -1,6 +1,6 @@
 <li class="list-inline-item">
     <a href="" class="nav-link d-block d-lg-none" href="#" id="mob-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
+        <div class="text-center my-yellow-text">
             <div><i class="fas fa-search fa-lg"></i></div>
             <p class="my-0">Search</p>
         </div>
@@ -8,7 +8,7 @@
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mob-search">
         <form class="form" method="GET" action="">
             <div class="input-group w-50">
-                <input class="form-control border rounded-0" type="text" name="q" placeholder="Search For Kicks">
+                <input class="form-control border rounded-0" type="text" name="q" placeholder="Search For Your Kicks">
                 <div class="input-group-append">
                   <button class="form-control btn border rounded-0" type="submit">
                       <span class="icon">
@@ -27,7 +27,7 @@
             <p class="my-0">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0 my-yellow-back" aria-labelledby="user-account">
+    <div class="dropdown-menu border-0" aria-labelledby="user-account">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
               <a href="" class="dropdown-item">Product Management</a>

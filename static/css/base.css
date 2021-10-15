@@ -10,6 +10,15 @@ body {
     font-family: 'Poppins';
 }
 
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 /* My Background Colours */
 .my-white-back {
     background-color: #F5F5F5;
@@ -44,10 +53,22 @@ body {
     color: #E63746;
 }
 
+/*
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #E63746;
+}*/
 
+/*
+.my-logo:hover {
+    background-color: #00BFFF;
+    transition: background-color .4s ease-in-out;
+}*/
 
-
-
+.navbar-toggler {
+    background-color: #FEE440;
+  }
 
 
 

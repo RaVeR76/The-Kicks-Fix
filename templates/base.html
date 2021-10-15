@@ -41,7 +41,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-50">
-                        <input class="form-control border rounded-0" type="text" name="q" placeholder="Search For Kicks">
+                        <input class="form-control border rounded-0" type="text" name="q" placeholder="Search For Your Kicks">
                         <div class="input-group-append">
                           <button class="form-control btn border rounded-0" type="submit">
                               <span class="icon">
@@ -55,7 +55,7 @@
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center">
                 <a href="{% url 'home' %}" class="nav-link">
-                    <h2 class="my-yellow-text my-0">The <strong>Kicks</strong> Fix</h2>    <!-- Will substitute logo image once I have it designed -->
+                    <h2 class="my-logo my-yellow-text my-0">The <strong>Kicks</strong> Fix</h2>    <!-- Will substitute logo image once I have it designed -->
                 </a>
             </div>
 
@@ -68,7 +68,7 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0 my-yellow-back" aria-labelledby="user-account">
+                        <div class="dropdown-menu border-0" aria-labelledby="user-account">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                   <a href="" class="dropdown-item">Product Management</a>
@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <nav class="navbar navbar-expand-lg navbar-light my-black-back w-100"> <!-- Possibly remove my-black-back for natural effect -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#large-nav" aria-controls="large-nav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>

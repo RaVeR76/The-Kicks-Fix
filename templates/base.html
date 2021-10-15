@@ -100,10 +100,11 @@
         </div>
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#large-nav" aria-controls="large-nav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
+                {% include 'includes/small-nav.html' %}
+                {% include 'includes/large-nav.html' %}
             </nav>
         </div>
     </header>

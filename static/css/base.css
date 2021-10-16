@@ -53,6 +53,11 @@ body {
     color: #E63746;
 }
 
+.navbar-toggler {
+    background-color: #FEE440;
+  }
+
+
 /*
 .dropdown-item:focus, .dropdown-item:hover {
     color: #16181b;
@@ -65,10 +70,6 @@ body {
     background-color: #00BFFF;
     transition: background-color .4s ease-in-out;
 }*/
-
-.navbar-toggler {
-    background-color: #FEE440;
-  }
 
 
 

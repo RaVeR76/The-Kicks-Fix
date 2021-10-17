@@ -40,6 +40,7 @@ Anyways, thank you for checking my final project out and I really hope you love 
     + [Icons](#icons)
     + [Colours](#colours)
 - [**Wireframes**](#wireframes)
+- [**Database Structure**](#database-structure)
 - [**Features**](#features)
   * [**Existing Features**](#existing-features)
   * [**Features To Be Implemented**](#features-to-be-implemented)
@@ -130,7 +131,7 @@ From the multitude of fonts I have settled on [Lora](https://fonts.google.com/sp
 
 Below is an example of my fonts where the title is in ***Lora*** and the text is in ***Poppins*** .....
 
-![The-Kicks-Fix Fonts](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/fonts.png)
+![The-Kicks-Fix Fonts](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/fonts.png)
 
 #### Icons
 
@@ -148,7 +149,7 @@ Therefore, I went for the typical white and black but versions that are just sli
 
 Below is an image of the chosen colours .....
 
-![The-Kicks-Fix Colours](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/colour-scheme.png)
+![The-Kicks-Fix Colours](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/colour-scheme.png)
 
 So a better breakdown of the colours are shown below:
 
@@ -204,6 +205,20 @@ Anyway, you can have a wee look at my wireframes below:
 
 
 [Back to Top](#table-of-contents)
+
+## **Database Structure**
+---
+For my database structure I had to think about this for a while hence why I have added before I'm about to start adding my models to my project.
+To be honest it took me while to get my head around it but I think I got there. After watching the Code Institute tutorials again, endless Youtube videos and 
+undeniable assistance from my lengendary mentor, I have produced my first Database Schema. I didn't lay one out for my MS3 which cost me valuable marks but for this project, I wasn't going to make the same mistake.
+The Kicks Fix Schema is shown below where I have set up 14 models and have shown the various relationships between them. I may add more if required as my project develops
+& I think of new features that can be implemented but these are the main models that my project needs and I am very happy with the structure.
+
+- [The Kicks Fix Schema](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/schema.png)
+
+
+*** DO A WRITE UP ON YOUR SCHEMA TO EXPLAIN IT BETTER ***
+
 
 ## **Features**
 ---

@@ -214,7 +214,7 @@ undeniable assistance from my lengendary mentor, I have produced my first Databa
 The Kicks Fix Schema is shown below where I have set up 14 models and have shown the various relationships between them. I may add more if required as my project develops
 & I think of new features that can be implemented but these are the main models that my project needs and I am very happy with the structure.
 
-- [The Kicks Fix Schema](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/schema.png)
+![The-Kicks-Fix Schema](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/schema.png)
 
 
 *** DO A WRITE UP ON YOUR SCHEMA TO EXPLAIN IT BETTER ***

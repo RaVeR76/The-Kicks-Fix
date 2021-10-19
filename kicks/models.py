@@ -13,6 +13,7 @@ class Kicks(models.Model):
     name = models.CharField(max_length=254)
     kicks_type = models.ForeignKey('Type', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
     colour = models.ForeignKey('common.Colour', null=True, blank=True, on_delete=models.SET_NULL)
     sizes_available = models.ForeignKey('common.Size', null=True, blank=True, on_delete=models.SET_NULL)
     image = models.ImageField(null=True, blank=True)

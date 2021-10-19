@@ -213,11 +213,13 @@ To be honest it took me while to get my head around it but I think I got there. 
 undeniable assistance from my lengendary mentor, I have produced my first Database Schema. I didn't lay one out for my MS3 which cost me valuable marks but for this project, I wasn't going to make the same mistake.
 The Kicks Fix Schema is shown below where I have set up 14 models and have shown the various relationships between them. I may add more if required as my project develops
 & I think of new features that can be implemented but these are the main models that my project needs and I am very happy with the structure.
+I used [drawSQL](https://drawsql.app/) to construct my schema which is a free online app and really awesome, once you get the hang of it !
 
 ![The-Kicks-Fix Schema](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/schema.png)
 
 
 *** DO A WRITE UP ON YOUR SCHEMA TO EXPLAIN IT BETTER ***
+*** REMOVE IMAGE_URL's AS NOT REQUIRED ***
 
 
 ## **Features**
@@ -235,6 +237,7 @@ The Kicks Fix Schema is shown below where I have set up 14 models and have shown
 ### **Languages**
 
 ### **Tools and Libraries**
+drawsql.app
 
 [Back to Top](#table-of-contents)
 

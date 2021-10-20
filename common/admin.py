@@ -10,6 +10,8 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+    ordering = ('friendly_name',)
+
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Colour)

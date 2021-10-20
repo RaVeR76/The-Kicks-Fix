@@ -20,11 +20,15 @@ class BrandAdmin(admin.ModelAdmin):
         'name',
     )
 
+    ordering = ('friendly_name',)
+
 class TypeAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
+    ordering = ('friendly_name',)
 
 
 admin.site.register(Kicks, KicksAdmin)

@@ -25,24 +25,24 @@
                     {% for kicks in kicks %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if product.image %}
+                                {% if kicks.image1 %}
                                 <a href="">
-                                    <img src="{{ kicks.image1.url }}" alt="{{ kicks.name }}" class="card-img-top img-fluid">
+                                    <img class="card-img-bottom img-fluid" src="{{ kicks.image1.url }}" alt="{{ kicks.name }}">
                                 </a>
                                 {% else %}
                                 <a href="">
-                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ kicks.name }}" class="card-img-top img-fluid">
+                                    <img src="{{ MEDIA_URL }}noimage.png }}" alt="{{ kicks.name }}" class="card-img-top img-fluid">
                                 </a>
                                 {% endif %}
-                            </div>
-                        </div>
-                        <div class="card-body pb-0">
-                            <p class="mb-0">{{ kicks.name }}</p>
-                        </div>
-                        <div class="card-footer pt-0 border-0 text-left">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ kicks.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -9,7 +9,7 @@ class KicksAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
-        'image',
+        'image1',
     )
 
     ordering = ('sku',)

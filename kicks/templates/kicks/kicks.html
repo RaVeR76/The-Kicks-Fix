@@ -10,11 +10,38 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="container my-black-text">
         <div class="row">
-            <div class="col">
-                {{ kicks }}
-                <p>This is taking the piss CSS !!!</p>
+            <div class="col text-center mt-3">
+                <h2 class="text-uppercase">Kicks</h2>
+                <hr class="w-50 mb-1">  
+            </div>
+        </div>
+        <div class="row">
+            <div class="kicks-container col-10 offset-1">
+                <div class="row mt-1 mb-1"></div>
+                <div class="row">
+                    {% for kicks in kicks %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border-0">
+                                <a href="">
+                                    <img src="{{ kicks.image.url }}" alt="{{ kicks.name }}" class="card-img-top img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ kicks.name }}</p>
+                        </div>
+                        <div class="card-footer pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">{{ kicks.price }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

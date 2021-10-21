@@ -55,31 +55,18 @@ body {
 
 .navbar-toggler {
     background-color: #FEE440;
-  }
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #E63746;
-    z-index: -1;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: #F5F5F5;
+	z-index: -1;
+}
 
-/*
-.dropdown-item:focus, .dropdown-item:hover {
-    color: #16181b;
-    text-decoration: none;
-    background-color: #E63746;
-}*/
-
-/*
-.my-logo:hover {
-    background-color: #00BFFF;
-    transition: background-color .4s ease-in-out;
-}*/
 
 
 

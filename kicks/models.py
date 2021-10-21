@@ -16,9 +16,11 @@ class Kicks(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
     colour = models.ForeignKey('common.Colour', null=True, blank=True, on_delete=models.SET_NULL)
     sizes_available = models.ForeignKey('common.Size', null=True, blank=True, on_delete=models.SET_NULL)
-    default_image = models.ImageField(null=True, blank=True)
+    image1_url = models.URLField(max_length=1024, null=True, blank=True)
     image1 = models.ImageField(null=True, blank=True)
+    image2_url = models.URLField(max_length=1024, null=True, blank=True)
     image2 = models.ImageField(null=True, blank=True)
+    image3_url = models.URLField(max_length=1024, null=True, blank=True)
     image3 = models.ImageField(null=True, blank=True)
 
     def __str__(self):

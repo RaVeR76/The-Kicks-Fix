@@ -5,6 +5,7 @@ from .models import Kicks, Brand, Type
 
 class KicksAdmin(admin.ModelAdmin):
     list_display = (
+        'brand',
         'sku',
         'name',
         'category',
@@ -12,7 +13,7 @@ class KicksAdmin(admin.ModelAdmin):
         'image1',
     )
 
-    ordering = ('sku',)
+    ordering = ('brand',)
 
 class BrandAdmin(admin.ModelAdmin):
     list_display = (

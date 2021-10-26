@@ -57,6 +57,19 @@ body {
     background-color: #FEE440;
 }
 
+/* Override Bootstrap colours for my Carousel icons */
+.fa-angle-left, .fa-angle-right  {
+    color: #121416 !important;
+}
+
+.carousel .carousel-indicators li {
+    background-color: #121416;
+}
+.carousel .carousel-indicators li.active {
+    background-color: #FEE440;
+}
+
+
 .overlay {
 	height: 100%;
 	width: 100%;

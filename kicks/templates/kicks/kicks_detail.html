@@ -16,13 +16,42 @@
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
                     {% if kicks.image1 %}
-                        <a href="{{ kicks.image1.url }}" target="_blank">
-                            <img class="card-img-bottom img-fluid" src="{{ kicks.image1.url }}" alt="{{ kicks.name }}">
+                    <div id="kicks_carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#kicks_carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#kicks_carousel" data-slide-to="1"></li>
+                            <li data-target="#kicks_carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="{{ kicks.image1.url }}" target="_blank">
+                                    <img src="{{ kicks.image1.url }}" class="d-block w-100" alt="{{ kicks.name }}">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="{{ kicks.image2.url }}" target="_blank">
+                                    <img src="{{ kicks.image2.url }}" class="d-block w-100" alt="{{ kicks.name }}">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="{{ kicks.image3.url }}" target="_blank">
+                                    <img src="{{ kicks.image3.url }}" class="d-block w-100" alt="{{ kicks.name }}">
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#kicks_carousel" role="button" data-slide="prev">
+                            <span class="fas fa-angle-left fa-2x" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
                         </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png }}" alt="{{ kicks.name }}">
+                        <a class="carousel-control-next" href="#kicks_carousel" role="button" data-slide="next">
+                            <span class="fas fa-angle-right fa-2x" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
                         </a>
+                    </div>
+                    {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png }}" alt="{{ kicks.name }}">
+                    </a>
                     {% endif %}
                 </div>
             </div>

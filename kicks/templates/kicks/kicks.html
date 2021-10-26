@@ -19,18 +19,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-10 offset-1">
+            <div class="kicks-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% for kicks in kicks %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                             <div class="card h-100 border-1 shadow">
                                 {% if kicks.image1 %}
-                                <a href="">
+                                <a href="{% url 'kicks_detail' kicks.id %}">
                                     <img class="card-img-bottom img-fluid" src="{{ kicks.image1.url }}" alt="{{ kicks.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'kicks_detail' kicks.id %}">
                                     <img src="{{ MEDIA_URL }}noimage.png }}" alt="{{ kicks.name }}" class="card-img-top img-fluid">
                                 </a>
                                 {% endif %}

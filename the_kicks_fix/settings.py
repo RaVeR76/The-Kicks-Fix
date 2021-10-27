@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'common',
     'kicks',
+    'accessories',
 ]
 
 MIDDLEWARE = [

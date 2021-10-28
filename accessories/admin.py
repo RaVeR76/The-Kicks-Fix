@@ -4,15 +4,15 @@ from .models import Accessories, Type
 
 class AccessoriesAdmin(admin.ModelAdmin):
     list_display = (
-        'accessory_type',
         'sku',
+        'accessory_type',
         'name',
         'category',
         'price',
         'image1',
     )
 
-    ordering = ('accessory_type',)
+    ordering = ('sku',)
 
 
 class TypeAdmin(admin.ModelAdmin):

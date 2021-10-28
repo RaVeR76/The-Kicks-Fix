@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid my-black-text">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="text-uppercase">All Accessories</h2>
+                <hr class="w-50 mb-1">  
+            </div>
+        </div>
+        <div class="row">
+            <div class="accessories-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for accessories in accessories %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
+                            <div class="card h-100 border-1 shadow">
+                                {% if accessories.image1 %}
+                                <a href="">
+                                    <img class="card-img-bottom img-fluid" src="{{ accessories.image1.url }}" alt="{{ accessories.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img src="{{ MEDIA_URL }}noimage.png }}" alt="{{ accessories.name }}" class="card-img-top img-fluid">
+                                </a>
+                                {% endif %}
+                                <div class="card-body pb-0 border-top">
+                                    <p class="mb-0">{{ accessories.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ accessories.price }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

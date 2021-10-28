@@ -9,7 +9,7 @@ class AccessoriesAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
-        'image',
+        'image1',
     )
 
     ordering = ('accessory_type',)

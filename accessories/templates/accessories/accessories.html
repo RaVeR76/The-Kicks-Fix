@@ -30,7 +30,7 @@
                                     <img class="card-img-bottom img-fluid" src="{{ accessories.image1.url }}" alt="{{ accessories.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'accessory_detail' accessories.id %}">
                                     <img src="{{ MEDIA_URL }}noimage.png }}" alt="{{ accessories.name }}" class="card-img-top img-fluid">
                                 </a>
                                 {% endif %}

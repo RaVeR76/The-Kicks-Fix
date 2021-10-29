@@ -5,11 +5,11 @@
                 New In
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="new-in">
-                <a href="" class="dropdown-item">Men</a>
-                <a href="" class="dropdown-item">Women</a>
+                <a href="{% url 'kicks' %}?category=new_in,men_kicks" class="dropdown-item">Men</a>
+                <a href="{% url 'kicks' %}?category=new_in,women_kicks" class="dropdown-item">Women</a>
                 <a href="" class="dropdown-item">Kids</a>
                 <a href="" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">All New In</a>
+                <a href="{% url 'kicks' %}?category=new_in" class="dropdown-item">All New In</a>
             </div>
         </li>
 
@@ -32,8 +32,8 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="men">
                 <a href="" class="dropdown-item">Brand</a>
-                <a href="" class="dropdown-item">Styles</a>
-                <a href="" class="dropdown-item">All Men Kicks</a>  <!-- Will add more at a later time -->
+                <a href="" class="dropdown-item">Style</a>
+                <a href="{% url 'kicks' %}?category=men_kicks" class="dropdown-item">All Men Kicks</a>  <!-- Will add more at a later time -->
             </div>
         </li>
 
@@ -43,8 +43,8 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="women">
                 <a href="" class="dropdown-item">Brand</a>
-                <a href="" class="dropdown-item">Styles</a>
-                <a href="" class="dropdown-item">All Women Kicks</a>  <!-- Will add more at a later time -->
+                <a href="" class="dropdown-item">Style</a>
+                <a href="{% url 'kicks' %}?category=women_kicks" class="dropdown-item">All Women Kicks</a>  <!-- Will add more at a later time -->
             </div>
         </li>
 
@@ -54,8 +54,8 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="kids">
                 <a href="" class="dropdown-item">Brand</a>
-                <a href="" class="dropdown-item">Styles</a>
-                <a href="" class="dropdown-item">All Kids Kicks</a>  <!-- Will add more at a later time -->
+                <a href="" class="dropdown-item">Style</a>
+                <a href="{% url 'kicks' %}?category=kids_kicks" class="dropdown-item">All Kids Kicks</a>  <!-- Will add more at a later time -->
             </div>
         </li>
 
@@ -65,7 +65,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accessories">
                 <a href="" class="dropdown-item">Brand</a>
-                <a href="" class="dropdown-item">Styles</a>
+                <a href="" class="dropdown-item">Style</a>
                 <a href="{% url 'accessories' %}" class="dropdown-item">All Accessories</a>  <!-- Will add more at a later time -->
             </div>
         </li>

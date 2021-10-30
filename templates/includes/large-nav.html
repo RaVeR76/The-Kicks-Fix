@@ -4,7 +4,7 @@
             <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="new-in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 New In
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="new-in">
+            <div class="dropdown-menu" aria-labelledby="new-in">
                 <a href="{% url 'kicks' %}?category=new_in&&sex=male,unisex" class="dropdown-item">Men</a>
                 <a href="{% url 'kicks' %}?category=new_in&&sex=female,unisex" class="dropdown-item">Women</a>
                 <a href="{% url 'kicks' %}?category=new_in&&sex=kids" class="dropdown-item">Kids</a>
@@ -17,31 +17,41 @@
             <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="sales" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sales
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sales">
-                <a href="{% url 'kicks' %}?category=sale_item&&sex=male" class="dropdown-item">Men</a>
-                <a href="{% url 'kicks' %}?category=sale_item&&sex=female" class="dropdown-item">Women</a>
+            <div class="dropdown-menu" aria-labelledby="sales">
+                <a href="{% url 'kicks' %}?category=sale_item&&sex=male,unisex" class="dropdown-item">Men</a>
+                <a href="{% url 'kicks' %}?category=sale_item&&sex=female,unisex" class="dropdown-item">Women</a>
                 <a href="{% url 'kicks' %}?category=sale_item&&sex=kids" class="dropdown-item">Kids</a>
                 <a href="" class="dropdown-item">Accessories</a>
                 <a href="{% url 'kicks' %}?category=sale_item" class="dropdown-item">All Sales</a>
             </div>
         </li>
 
+
+        
         <li class="nav-item dropdown">
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="men" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Men
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="men">
-                <a href="" class="dropdown-item">Brand</a>
-                <a href="" class="dropdown-item">Style</a>
-                <a href="{% url 'kicks' %}?category=men_kicks" class="dropdown-item">All Men Kicks</a>  <!-- Will add more at a later time -->
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="men">
+                <li class="dropdown-submenu dropright"><a class="dropdown-item dropdown-toggle" href="#">Brands</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                        <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="dropdown-item">Style</a></li>
+                <li><a href="{% url 'kicks' %}?category=men_kicks" class="dropdown-item">All Men Kicks</a></li>
+            </ul>
         </li>
+
+
+
 
         <li class="nav-item dropdown">
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="women" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Women
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="women">
+            <div class="dropdown-menu" aria-labelledby="women">
                 <a href="" class="dropdown-item">Brand</a>
                 <a href="" class="dropdown-item">Style</a>
                 <a href="{% url 'kicks' %}?category=women_kicks" class="dropdown-item">All Women Kicks</a>  <!-- Will add more at a later time -->
@@ -52,7 +62,7 @@
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="kids" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Kids
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="kids">
+            <div class="dropdown-menu" aria-labelledby="kids">
                 <a href="" class="dropdown-item">Brand</a>
                 <a href="" class="dropdown-item">Style</a>
                 <a href="{% url 'kicks' %}?category=kids_kicks" class="dropdown-item">All Kids Kicks</a>  <!-- Will add more at a later time -->
@@ -63,7 +73,7 @@
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="accessories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="accessories">
+            <div class="dropdown-menu" aria-labelledby="accessories">
                 <a href="" class="dropdown-item">Brand</a>
                 <a href="" class="dropdown-item">Style</a>
                 <a href="{% url 'accessories' %}" class="dropdown-item">All Accessories</a>  <!-- Will add more at a later time -->
@@ -74,7 +84,7 @@
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="tlc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 TLC
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="tlc">
+            <div class="dropdown-menu" aria-labelledby="tlc">
                 <a href="" class="dropdown-item">Kick Kindness</a>
                 <a href="" class="dropdown-item">Type</a>
                 <a href="" class="dropdown-item">Add New Link</a>  <!-- Will add more at a later time -->
@@ -83,3 +93,27 @@
 
     </ul>
 </div>
+
+
+<script>
+
+$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+  }
+  var $subMenu = $(this).next(".dropdown-menu");
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass("show");
+  });
+
+
+  return false;
+});
+
+
+
+
+</script>

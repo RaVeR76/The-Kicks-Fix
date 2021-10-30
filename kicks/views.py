@@ -16,11 +16,13 @@ def all_kicks(request):
     sex = None
 
     if request.GET:
+        # Filter Navbar Category from ALL Kicks"
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             kicks = kicks.filter(category__name__in=categories)
         #    categories = Category.objects.filter(name__in=categories)
 
+            # Filter Navbar Sex from Category filtered Kicks above
             if 'sex' in request.GET:
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)

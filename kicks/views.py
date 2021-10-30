@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Kicks
+from .models import Kicks, Brand
 from common.models import Category, Sex
 
 # Create your views here.
@@ -11,6 +11,7 @@ def all_kicks(request):
     """ A view to show all kicks, including sorting and search queries """
 
     kicks = Kicks.objects.all()
+    brands = Brand.objects.all()
     query = None
     category = None
     sex = None
@@ -27,10 +28,10 @@ def all_kicks(request):
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)
 
-        # Filter brand from the navbar Brands submenu
+        # Filter ALL kicks by brand from the selected navbar Brands submenu
         if 'brand' in request.GET:
-            brands = request.GET['brand'].split(',')
-            kicks = kicks.filter(brand__name__in=brands)
+            chosen_brand = request.GET['brand'].split(',')
+            kicks = kicks.filter(brand__name__in=chosen_brand)
 
 
         if 'q' in request.GET:
@@ -45,6 +46,7 @@ def all_kicks(request):
     context = {
         'kicks': kicks,
         'search_word': query,
+        'brands': brands,
       #  'chosen_categories': categories,
     }
 

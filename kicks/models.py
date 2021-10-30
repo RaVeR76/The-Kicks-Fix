@@ -1,5 +1,5 @@
 from django.db import models
-from common.models import Category, Colour, Size
+from common.models import Category, Colour, Size, Sex
 
 
 class Kicks(models.Model):
@@ -8,6 +8,7 @@ class Kicks(models.Model):
         verbose_name_plural = 'Kicks'
 
     category = models.ForeignKey('common.Category', null=True, blank=True, on_delete=models.SET_NULL)
+    sex = models.ForeignKey('common.Sex', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)

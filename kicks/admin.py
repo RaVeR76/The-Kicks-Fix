@@ -8,6 +8,7 @@ class KicksAdmin(admin.ModelAdmin):
         'brand',
         'sku',
         'name',
+        'sex',
         'category',
         'price',
         'image1',

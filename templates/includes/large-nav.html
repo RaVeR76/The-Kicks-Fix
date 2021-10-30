@@ -27,7 +27,7 @@
         </li>
 
 
-        
+
         <li class="nav-item dropdown">
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="men" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Men
@@ -35,8 +35,11 @@
             <ul class="dropdown-menu" aria-labelledby="men">
                 <li class="dropdown-submenu dropright"><a class="dropdown-item dropdown-toggle" href="#">Brands</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Submenu action</a></li>
-                        <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+
+                        {% for brand in brands %}
+                            <li><a class="dropdown-item" href="{% url 'kicks' %}?brand={{ brand.name }}">{{ brand.friendly_name }}</a></li>
+                        {% endfor %}
+                        
                     </ul>
                 </li>
                 <li><a href="" class="dropdown-item">Style</a></li>

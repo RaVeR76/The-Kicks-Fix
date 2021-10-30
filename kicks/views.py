@@ -27,6 +27,11 @@ def all_kicks(request):
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)
 
+        # Filter brand from the navbar Brands submenu
+        if 'brand' in request.GET:
+            brands = request.GET['brand'].split(',')
+            kicks = kicks.filter(brand__name__in=brands)
+
 
         if 'q' in request.GET:
             query = request.GET['q']

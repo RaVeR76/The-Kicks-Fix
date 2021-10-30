@@ -23,7 +23,7 @@ def all_kicks(request):
             kicks = kicks.filter(category__name__in=categories)
         #    categories = Category.objects.filter(name__in=categories)
 
-            # Filter Navbar Sex from Category filtered Kicks above
+            # Filter Navbar Sex from the Category filtered Kicks above
             if 'sex' in request.GET:
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)
@@ -32,6 +32,11 @@ def all_kicks(request):
         if 'brand' in request.GET:
             chosen_brand = request.GET['brand'].split(',')
             kicks = kicks.filter(brand__name__in=chosen_brand)
+
+            # Filter Navbar Sex from the Brand filtered Kicks above
+            if 'sex' in request.GET:
+                sex = request.GET['sex'].split(',')
+                kicks = kicks.filter(sex__name__in=sex)
 
 
         if 'q' in request.GET:

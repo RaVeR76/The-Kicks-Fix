@@ -18,13 +18,13 @@ def all_kicks(request):
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             kicks = kicks.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+           # categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('kicks'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             kicks = kicks.filter(queries)

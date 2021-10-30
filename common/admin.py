@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Colour, Size
+from .models import Category, Colour, Size, Sex
 
 
 # Register your models here.
@@ -16,3 +16,4 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Colour)
 admin.site.register(Size)
+admin.site.register(Sex)

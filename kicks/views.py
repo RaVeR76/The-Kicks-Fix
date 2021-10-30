@@ -17,7 +17,7 @@ def all_kicks(request):
     sex = None
 
     if request.GET:
-        # Filter Navbar Category from ALL Kicks"
+        # Filter ALL Kicks by selected Category
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             kicks = kicks.filter(category__name__in=categories)
@@ -37,6 +37,11 @@ def all_kicks(request):
             if 'sex' in request.GET:
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)
+
+        # Filter ALL Kicks by selected Sex
+        if 'sex' in request.GET:
+            sex = request.GET['sex'].split(',')
+            kicks = kicks.filter(sex__name__in=sex)
 
 
         if 'q' in request.GET:

@@ -31,10 +31,10 @@ class Size(models.Model):
 
 
 class Sex(models.Model):
-    sex = models.CharField(max_length=254)
+    name = models.CharField(max_length=254)
 
     class Meta:
         verbose_name_plural = 'sex'
 
     def __str__(self):
-        return self.sex
+        return self.name

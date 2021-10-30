@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Kicks
-from common.models import Category
+from common.models import Category, Sex
 
 # Create your views here.
 
@@ -13,12 +13,19 @@ def all_kicks(request):
     kicks = Kicks.objects.all()
     query = None
     category = None
+    sex = None
 
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             kicks = kicks.filter(category__name__in=categories)
-           # categories = Category.objects.filter(name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
+        if 'sex' in request.GET:
+            sex = request.GET['sex'].split(',')
+            kicks = kicks.filter(sex__name__in=sex)
+      #      categories = Category.objects.filter(name__in=categories)
+
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -32,7 +39,7 @@ def all_kicks(request):
     context = {
         'kicks': kicks,
         'search_word': query,
-       # 'chosen_categories': categories,
+      #  'chosen_categories': categories,
     }
 
     return render(request, 'kicks/kicks.html', context)

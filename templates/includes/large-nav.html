@@ -5,11 +5,11 @@
                 New In
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="new-in">
-                <a href="{% url 'kicks' %}?category=new_in" class="dropdown-item">Men</a>
-                <a href="{% url 'kicks' %}?category=new_in,women_kicks" class="dropdown-item">Women</a>
-                <a href="" class="dropdown-item">Kids</a>
-                <a href="" class="dropdown-item">Accessories</a>
-                <a href="{% url 'kicks' %}?category=new_in" class="dropdown-item">All New In</a>
+                <a href="{% url 'kicks' %}?sex=female" class="dropdown-item">Men</a>
+                <a href="{% url 'kicks' %}?category=new_in" class="dropdown-item">Women</a>
+                <a href="{% url 'kicks' %}?category=kicks" class="dropdown-item">Kids</a>
+                <a href="{% url 'kicks' %}?category=accessories" class="dropdown-item">Accessories</a>
+                <a href="{% url 'kicks' %}?category=sale_item" class="dropdown-item">All New In</a>
             </div>
         </li>
 

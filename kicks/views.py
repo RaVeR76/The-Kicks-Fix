@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Kicks, Brand
+from .models import Kicks, Brand, Style
 from common.models import Category, Sex
 
 # Create your views here.
@@ -12,6 +12,7 @@ def all_kicks(request):
 
     kicks = Kicks.objects.all()
     brands = Brand.objects.all()
+    styles = Style.objects.all()
     query = None
     category = None
     sex = None
@@ -57,6 +58,7 @@ def all_kicks(request):
         'kicks': kicks,
         'search_word': query,
         'brands': brands,
+        'styles': styles,
       #  'chosen_categories': categories,
     }
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from kicks.models import Brand
+from kicks.models import Brand, Style
 
 # Create your views here.
 
@@ -9,9 +9,11 @@ def index(request):
     """ Pass Brands into home.html for navbar usage """
 
     brands = Brand.objects.all()
+    styles = Style.objects.all()
 
     context = {
         'brands': brands,
+        'styles': styles,
     }
 
     return render(request, 'home/index.html', context)

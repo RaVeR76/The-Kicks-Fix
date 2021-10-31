@@ -45,7 +45,15 @@
                         {% endfor %}       
                     </ul>
                 </li>
-                <li><a href="" class="dropdown-item">Style</a></li>
+                
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Styles</a>
+                    <ul class="dropdown-menu">
+                        {% for style in styles %}
+                            <li><a class="dropdown-item" href="{% url 'kicks' %}?style={{ brand.name }}&&sex=male,unisex">{{ style.friendly_name }}</a></li>
+                        {% endfor %}       
+                    </ul>
+                </li>
+
                 <li><a href="{% url 'kicks' %}?sex=male,unisex" class="dropdown-item">All Men Kicks</a></li>
             </ul>
         </li>

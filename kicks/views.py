@@ -43,7 +43,7 @@ def all_kicks(request):
             sex = request.GET['sex'].split(',')
             kicks = kicks.filter(sex__name__in=sex)
 
-
+        # Filter ALL Kicks by name or description using tye search bar
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -62,7 +62,7 @@ def all_kicks(request):
 
     return render(request, 'kicks/kicks.html', context)
 
-
+# Get selected pair of Kicks for displaying more info
 def kicks_detail(request, kicks_id):
     """ A view to show one pair of kicks & it's details """
 

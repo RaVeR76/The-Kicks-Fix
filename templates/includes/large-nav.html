@@ -72,7 +72,13 @@
                         {% endfor %}       
                     </ul>
                 </li>
-                <li><a href="" class="dropdown-item">Style</a></li>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Styles</a>
+                    <ul class="dropdown-menu">
+                        {% for style in styles %}
+                            <li><a class="dropdown-item" href="{% url 'kicks' %}?style={{ style.name }}&&sex=female,unisex">{{ style.friendly_name }}</a></li>
+                        {% endfor %}       
+                    </ul>
+                </li>
                 <li><a href="{% url 'kicks' %}?sex=female,unisex" class="dropdown-item">All Women Kicks</a></li>
             </ul>
         </li>
@@ -90,7 +96,13 @@
                         {% endfor %}       
                     </ul>
                 </li>
-                <li><a href="" class="dropdown-item">Style</a></li>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Styles</a>
+                    <ul class="dropdown-menu">
+                        {% for style in styles %}
+                            <li><a class="dropdown-item" href="{% url 'kicks' %}?style={{ style.name }}&&sex=kids">{{ style.friendly_name }}</a></li>
+                        {% endfor %}       
+                    </ul>
+                </li>
                 <li><a href="{% url 'kicks' %}?sex=kids" class="dropdown-item">All Kids Kicks</a></li>  <!-- Will add more at a later time -->
             </ul>
         </li>
@@ -99,11 +111,16 @@
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="accessories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
-            <div class="dropdown-menu" aria-labelledby="accessories">
-                <a href="" class="dropdown-item">Brand</a>
-                <a href="" class="dropdown-item">Style</a>
-                <a href="{% url 'accessories' %}" class="dropdown-item">All Accessories</a>  <!-- Will add more at a later time -->
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="accessories">
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Types</a>
+                    <ul class="dropdown-menu">
+                        {% for type in types %}
+                            <li><a class="dropdown-item" href="{% url 'accessories' %}?type={{ type.name }}">{{ type.friendly_name }}</a></li>
+                        {% endfor %}       
+                    </ul>
+                </li>
+                <li><a href="{% url 'accessories' %}" class="dropdown-item">All Accessories</a></li>  <!-- Will add more at a later time -->
+            </ul>
         </li>
 
         <li class="nav-item dropdown">
@@ -122,7 +139,9 @@
 
 
 <script>
-
+    /**
+     * JS code for Dropright Submenus in Navbar (credited in README)
+     */
     $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
         if (!$(this).next().hasClass('show')) {
             $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");

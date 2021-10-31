@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Kicks, Brand, Style
 from common.models import Category, Sex
+from accessories.models import Type
 
 # Create your views here.
 
@@ -13,12 +14,13 @@ def all_kicks(request):
     kicks = Kicks.objects.all()
     brands = Brand.objects.all()
     styles = Style.objects.all()
+    types = Type.objects.all()
     query = None
     category = None
     sex = None
 
     if request.GET:
-        # Filter ALL Kicks by selected Category
+        # Filter ALL Kicks by the selected Category
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             kicks = kicks.filter(category__name__in=categories)
@@ -29,7 +31,7 @@ def all_kicks(request):
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)
 
-        # Filter ALL kicks by brand from the selected navbar Brands submenu
+        # Filter ALL Kicks by Brand from the selected navbar Brands submenu
         if 'brand' in request.GET:
             chosen_brand = request.GET['brand'].split(',')
             kicks = kicks.filter(brand__name__in=chosen_brand)
@@ -39,7 +41,7 @@ def all_kicks(request):
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)
 
-        # Filter ALL kicks by style from the selected navbar Styles submenu
+        # Filter ALL Kicks by the Style from the selected navbar Styles submenu
         if 'style' in request.GET:
             chosen_style = request.GET['style'].split(',')
             kicks = kicks.filter(style__name__in=chosen_style)
@@ -69,6 +71,7 @@ def all_kicks(request):
         'search_word': query,
         'brands': brands,
         'styles': styles,
+        'types': types,
       #  'chosen_categories': categories,
     }
 

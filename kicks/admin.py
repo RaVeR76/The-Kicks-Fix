@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Kicks, Brand, Type
+from .models import Kicks, Brand, Style
 
 # Register your models here.
 
@@ -24,7 +24,7 @@ class BrandAdmin(admin.ModelAdmin):
 
     ordering = ('friendly_name',)
 
-class TypeAdmin(admin.ModelAdmin):
+class StyleAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
@@ -35,4 +35,4 @@ class TypeAdmin(admin.ModelAdmin):
 
 admin.site.register(Kicks, KicksAdmin)
 admin.site.register(Brand, BrandAdmin)
-admin.site.register(Type, TypeAdmin)
+admin.site.register(Style, StyleAdmin)

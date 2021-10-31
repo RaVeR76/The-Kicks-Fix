@@ -12,7 +12,7 @@ class Kicks(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
-    kicks_type = models.ForeignKey('Type', null=True, blank=True, on_delete=models.SET_NULL)
+    style = models.ForeignKey('Style', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
     colour = models.ForeignKey('common.Colour', null=True, blank=True, on_delete=models.SET_NULL)
@@ -39,7 +39,7 @@ class Brand(models.Model):
         return self.friendly_name
 
 
-class Type(models.Model):
+class Style(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 

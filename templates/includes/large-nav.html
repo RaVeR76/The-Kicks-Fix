@@ -12,7 +12,7 @@
                 <a href="{% url 'kicks' %}?category=new_in&&sex=male,unisex" class="dropdown-item">Men</a>
                 <a href="{% url 'kicks' %}?category=new_in&&sex=female,unisex" class="dropdown-item">Women</a>
                 <a href="{% url 'kicks' %}?category=new_in&&sex=kids" class="dropdown-item">Kids</a>
-                <a href="" class="dropdown-item">Accessories</a>
+                <a href="{% url 'accessories' %}?category=new_in" class="dropdown-item">Accessories</a>
                 <a href="{% url 'kicks' %}?category=new_in" class="dropdown-item">All New In</a>
             </div>
         </li>
@@ -26,11 +26,10 @@
                 <a href="{% url 'kicks' %}?category=sale_item&&sex=male,unisex" class="dropdown-item">Men</a>
                 <a href="{% url 'kicks' %}?category=sale_item&&sex=female,unisex" class="dropdown-item">Women</a>
                 <a href="{% url 'kicks' %}?category=sale_item&&sex=kids" class="dropdown-item">Kids</a>
-                <a href="" class="dropdown-item">Accessories</a>
+                <a href="{% url 'accessories' %}?category=sale_item" class="dropdown-item">Accessories</a>
                 <a href="{% url 'kicks' %}?category=sale_item" class="dropdown-item">All Sales</a>
             </div>
         </li>
-
 
         <!-- Men Navbar Dropdown Menu With Added Submenus For Brands & Styles -->
         <li class="nav-item dropdown">
@@ -57,7 +56,6 @@
                 <li><a href="{% url 'kicks' %}?sex=male,unisex" class="dropdown-item">All Men Kicks</a></li>
             </ul>
         </li>
-
 
         <!-- Women Navbar Dropdown Menu With Added Submenus For Brands & Styles -->
         <li class="nav-item dropdown">
@@ -107,6 +105,7 @@
             </ul>
         </li>
 
+        <!-- Accessories Navbar Dropdown Menu With Added Submenus For Types -->
         <li class="nav-item dropdown">
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="accessories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
@@ -123,6 +122,7 @@
             </ul>
         </li>
 
+        <!-- TLC Navbar Dropdown Menu -->
         <li class="nav-item dropdown">
             <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="tlc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 TLC

@@ -14,6 +14,11 @@ def all_accessories(request):
     styles = Style.objects.all()
 
     if request.GET:
+        # Filter ALL Accessories by the selected Category
+        if 'category' in request.GET:
+            category = request.GET['category'].split(',')
+            accessories = accessories.filter(category__name__in=category)
+
         # Filter ALL Accessories by the selected Type
         if 'type' in request.GET:
             chosen_type = request.GET['type'].split(',')

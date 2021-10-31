@@ -49,7 +49,7 @@
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Styles</a>
                     <ul class="dropdown-menu">
                         {% for style in styles %}
-                            <li><a class="dropdown-item" href="{% url 'kicks' %}?style={{ brand.name }}&&sex=male,unisex">{{ style.friendly_name }}</a></li>
+                            <li><a class="dropdown-item" href="{% url 'kicks' %}?style={{ style.name }}&&sex=male,unisex">{{ style.friendly_name }}</a></li>
                         {% endfor %}       
                     </ul>
                 </li>

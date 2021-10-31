@@ -39,6 +39,16 @@ def all_kicks(request):
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)
 
+        # Filter ALL kicks by style from the selected navbar Styles submenu
+        if 'style' in request.GET:
+            chosen_style = request.GET['style'].split(',')
+            kicks = kicks.filter(style__name__in=chosen_style)
+
+            # Filter Navbar Sex from the Style filtered Kicks above
+            if 'sex' in request.GET:
+                sex = request.GET['sex'].split(',')
+                kicks = kicks.filter(sex__name__in=sex)
+
         # Filter ALL Kicks by selected Sex
         if 'sex' in request.GET:
             sex = request.GET['sex'].split(',')

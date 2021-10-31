@@ -82,9 +82,15 @@ def kicks_detail(request, kicks_id):
     """ A view to show one pair of kicks & it's details """
 
     pair_of_kicks = get_object_or_404(Kicks, pk=kicks_id)
+    brands = Brand.objects.all()
+    styles = Style.objects.all()
+    types = Type.objects.all()
 
     context = {
         'kicks': pair_of_kicks,
+        'brands': brands,
+        'styles': styles,
+        'types': types,
     }
 
     return render(request, 'kicks/kicks_detail.html', context)

@@ -16,45 +16,39 @@ def all_kicks(request):
     styles = Style.objects.all()
     types = Type.objects.all()
     query = None
-    category = None
-    sex = None
+    #sex = None
+    kicks_title = 'All Kicks'
 
     if request.GET:
         # Filter ALL Kicks by the selected Category
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             kicks = kicks.filter(category__name__in=categories)
-        #    categories = Category.objects.filter(name__in=categories)
+            category = Category.objects.filter(name__in=categories).first()
+            kicks_title = f'All {category.friendly_name} Kicks'
 
             # Filter Navbar Sex from the Category filtered Kicks above
             if 'sex' in request.GET:
                 sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=sex)
+                chosen_sex = Sex.objects.filter(name__in=sex).first()
+                kicks_title = f'{chosen_sex.name} - {category.friendly_name} Kicks'
 
-        # Filter ALL Kicks by Brand from the selected navbar Brands submenu
-        if 'brand' in request.GET:
-            chosen_brand = request.GET['brand'].split(',')
-            kicks = kicks.filter(brand__name__in=chosen_brand)
-
-            # Filter Navbar Sex from the Brand filtered Kicks above
-            if 'sex' in request.GET:
-                sex = request.GET['sex'].split(',')
-                kicks = kicks.filter(sex__name__in=sex)
-
-        # Filter ALL Kicks by the Style from the selected navbar Styles submenu
-        if 'style' in request.GET:
-            chosen_style = request.GET['style'].split(',')
-            kicks = kicks.filter(style__name__in=chosen_style)
-
-            # Filter Navbar Sex from the Style filtered Kicks above
-            if 'sex' in request.GET:
-                sex = request.GET['sex'].split(',')
-                kicks = kicks.filter(sex__name__in=sex)
-
-        # Filter ALL Kicks by selected Sex
+        # Filter Navbar Sex from ALL Kicks
         if 'sex' in request.GET:
             sex = request.GET['sex'].split(',')
             kicks = kicks.filter(sex__name__in=sex)
+
+            # Filter Chosen Sex Kicks by Brand from the selected navbar Brands submenu
+            if 'brand' in request.GET:
+                chosen_brand = request.GET['brand'].split(',')
+                kicks = kicks.filter(brand__name__in=chosen_brand)
+
+            # Filter Chosen Sex Kicks by the Style from the selected navbar Styles submenu
+            if 'style' in request.GET:
+                chosen_style = request.GET['style'].split(',')
+                kicks = kicks.filter(style__name__in=chosen_style)
+
 
         # Filter ALL Kicks by name or description using tye search bar
         if 'q' in request.GET:
@@ -67,6 +61,7 @@ def all_kicks(request):
             kicks = kicks.filter(queries)
 
     context = {
+        'kicks_title': kicks_title,
         'kicks': kicks,
         'search_word': query,
         'brands': brands,

@@ -40,11 +40,14 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">
-                                                 {{ kicks.brand }} /
-                                                 {{ kicks.style }} /
-                                                 {{ kicks.sex }} /
-                                                 {{ kicks.category }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>
+                                            {% if kicks.category %}
+                                            <p class="small mt-1 mb-0">
+                                                <a href="{% url 'kicks' %}?category={{ kicks.category.name }}" class="text-muted">
+                                                    <i class="fas fa-tag mr-1"></i>{{ kicks.category.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>

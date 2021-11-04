@@ -59,6 +59,13 @@
                 <div class="accessory-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ accessories.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ accessories.price }}</p>
+                    {% if accessories.category %}
+                    <p class="small mt-1 mb-0">
+                        <a href="{% url 'accessories' %}?category={{ accessories.category.name }}" class="text-muted">
+                            <i class="fas fa-tag mr-1"></i>{{ accessories.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                     <p class="mt-3">{{ accessories.description }}</p>
                 </div>
             </div>

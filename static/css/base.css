@@ -80,12 +80,19 @@ body {
 	z-index: -1;
 }
 
-/*
-.card:hover {
-      box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-      transition: all .55s ease-in-out;
-    }
-*/
+/* Card animation */
+.card{
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    border-color: #E63746;
+    border-width: thin;
+}
+
 
 .dropdown-submenu {
     position: relative;

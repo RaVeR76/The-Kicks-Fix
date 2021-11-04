@@ -69,6 +69,20 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>
+                                            {% if kicks.brand %}
+                                            <p class="small mt-1 mb-0">
+                                                <a href="{% url 'kicks' %}?brand={{ kicks.brand.name }}" class="text-muted">
+                                                    <i class="fas fa-copyright mr-1"></i>{{ kicks.brand.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
+                                            {% if kicks.style %}
+                                            <p class="small mt-1 mb-0">
+                                                <a href="{% url 'kicks' %}?style={{ kicks.style.name }}" class="text-muted">
+                                                    <i class="fas fa-star mr-1"></i>{{ kicks.style.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>

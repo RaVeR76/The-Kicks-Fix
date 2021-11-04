@@ -20,7 +20,35 @@
         </div>
         <div class="row">
             <div class="kicks-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
+                <div class="row mt-1 mb-2">
+
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset">Sort by...</option>
+                                <option value="price_asc">Price (low to high)</option>
+                                <option value="price_desc">Price (high to low)</option>
+                                <option value="name_asc">Name (A-Z)</option>
+                                <option value="name_desc">Name (Z-A)</option>
+                                <option value="brand_asc">Brand (A-Z)</option>
+                                <option value="brand_desc">Brand (Z-A)</option>
+                                <option value="style_asc">Style (A-Z)</option>
+                                <option value="style_desc">Style (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'kicks' %}">Kicks Home</a> | </span>
+                            {% endif %}
+                            {{ kicks|length }} Kicks{% if search_word %} found for <strong>"{{ search_word }}"</strong>{% endif %}
+                        </p>
+                    </div>
+
+
+
+                </div>
                 <div class="row">
                     {% for kicks in kicks %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
@@ -41,13 +69,6 @@
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>
-                                            {% if kicks.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a href="{% url 'kicks' %}?category={{ kicks.category.name }}" class="text-muted">
-                                                    <i class="fas fa-tag mr-1"></i>{{ kicks.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -58,4 +79,41 @@
             </div>
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up my-black-text mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

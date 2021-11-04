@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Kicks, Brand, Style
 from common.models import Category, Sex
 from accessories.models import Type
@@ -16,9 +17,23 @@ def all_kicks(request):
     styles = Style.objects.all()
     types = Type.objects.all()
     query = None
+    sort = None
+    direction = None
     kicks_title = 'All Kicks'
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                kicks = kicks.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            kicks = kicks.order_by(sortkey)
+
         # Filter ALL Kicks by the selected Category
         if 'category' in request.GET:
             chosen_category = request.GET['category'].split(',')
@@ -66,6 +81,8 @@ def all_kicks(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             kicks = kicks.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'kicks_title': kicks_title,
         'kicks': kicks,
@@ -73,7 +90,7 @@ def all_kicks(request):
         'brands': brands,
         'styles': styles,
         'types': types,
-      #  'chosen_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'kicks/kicks.html', context)

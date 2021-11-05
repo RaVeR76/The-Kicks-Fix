@@ -5,7 +5,7 @@ from .models import Accessories, Type
 class AccessoriesAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
-        'accessory_type',
+        'type',
         'name',
         'category',
         'price',

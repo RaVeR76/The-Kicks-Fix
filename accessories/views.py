@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.db.models.functions import Lower
 from .models import Accessories, Type
 from kicks.models import Brand, Style
 from common.models import Category
@@ -13,7 +14,22 @@ def all_accessories(request):
     types = Type.objects.all()
     brands = Brand.objects.all()
     styles = Style.objects.all()
+    sort = None
+    direction = None
     accessories_title = 'All Accessories'
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                accessories = accessories.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            accessories = accessories.order_by(sortkey)
 
     if request.GET:
         # Filter ALL Accessories by the selected Category
@@ -26,9 +42,11 @@ def all_accessories(request):
         # Filter ALL Accessories by the selected Type
         if 'type' in request.GET:
             chosen_type = request.GET['type'].split(',')
-            accessories = accessories.filter(accessory_type__name__in=chosen_type)
+            accessories = accessories.filter(type__name__in=chosen_type)
             chosen_type = Type.objects.filter(name__in=chosen_type).first()
             accessories_title = f'All {chosen_type.friendly_name} Accessories'
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'accessories_title': accessories_title,
@@ -36,6 +54,7 @@ def all_accessories(request):
         'types': types,
         'brands': brands,
         'styles': styles,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'accessories/accessories.html', context)

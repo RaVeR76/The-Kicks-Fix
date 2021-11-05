@@ -48,6 +48,32 @@ def all_kicks(request):
                 chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
                 kicks_title = f"{chosen_sex.friendly_name}'s {chosen_category.friendly_name} Kicks"
 
+            # Filter Chosen Sex Kicks by Brand from the selected navbar Brands submenu
+        if 'brand' in request.GET:
+            chosen_brand = request.GET['brand'].split(',')
+            kicks = kicks.filter(brand__name__in=chosen_brand)
+            chosen_brand = Brand.objects.filter(name__in=chosen_brand).first()
+            kicks_title = f"All {chosen_brand.friendly_name} Kicks"
+
+            if 'sex' in request.GET:
+                chosen_sex = request.GET['sex'].split(',')
+                kicks = kicks.filter(sex__name__in=chosen_sex)
+                chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
+                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_brand.friendly_name} Kicks"
+
+            # Filter Chosen Sex Kicks by the Style from the selected navbar Styles submenu
+        if 'style' in request.GET:
+            chosen_style = request.GET['style'].split(',')
+            kicks = kicks.filter(style__name__in=chosen_style)
+            chosen_style = Style.objects.filter(name__in=chosen_style).first()
+            kicks_title = f"All {chosen_style.friendly_name} Kicks"
+
+            if 'sex' in request.GET:
+                chosen_sex = request.GET['sex'].split(',')
+                kicks = kicks.filter(sex__name__in=chosen_sex)
+                chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
+                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_style.friendly_name} Kicks"
+
         # Filter Navbar Sex from ALL Kicks
         if 'sex' in request.GET:
             chosen_sex = request.GET['sex'].split(',')
@@ -55,20 +81,6 @@ def all_kicks(request):
             if 'category' not in request.GET:   # Added this so it wouldn't override my Category Kicks title which it had before
                 chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
                 kicks_title = f"All {chosen_sex.friendly_name}'s Kicks"
-
-            # Filter Chosen Sex Kicks by Brand from the selected navbar Brands submenu
-            if 'brand' in request.GET:
-                chosen_brand = request.GET['brand'].split(',')
-                kicks = kicks.filter(brand__name__in=chosen_brand)
-                chosen_brand = Brand.objects.filter(name__in=chosen_brand).first()
-                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_brand.friendly_name} Kicks"
-
-            # Filter Chosen Sex Kicks by the Style from the selected navbar Styles submenu
-            if 'style' in request.GET:
-                chosen_style = request.GET['style'].split(',')
-                kicks = kicks.filter(style__name__in=chosen_style)
-                chosen_style = Style.objects.filter(name__in=chosen_style).first()
-                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_style.friendly_name} Kicks"
 
 
         # Filter ALL Kicks by name or description using tye search bar

@@ -59,12 +59,19 @@
                 <div class="kicks-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ kicks.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>
-                    {% if kicks.category %}
-                    <p class="small mt-1 mb-0">
-                        <a href="{% url 'kicks' %}?category={{ kicks.category.name }}" class="text-muted">
-                            <i class="fas fa-tag mr-1"></i>{{ kicks.category.friendly_name }}
-                        </a>
-                    </p>
+                    {% if kicks.brand %}
+                        <p class="small mt-1 mb-0">
+                            <a href="{% url 'kicks' %}?brand={{ kicks.brand.name }}" class="text-muted">
+                                <i class="fas fa-copyright mr-1"></i>{{ kicks.brand.friendly_name }}
+                            </a>
+                        </p>
+                    {% endif %}
+                    {% if kicks.style %}
+                        <p class="small mt-1 mb-0">
+                            <a href="{% url 'kicks' %}?style={{ kicks.style.name }}" class="text-muted">
+                                <i class="fas fa-star mr-1"></i>{{ kicks.style.friendly_name }}
+                            </a>
+                        </p>
                     {% endif %}
                     <p class="mt-3">{{ kicks.description }}</p>
                 </div>

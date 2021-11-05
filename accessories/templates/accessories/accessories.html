@@ -36,7 +36,9 @@
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
+                            {% if current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'accessories' %}">Accessories Home</a> | </span>
+                            {% endif %}
                             {{ accessories|length }} accessories
                         </p>
                     </div>

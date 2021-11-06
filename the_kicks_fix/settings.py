@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'common',
     'kicks',
     'accessories',
+    'bag',
 ]
 
 MIDDLEWARE = [

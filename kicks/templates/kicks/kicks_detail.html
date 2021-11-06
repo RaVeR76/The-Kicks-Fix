@@ -74,14 +74,14 @@
                         </p>
                     {% endif %}
                     <p class="mt-3">{{ kicks.description }}</p>
-                    <form class="form" action="{% url 'add_to_bag' kicks.id %}" method="POST">
+                    <form class="form" action="{% url 'add_to_bag' kicks.sku %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ kicks.id }}" id="id_qty_{{ kicks.id }}">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ kicks.sku }}" id="id_qty_{{ kicks.sku }}">
                                     </div>
                                 </div>
                             </div>

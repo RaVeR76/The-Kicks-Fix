@@ -69,7 +69,6 @@ body {
     background-color: #FEE440;
 }
 
-
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -105,21 +104,46 @@ body {
 
 .dropdown-submenu {
     position: relative;
-  }
+}
   
-  .dropdown-submenu a::after {
+.dropdown-submenu a::after {
     transform: rotate(-90deg);
     position: absolute;
     right: 6px;
     top: .8em;
-  }
+}
   
-  .dropdown-submenu .dropdown-menu {
+.dropdown-submenu .dropdown-menu {
     top: 0;
     left: 100%;
     margin-left: .1rem;
     margin-right: .1rem;
-  }
+}
+
+.my-black-btn {
+    background: black;
+    color: white;
+}
+
+.my-black-btn:hover,
+.my-black-btn:active,
+.my-black-btn:focus {
+    background: #222;
+    color: white;
+}
+
+.my-white-btn {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.my-white-btn:hover,
+.my-white-btn:active,
+.my-white-btn:focus {
+    background: black;
+    color: white !important;
+}
 
 
 .btt-button {

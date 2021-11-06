@@ -5,7 +5,7 @@ from home.models import Discount
 
 def bag_contents(request):
 
-    site_discounts = Discount.objects.get(name='discount')
+    site_discounts = Discount.objects.get(name='discount') # Utilise Django admin for discounts & delivery costs
 
     bag_items = []
     total = 0

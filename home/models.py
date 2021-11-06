@@ -8,10 +8,14 @@ class Home(models.Model):
     class Meta:
         verbose_name_plural = 'Home'
 
+    name = models.CharField(max_length=254, default='home')
     main_slogan = models.CharField(max_length=254)
     promotion_bar = models.CharField(max_length=254)
     social_icon = models.ForeignKey('Social', null=True, blank=True, on_delete=models.SET_NULL)
     discount_code = models.ForeignKey('Discount', null=True, blank=True, on_delete=models.SET_NULL)
+
+    def __str__(self):
+        return self.name
 
 
 class Social(models.Model):
@@ -33,7 +37,11 @@ class Social(models.Model):
 
 class Discount(models.Model):
 
+    name = models.CharField(max_length=254, default='discount')
     discount_code = models.CharField(max_length=25)
     discount_percentage = models.DecimalField(max_digits=2, decimal_places=0, default=0)
     free_delivery_threshold = models.DecimalField(max_digits=2, decimal_places=0, default=0)
     standard_delivery_percentage = models.DecimalField(max_digits=2, decimal_places=0, default=0)
+
+    def __str__(self):
+        return self.name

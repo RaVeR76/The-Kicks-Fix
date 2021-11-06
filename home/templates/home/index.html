@@ -13,7 +13,9 @@
     <div class="container h-100">
         <div class="row justify-content-end h-100">
             <div class="col-7 col-md-6 my-auto text-center">
-                <h1 class="text-uppercase display-4">Get Your Kicks Inside</h1>
+                {% for h in home %}
+                    <h1 class="text-uppercase display-4">{{ h.main_slogan }}</h1>
+                {% endfor %}
                 <div class="my-5">
                     <a href="{% url 'kicks' %}" class="btn my-yellow-back btn-lg text-uppercase">Shop Now</a>
                 </div>

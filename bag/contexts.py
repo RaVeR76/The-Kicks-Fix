@@ -19,22 +19,22 @@ def bag_contents(request):
 
     for item_id, quantity in bag.items():
         if "RAVE" not in item_id: # If No RAVE then it's a Kicks Item
-            kicks = get_object_or_404(Kicks, sku=item_id)
-            total += quantity * kicks.price
+            product = get_object_or_404(Kicks, sku=item_id)
+            total += quantity * product.price
             kicks_count += quantity
             bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
-            'kicks': kicks,
+            'product': product,
             })
         elif "RAVE" in item_id: # If RAVE then it's an Accessories Item
-            accessories = get_object_or_404(Accessories, sku=item_id)
-            total += quantity * accessories.price
+            product = get_object_or_404(Accessories, sku=item_id)
+            total += quantity * product.price
             accessories_count += quantity
             bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
-            'accessories': accessories,
+            'product': product,
             })
 
     if total < free_delivery_threshold:
@@ -51,6 +51,7 @@ def bag_contents(request):
         'total': total,
         'kicks_count': kicks_count,
         'accessories_count': accessories_count,
+        'delivery': delivery,
         'free_delivery_topup': free_delivery_topup,
         'free_delivery_threshold': free_delivery_threshold,
         'grand_total': grand_total,

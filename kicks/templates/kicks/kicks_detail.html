@@ -79,20 +79,33 @@
                         <div class="form-row">
 
                             <div class="col-12">
-                                <p><strong>Size:</strong></p>
-                                
-                                  <select class="form-control rounded-0 w-50" name="kicks_size" id='id_kicks_size'>
+                                <p class="mb-2"><strong>Size:</strong></p>
+                               
+                                <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                                    <label class="btn btn-dark active">
+                                    <input type="radio" name="options" id="uk_size" checked>UK
+                                    </label>
+                                    <label class="btn btn-dark">
+                                    <input type="radio" name="options" id="eu_size">EU
+                                    </label>
+                                    <label class="btn btn-dark">
+                                    <input type="radio" name="options" id="us_size">US
+                                    </label>
+                                </div>
+                               
+                                {{ kicks.sex }}
 
-                                   {% for size in kids_sizes_uk %}
+                                
+                                {% if kicks.sex|lower == 'kids' %}
+                                    <select class="form-control rounded-0 w-50" name="kicks_size" id='id_kicks_size'>
+
+                                    {% for size in kids_sizes_uk %}
                                         <option value="{{ size }}">{{ size }}</option>
                                     {% endfor %}
 
-                                </select>
+                                    </select>
+                                {% endif %}
 
-
-
-
-                                {{ kids_sizes_uk }}
                             </div>
 
 

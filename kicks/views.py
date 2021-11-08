@@ -124,7 +124,8 @@ def kicks_detail(request, kicks_id):
 
     kids_sizes = Size.objects.get(name='kids_sizes')
     kids_sizes_uk = kids_sizes.size.get("uk")
-    print(kids_sizes_uk)
+    kids_sizes_eu = kids_sizes.size.get("eu")
+    kids_sizes_us = kids_sizes.size.get("us")
 
    # kids_sizes_uk = [10.5, 11.5, 12.5, 13.5, 1.5, 2.5, 3.5, 4, 4.5]
 
@@ -138,7 +139,9 @@ def kicks_detail(request, kicks_id):
         'brands': brands,
         'styles': styles,
         'types': types,
-        'kids_sizes_uk': kids_sizes_uk
+        'kids_sizes_uk': kids_sizes_uk,
+        'kids_sizes_eu': kids_sizes_eu,
+        'kids_sizes_us': kids_sizes_us,
     }
 
     return render(request, 'kicks/kicks_detail.html', context)

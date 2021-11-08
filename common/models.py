@@ -28,10 +28,15 @@ class Colour(models.Model):
 
 
 class Size(models.Model):
-    size = models.CharField(max_length=254)
+    name = models.CharField(max_length=50, default='size')
+    friendly_name = models.CharField(max_length=50, null=True, blank=True)
+    size = models.JSONField(default=list)
 
     def __str__(self):
-        return self.size
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
 
 
 class Sex(models.Model):

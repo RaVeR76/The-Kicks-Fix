@@ -13,7 +13,16 @@ class CategoryAdmin(admin.ModelAdmin):
     ordering = ('friendly_name',)
 
 
+class SizeAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+    ordering = ('friendly_name',)
+
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Colour)
-admin.site.register(Size)
+admin.site.register(Size, SizeAdmin)
 admin.site.register(Sex)

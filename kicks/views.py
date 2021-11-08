@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Kicks, Brand, Style
-from common.models import Category, Sex
+from common.models import Category, Sex, Size
 from accessories.models import Type
 
 # Create your views here.
@@ -120,12 +120,25 @@ def kicks_detail(request, kicks_id):
     brands = Brand.objects.all()
     styles = Style.objects.all()
     types = Type.objects.all()
+   # size = Size.objects.all()
+
+    kids_sizes = Size.objects.get(name='kids_sizes')
+    kids_sizes_uk = kids_sizes.size.get("uk")
+    print(kids_sizes_uk)
+
+   # kids_sizes_uk = [10.5, 11.5, 12.5, 13.5, 1.5, 2.5, 3.5, 4, 4.5]
+
+   # women_sizes_uk = [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5]
+
+  #  men_sizes_uk = [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 11, 12]
+
 
     context = {
         'kicks': pair_of_kicks,
         'brands': brands,
         'styles': styles,
         'types': types,
+        'kids_sizes_uk': kids_sizes_uk
     }
 
     return render(request, 'kicks/kicks_detail.html', context)

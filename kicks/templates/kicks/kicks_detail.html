@@ -83,25 +83,26 @@
                                
                                 <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
                                     <label class="btn btn-dark active">
-                                    <input type="radio" name="options" id="uk_size" checked>UK
+                                    <input type="radio" name="size_origin" id="uk_size" value="uk_size" checked>UK
                                     </label>
                                     <label class="btn btn-dark">
-                                    <input type="radio" name="options" id="eu_size">EU
+                                    <input type="radio" name="size_origin" id="eu_size" value="eu_size">EU
                                     </label>
                                     <label class="btn btn-dark">
-                                    <input type="radio" name="options" id="us_size">US
+                                    <input type="radio" name="size_origin" id="us_size" value="us_size">US
                                     </label>
                                 </div>
                                
                                 {{ kicks.sex }}
+                                <p id="demo"></p>
 
                                 
                                 {% if kicks.sex|lower == 'kids' %}
                                     <select class="form-control rounded-0 w-50" name="kicks_size" id='id_kicks_size'>
 
-                                    {% for size in kids_sizes_uk %}
-                                        <option value="{{ size }}">{{ size }}</option>
-                                    {% endfor %}
+                                        {% for size in kids_sizes_uk %}
+                                            <option value="{{ size }}">{{ size }}</option>
+                                        {% endfor %}
 
                                     </select>
                                 {% endif %}
@@ -134,4 +135,43 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+
+{% block postloadjs %}
+    {{ block.super }}
+
+<script>
+
+const kickSize = document.getElementById("id_kicks_size");
+      
+    function sizeUK(){
+        kickSize.innerHTML = 
+        `{% for size in kids_sizes_uk %}
+            <option value="{{ size }}">{{ size }}</option>
+        {% endfor %}`;
+    }
+
+    function sizeEU(){
+        kickSize.innerHTML = 
+        `{% for size in kids_sizes_eu %}
+            <option value="{{ size }}">{{ size }}</option>
+        {% endfor %}`;
+    }
+
+    function sizeUS(){
+        kickSize.innerHTML = 
+        `{% for size in kids_sizes_us %}
+            <option value="{{ size }}">{{ size }}</option>
+        {% endfor %}`;
+    }
+
+   
+document.getElementById('uk_size').addEventListener("click", sizeUK);
+document.getElementById('eu_size').addEventListener("click", sizeEU);
+document.getElementById('us_size').addEventListener("click", sizeUS);
+
+
+</script>
+
 {% endblock %}

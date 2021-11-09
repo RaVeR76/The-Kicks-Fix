@@ -120,7 +120,6 @@ def kicks_detail(request, kicks_id):
     brands = Brand.objects.all()
     styles = Style.objects.all()
     types = Type.objects.all()
-   # size = Size.objects.all()
 
     kids_sizes = Size.objects.get(name='kids_sizes')
     kids_sizes_uk = kids_sizes.size.get("uk")
@@ -132,12 +131,10 @@ def kicks_detail(request, kicks_id):
     women_sizes_eu = women_sizes.size.get("eu")
     women_sizes_us = women_sizes.size.get("us")
 
-   # kids_sizes_uk = [10.5, 11.5, 12.5, 13.5, 1.5, 2.5, 3.5, 4, 4.5]
-
-   # women_sizes_uk = [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5]
-
-  #  men_sizes_uk = [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 11, 12]
-
+    men_sizes = Size.objects.get(name='men_sizes')
+    men_sizes_uk = men_sizes.size.get("uk")
+    men_sizes_eu = men_sizes.size.get("eu")
+    men_sizes_us = men_sizes.size.get("us")
 
     context = {
         'kicks': pair_of_kicks,
@@ -150,6 +147,9 @@ def kicks_detail(request, kicks_id):
         'women_sizes_uk': women_sizes_uk,
         'women_sizes_eu': women_sizes_eu,
         'women_sizes_us': women_sizes_us,
+        'men_sizes_uk': men_sizes_uk,
+        'men_sizes_eu': men_sizes_eu,
+        'men_sizes_us': men_sizes_us,
     }
 
     return render(request, 'kicks/kicks_detail.html', context)

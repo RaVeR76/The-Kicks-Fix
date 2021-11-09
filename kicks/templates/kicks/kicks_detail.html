@@ -97,15 +97,26 @@
                                 <p id="demo"></p>
 
                                 
-                                {% if kicks.sex|lower == 'kids' %}
-                                    <select class="form-control rounded-0 w-50" name="kicks_size" id='id_kicks_size'>
-
-                                        {% for size in kids_sizes_uk %}
-                                            <option value="{{ size }}">{{ size }}</option>
-                                        {% endfor %}
-
+                         
+                                    <select class="form-control rounded-0 w-50" name="{{ kicks.sex }}" id='kicks_size'>
+                                        
+                                        {% if kicks.sex|lower == 'kids' %}
+                                            {% for size in kids_sizes_uk %}
+                                                <option value="{{ size }}">{{ size }}</option>
+                                            {% endfor %}
+                                        {% elif kicks.sex|lower == 'female' %}
+                                            {% for size in women_sizes_uk %}
+                                                <option value="{{ size }}">{{ size }}</option>
+                                            {% endfor %}
+                                        {% endif %}
+                         
                                     </select>
-                                {% endif %}
+                             
+
+ 
+
+                                    
+                             
 
                             </div>
 
@@ -143,27 +154,48 @@
 
 <script>
 
-const kickSize = document.getElementById("id_kicks_size");
+const KickSize = document.getElementById("kicks_size");
       
     function sizeUK(){
-        kickSize.innerHTML = 
-        `{% for size in kids_sizes_uk %}
-            <option value="{{ size }}">{{ size }}</option>
-        {% endfor %}`;
+        if ((KickSize.name == "kids")) {
+            KickSize.innerHTML = 
+            `{% for size in kids_sizes_uk %}
+                <option value="{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "female")) {
+            KickSize.innerHTML = 
+            `{% for size in women_sizes_uk %}
+                <option value="{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        }
     }
 
     function sizeEU(){
-        kickSize.innerHTML = 
-        `{% for size in kids_sizes_eu %}
-            <option value="{{ size }}">{{ size }}</option>
-        {% endfor %}`;
+        if ((KickSize.name == "kids")) {
+            KickSize.innerHTML = 
+            `{% for size in kids_sizes_eu %}
+                <option value="{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "female")) {
+            KickSize.innerHTML = 
+            `{% for size in women_sizes_eu %}
+                <option value="{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        }
     }
 
     function sizeUS(){
-        kickSize.innerHTML = 
-        `{% for size in kids_sizes_us %}
-            <option value="{{ size }}">{{ size }}</option>
-        {% endfor %}`;
+        if ((KickSize.name == "kids")) {
+            KickSize.innerHTML = 
+            `{% for size in kids_sizes_us %}
+                <option value="{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "female")) {
+            KickSize.innerHTML = 
+            `{% for size in women_sizes_us %}
+                <option value="{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        }
     }
 
    

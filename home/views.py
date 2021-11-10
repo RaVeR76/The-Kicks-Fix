@@ -14,14 +14,14 @@ def index(request):
     styles = Style.objects.all()
     types = Type.objects.all()
 
-    new_slogan = Home.objects.get(name='home')
-    main_slogan = new_slogan.main_slogan
+    home = Home.objects.get(name='home')
+    main_slogan = home.main_slogan
 
-
-   # main_slogan = Home.objects.get(main_slogan__exact='main_slogan')
+    #new_promotion = home.promotion_bar
 
     context = {
         'main_slogan': main_slogan,
+      #  'new_promotion': new_promotion,
         'brands': brands,
         'styles': styles,
         'types': types,

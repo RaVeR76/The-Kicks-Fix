@@ -83,31 +83,29 @@
                                
                                 <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
                                     <label class="btn btn-dark active">
-                                    <input type="radio" name="size_origin" id="uk_size" value="uk_size" checked>UK
+                                    <input type="radio" name="uk_size" id="uk_size" value="uk_size" checked>UK
                                     </label>
                                     <label class="btn btn-dark">
-                                    <input type="radio" name="size_origin" id="eu_size" value="eu_size">EU
+                                    <input type="radio" name="eu_size" id="eu_size" value="eu_size">EU
                                     </label>
                                     <label class="btn btn-dark">
-                                    <input type="radio" name="size_origin" id="us_size" value="us_size">US
+                                    <input type="radio" name="us_size" id="us_size" value="us_size">US
                                     </label>
                                 </div>
-                               
-                                {{ kicks.sex }}
 
-                                    <select class="form-control rounded-0 w-50" name="{{ kicks.sex }}" id='kicks_size'>
+                                    <select class="form-control rounded-0 w-50" name="{{ kicks.sex }}_size" id='kicks_size'>
                                         
                                         {% if kicks.sex|lower == 'kids' %}
                                             {% for size in kids_sizes_uk %}
-                                                <option value="{{ size }}">{{ size }}</option>
+                                                <option value="UK{{ size }}">{{ size }}</option>
                                             {% endfor %}
                                         {% elif kicks.sex|lower == 'female' %}
                                             {% for size in women_sizes_uk %}
-                                                <option value="{{ size }}">{{ size }}</option>
+                                                <option value="UK{{ size }}">{{ size }}</option>
                                             {% endfor %}
                                         {% elif kicks.sex|lower == 'male' %}
                                             {% for size in men_sizes_uk %}
-                                                <option value="{{ size }}">{{ size }}</option>
+                                                <option value="UK{{ size }}">{{ size }}</option>
                                             {% endfor %}
                                         {% endif %}
                          
@@ -152,58 +150,58 @@
 const KickSize = document.getElementById("kicks_size");
       
     function sizeUK(){
-        if ((KickSize.name == "kids")) {
+        if ((KickSize.name == "kids_size")) {
             KickSize.innerHTML = 
             `{% for size in kids_sizes_uk %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="UK{{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "female")) {
+        } else if ((KickSize.name == "female_size")) {
             KickSize.innerHTML = 
             `{% for size in women_sizes_uk %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="UK{{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "male")) {
+        } else if ((KickSize.name == "male_size")) {
             KickSize.innerHTML = 
             `{% for size in men_sizes_uk %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="UK{{ size }}">{{ size }}</option>
             {% endfor %}`;
         }
     }
 
     function sizeEU(){
-        if ((KickSize.name == "kids")) {
+        if ((KickSize.name == "kids_size")) {
             KickSize.innerHTML = 
             `{% for size in kids_sizes_eu %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="EU{{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "female")) {
+        } else if ((KickSize.name == "female_size")) {
             KickSize.innerHTML = 
             `{% for size in women_sizes_eu %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="EU{{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "male")) {
+        } else if ((KickSize.name == "male_size")) {
             KickSize.innerHTML = 
             `{% for size in men_sizes_eu %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="EU{{ size }}">{{ size }}</option>
             {% endfor %}`;
         }
     }
 
     function sizeUS(){
-        if ((KickSize.name == "kids")) {
+        if ((KickSize.name == "kids_size")) {
             KickSize.innerHTML = 
             `{% for size in kids_sizes_us %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="US{{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "female")) {
+        } else if ((KickSize.name == "female_size")) {
             KickSize.innerHTML = 
             `{% for size in women_sizes_us %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="US{{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "male")) {
+        } else if ((KickSize.name == "male_size")) {
             KickSize.innerHTML = 
             `{% for size in men_sizes_us %}
-                <option value="{{ size }}">{{ size }}</option>
+                <option value="US{{ size }}">{{ size }}</option>
             {% endfor %}`;
         }
     }

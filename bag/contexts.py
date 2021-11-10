@@ -16,18 +16,47 @@ def bag_contents(request):
     free_delivery_threshold = site_discounts.free_delivery_threshold
     standard_delivery_percentage = site_discounts.standard_delivery_percentage
 
-    for item_id, quantity in bag.items():
-        if "RAVE" not in item_id: # If No RAVE then it's a Kicks Item
-            product = get_object_or_404(Kicks, sku=item_id)
-        elif "RAVE" in item_id: # If RAVE then it's an Accessories Item
+    for item_id, item_data in bag.items():
+        if isinstance(item_data, int):
             product = get_object_or_404(Accessories, sku=item_id)
-        total += quantity * product.price
-        product_count += quantity
-        bag_items.append({
-        'item_id': item_id,
-        'quantity': quantity,
-        'product': product,
-        })
+            total += item_data * product.price
+            product_count += item_data
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'product': product,
+            })
+        else:
+            product = get_object_or_404(Kicks, sku=item_id)
+            for size, quantity in item_data['kicks_by_size'].items():
+                total += quantity * product.price
+                product_count += quantity
+                bag_items.append({
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'product': product,
+                    'size': size,
+                })
+
+  #  for item_id, quantity in bag.items():
+   #     if "RAVE" not in item_id: # If No RAVE then it's a Kicks Item
+   #         product = get_object_or_404(Kicks, sku=item_id)
+   #         total += quantity * product.price
+   #         product_count += quantity
+   #         bag_items.append({
+   #             'item_id': item_id,
+   #             'quantity': quantity,
+   #             'product': product,
+   #         })
+    #    elif "RAVE" in item_id: # If RAVE then it's an Accessories Item
+    #        product = get_object_or_404(Accessories, sku=item_id)
+    #        total += quantity * product.price
+    #        product_count += quantity
+    #        bag_items.append({
+    #            'item_id': item_id,
+    #            'quantity': quantity,
+    #            'product': product,
+    #        })
 
      #   elif "RAVE" in item_id: # If RAVE then it's an Accessories Item
       #      product = get_object_or_404(Accessories, sku=item_id)

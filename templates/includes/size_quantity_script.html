@@ -1,0 +1,110 @@
+<script type="text/javascript">
+
+const KickSize = document.getElementById("kicks_size");
+
+    // If UK button selected, check Kicks sex & display associated sizes in select box   
+    function sizeUK(){
+        if ((KickSize.name == "kids_size")) {
+            KickSize.innerHTML = 
+            `{% for size in kids_sizes_uk %}
+                <option value="uk {{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "female_size")) {
+            KickSize.innerHTML = 
+            `{% for size in women_sizes_uk %}
+                <option value="uk {{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "male_size")) {
+            KickSize.innerHTML = 
+            `{% for size in men_sizes_uk %}
+                <option value="uk {{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        }
+    }
+
+    // If EU button selected, check Kicks sex & display associated sizes in select box 
+    function sizeEU(){
+        if ((KickSize.name == "kids_size")) {
+            KickSize.innerHTML = 
+            `{% for size in kids_sizes_eu %}
+                <option value="eu {{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "female_size")) {
+            KickSize.innerHTML = 
+            `{% for size in women_sizes_eu %}
+                <option value="eu {{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "male_size")) {
+            KickSize.innerHTML = 
+            `{% for size in men_sizes_eu %}
+                <option value="eu {{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        }
+    }
+
+    // If US button selected, check Kicks sex & display associated sizes in select box 
+    function sizeUS(){
+        if ((KickSize.name == "kids_size")) {
+            KickSize.innerHTML = 
+            `{% for size in kids_sizes_us %}
+                <option value="us{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "female_size")) {
+            KickSize.innerHTML = 
+            `{% for size in women_sizes_us %}
+                <option value="us{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        } else if ((KickSize.name == "male_size")) {
+            KickSize.innerHTML = 
+            `{% for size in men_sizes_us %}
+                <option value="us{{ size }}">{{ size }}</option>
+            {% endfor %}`;
+        }
+    }
+
+    // Disable plus & minus buttons if they go outside 1-99 range
+    function handleEnableDisable(itemId) {
+        let currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        let minusDisabled = currentValue < 2;
+        let plusDisabled = currentValue > 98;
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
+
+    // Ensure proper enabling/disabling of all inputs on page load
+    let allQtyInputs = $('.qty_input');
+    for(let i = 0; i < allQtyInputs.length; i++){
+        let itemId = $(allQtyInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
+    }
+
+    // Check enable/disable every time the input is changed
+    $('.qty_input').change(function() {
+        let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
+
+    // Increment item quantity
+    $('.increment-qty').click(function(e) {
+        e.preventDefault();
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        let currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue + 1);
+        let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
+
+    // Decrement item quantity
+    $('.decrement-qty').click(function(e) {
+        e.preventDefault();
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        let currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue - 1);
+        let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
+
+document.getElementById('uk_size').addEventListener("click", sizeUK);
+document.getElementById('eu_size').addEventListener("click", sizeEU);
+document.getElementById('us_size').addEventListener("click", sizeUS);
+</script>

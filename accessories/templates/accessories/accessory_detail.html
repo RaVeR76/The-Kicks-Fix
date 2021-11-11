@@ -74,9 +74,25 @@
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-dark rounded-0" 
+                                                data-item_id="{{ accessories.id }}" id="decrement-qty_{{ accessories.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
                                         <input class="form-control qty_input" type="number" 
                                             name="quantity" value="1" min="1" max="99" 
-                                            data-item_id="{{ accessories.sku }}" id="id_qty_{{ accessories.sku }}">
+                                            data-item_id="{{ accessories.id }}" id="id_qty_{{ accessories.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-dark rounded-0"
+                                                data-item_id="{{ accessories.id }}" id="increment-qty_{{ accessories.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -97,4 +113,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'includes/size_quantity_script.html' %}
 {% endblock %}

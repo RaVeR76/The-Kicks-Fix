@@ -1,21 +1,21 @@
 <script type="text/javascript">
 
-const KickSize = document.getElementById("kicks_size");
+const kickSize = document.getElementById("kicks_size");
 
     // If UK button selected, check Kicks sex & display associated sizes in select box   
     function sizeUK(){
-        if ((KickSize.name == "kids_size")) {
-            KickSize.innerHTML = 
+        if ((kickSize.name == "kids_size")) {
+            kickSize.innerHTML = 
             `{% for size in kids_sizes_uk %}
                 <option value="uk {{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "female_size")) {
-            KickSize.innerHTML = 
+        } else if ((kickSize.name == "female_size")) {
+            kickSize.innerHTML = 
             `{% for size in women_sizes_uk %}
                 <option value="uk {{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "male_size")) {
-            KickSize.innerHTML = 
+        } else if ((kickSize.name == "male_size")) {
+            kickSize.innerHTML = 
             `{% for size in men_sizes_uk %}
                 <option value="uk {{ size }}">{{ size }}</option>
             {% endfor %}`;
@@ -24,18 +24,18 @@ const KickSize = document.getElementById("kicks_size");
 
     // If EU button selected, check Kicks sex & display associated sizes in select box 
     function sizeEU(){
-        if ((KickSize.name == "kids_size")) {
-            KickSize.innerHTML = 
+        if ((kickSize.name == "kids_size")) {
+            kickSize.innerHTML = 
             `{% for size in kids_sizes_eu %}
                 <option value="eu {{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "female_size")) {
-            KickSize.innerHTML = 
+        } else if ((kickSize.name == "female_size")) {
+            kickSize.innerHTML = 
             `{% for size in women_sizes_eu %}
                 <option value="eu {{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "male_size")) {
-            KickSize.innerHTML = 
+        } else if ((kickSize.name == "male_size")) {
+            kickSize.innerHTML = 
             `{% for size in men_sizes_eu %}
                 <option value="eu {{ size }}">{{ size }}</option>
             {% endfor %}`;
@@ -44,18 +44,18 @@ const KickSize = document.getElementById("kicks_size");
 
     // If US button selected, check Kicks sex & display associated sizes in select box 
     function sizeUS(){
-        if ((KickSize.name == "kids_size")) {
-            KickSize.innerHTML = 
+        if ((kickSize.name == "kids_size")) {
+            kickSize.innerHTML = 
             `{% for size in kids_sizes_us %}
                 <option value="us {{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "female_size")) {
-            KickSize.innerHTML = 
+        } else if ((kickSize.name == "female_size")) {
+            kickSize.innerHTML = 
             `{% for size in women_sizes_us %}
                 <option value="us {{ size }}">{{ size }}</option>
             {% endfor %}`;
-        } else if ((KickSize.name == "male_size")) {
-            KickSize.innerHTML = 
+        } else if ((kickSize.name == "male_size")) {
+            kickSize.innerHTML = 
             `{% for size in men_sizes_us %}
                 <option value="us {{ size }}">{{ size }}</option>
             {% endfor %}`;

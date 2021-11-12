@@ -47,17 +47,17 @@ const KickSize = document.getElementById("kicks_size");
         if ((KickSize.name == "kids_size")) {
             KickSize.innerHTML = 
             `{% for size in kids_sizes_us %}
-                <option value="us{{ size }}">{{ size }}</option>
+                <option value="us {{ size }}">{{ size }}</option>
             {% endfor %}`;
         } else if ((KickSize.name == "female_size")) {
             KickSize.innerHTML = 
             `{% for size in women_sizes_us %}
-                <option value="us{{ size }}">{{ size }}</option>
+                <option value="us {{ size }}">{{ size }}</option>
             {% endfor %}`;
         } else if ((KickSize.name == "male_size")) {
             KickSize.innerHTML = 
             `{% for size in men_sizes_us %}
-                <option value="us{{ size }}">{{ size }}</option>
+                <option value="us {{ size }}">{{ size }}</option>
             {% endfor %}`;
         }
     }

@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
+
+from accessories.models import Accessories
 
 # Create your views here.
 
@@ -33,10 +36,12 @@ def add_to_bag(request, item_id):
         else:
             bag[item_id] = {'kicks_by_size': {size: quantity}}
     else:
+        accessory = Accessories.objects.get(sku=item_id)
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
         else:
             bag[item_id] = quantity
+            messages.success(request, f'Added {accessory.name} to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)

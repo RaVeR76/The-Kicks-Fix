@@ -10,11 +10,14 @@ def context(request):
 def site_context(request):
 
     home = Home.objects.get(name='home')
+    
     main_slogan = home.main_slogan
+    promotion_bar = home.promotion_bar
     logo = home.logo.url
 
     context = {
         'main_slogan': main_slogan,
+        'promotion_bar': promotion_bar,
         'logo': logo,
     }
 

@@ -6,7 +6,7 @@ body {
     background: url('/media/home_dark_hero.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #F5F5F5 ;
+    color: #F5F5F5;
     font-family: 'Poppins';
 }
 
@@ -158,6 +158,23 @@ body {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* -- Bootstrap Toasts --*/
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /* -- Media Queries -- */

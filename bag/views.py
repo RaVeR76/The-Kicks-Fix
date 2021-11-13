@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 
+from kicks.models import Kicks
 from accessories.models import Accessories
 
 # Create your views here.
@@ -28,17 +29,22 @@ def add_to_bag(request, item_id):
         size = request.POST['male_size']
 
     if size:
+        kicks = get_object_or_404(Kicks, sku=item_id)
         if item_id in list(bag.keys()):
             if size in bag[item_id]['kicks_by_size'].keys():
                 bag[item_id]['kicks_by_size'][size] += quantity
+                messages.success(request, f'Updated size {size.upper()} {kicks.name} quantity to {bag[item_id]["kicks_by_size"][size]}')
             else:
                 bag[item_id]['kicks_by_size'][size] = quantity
+                messages.success(request, f'Added size {size.upper()} {kicks.name} to your bag')
         else:
             bag[item_id] = {'kicks_by_size': {size: quantity}}
+            messages.success(request, f'Added size {size.upper()} {kicks.name} to your bag')
     else:
-        accessory = Accessories.objects.get(sku=item_id)
+        accessory = get_object_or_404(Accessories, sku=item_id)
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
+            messages.success(request, f'Updated {accessory.name} quantity to {bag[item_id]}')
         else:
             bag[item_id] = quantity
             messages.success(request, f'Added {accessory.name} to your bag')
@@ -57,17 +63,23 @@ def update_bag(request, item_id):
         size = request.POST['kicks_size']
 
     if size:
+        kicks = get_object_or_404(Kicks, sku=item_id)
         if quantity > 0:
             bag[item_id]['kicks_by_size'][size] = quantity
+            messages.success(request, f'Updated size {size.upper()} {kicks.name} quantity to {bag[item_id]["kicks_by_size"][size]}')
         else:
             del bag[item_id]['kicks_by_size'][size]
             if not bag[item_id]['kicks_by_size']:
                 bag.pop(item_id)
+                messages.success(request, f'Removed size {size.upper()} {kicks.name} from your bag')
     else:
+        accessory = get_object_or_404(Accessories, sku=item_id)
         if quantity > 0:
             bag[item_id] = quantity
+            messages.success(request, f'Updated {accessory.name} quantity to {bag[item_id]}')
         else:
             bag.pop(item_id)
+            messages.success(request, f'Removed {accessory.name} from your bag')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -83,14 +95,19 @@ def remove_from_bag(request, item_id):
             size = request.POST['kicks_size']
 
         if size:
+            kicks = get_object_or_404(Kicks, sku=item_id)
             del bag[item_id]['kicks_by_size'][size]
             if not bag[item_id]['kicks_by_size']:
                 bag.pop(item_id)
+                messages.success(request, f'Removed size {size.upper()} {kicks.name} from your bag')
         else:
+            accessory = get_object_or_404(Accessories, sku=item_id)
             bag.pop(item_id)
+            messages.success(request, f'Removed {accessory.name} from your bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)

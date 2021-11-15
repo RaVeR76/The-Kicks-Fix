@@ -57,6 +57,10 @@ body {
     background-color: #FEE440;
 }
 
+.text-small {
+    font-size: smaller;
+}
+
 /* Override Bootstrap colours for my Carousel icons */
 .fa-angle-left, .fa-angle-right  {
     color: #121416 !important;
@@ -223,7 +227,7 @@ body {
 }
 
 .bag-notification-wrapper {
-    height: 100px;
+    height: 120px;
     overflow-x: hidden;
     overflow-y: auto;
 }

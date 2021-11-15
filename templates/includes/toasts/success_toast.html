@@ -38,11 +38,11 @@
                 <div class="col">
                     <strong><p class="mt-3 mb-1 text-dark">
                         Total{% if free_delivery_topup > 0 %} (Exc. delivery){% endif %}: 
-                        <span class="float-right">${{ total|floatformat:2 }}</span>
+                        <span class="float-right">£{{ total|floatformat:2 }}</span>
                     </p></strong>
                     {% if free_delivery_topup > 0 %}
-                        <p class="mb-0 p-2 bg-warning shadow-sm text-dark text-center">
-                            Spend <strong>${{ free_delivery_topup }}</strong> more to get free next day delivery!
+                        <p class="mb-0 p-2 bg-warning shadow-sm text-dark text-center text-small">
+                            Spend <strong>£{{ free_delivery_topup }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
                     <a href="{% url 'view_bag' %}" class="btn btn-dark btn-block rounded-0">

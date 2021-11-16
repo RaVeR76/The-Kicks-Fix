@@ -1,8 +1,30 @@
 from django.contrib import admin
-from .models import Order
+from .models import Order, OrderLineItem
+
+
+class OrderLineItemAdminInline(admin.TabularInline):
+    model = OrderLineItem
+
+    readonly_fields = ('lineitem_total',)
+
+    #if product_size:
+   #     fields = ('kicks', 'product_size', 'quantity', 'lineitem_total',)
+ ##   else:
+ #       fields = ('accessory', 'quantity', 'lineitem_total',)
+
+    #readonly_fields = ('lineitem_total',)
+
+#class OrderLineItemAdmin(admin.ModelAdmin):
+
+ #   fields = ('order', 'kicks',
+ #               'accessory', 'product_size',
+ #               'quantity',)
+    
+ #   readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
+    inlines = (OrderLineItemAdminInline,)
 
     readonly_fields = ('order_number', 'date',
                        'delivery_cost', 'order_total',

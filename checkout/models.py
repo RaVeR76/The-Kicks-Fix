@@ -1,8 +1,10 @@
 import uuid
 
-
 from django.db import models
 from django.db.models import Sum
+
+from kicks.models import Kicks
+from accessories.models import Accessories
 from home.models import Discount
 
 
@@ -59,3 +61,36 @@ class Order(models.Model):
         return self.order_number
 
 # I will add OrderLine Item later once I figure out how to differentiate between my two products
+
+class OrderLineItem(models.Model):
+    order = models.ForeignKey(Order, null=False, blank=False,
+                              on_delete=models.CASCADE,
+                              related_name='lineitems')
+    kicks = models.ForeignKey(Kicks, null=True, blank=True,
+                                on_delete=models.CASCADE)
+    accessory = models.ForeignKey(Accessories, null=True, blank=True,
+                                on_delete=models.CASCADE)
+    product_size = models.CharField(max_length=8, null=True,
+                                    blank=True)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=False, blank=False,
+                                         editable=False)
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the lineitem total
+        and update the order total.
+        """
+        if self.product_size:
+            self.lineitem_total = self.kicks.price * self.quantity
+            super().save(*args, **kwargs)
+        else:
+            self.lineitem_total = self.accessory.price * self.quantity
+            super().save(*args, **kwargs)
+
+    def __str__(self):
+        if self.product_size:
+            return f'SKU {self.kicks.sku} on order {self.order.order_number}'
+        else:
+            return f'SKU {self.accessory.sku} on order {self.order.order_number}'

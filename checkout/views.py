@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order
+from .models import Order, OrderLineItem
 from kicks.models import Kicks
 from accessories.models import Accessories
 
@@ -36,19 +36,19 @@ def checkout(request):
             for item_id, item_data in bag.items():
                 try:
                     if isinstance(item_data, int):
-                        product = Accessories.objects.get(sku=item_id) # I know Accessories has no sizes
+                        accessory = Accessories.objects.get(sku=item_id) # I know Accessories has no sizes
                         order_line_item = OrderLineItem(
                             order=order,
-                            product=product,
+                            accessory=accessory,
                             quantity=item_data,
                         )
                         order_line_item.save()
                     else:
-                        product = Kicks.objects.get(sku=item_id) # I know Kicks has sizes
+                        kicks = Kicks.objects.get(sku=item_id) # I know Kicks has sizes
                         for size, quantity in item_data['kicks_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
-                                product=product,
+                                kicks=kicks,
                                 quantity=quantity,
                                 product_size=size,
                             )

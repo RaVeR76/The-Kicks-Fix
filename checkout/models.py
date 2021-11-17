@@ -40,7 +40,7 @@ class Order(models.Model):
         free_delivery_threshold = site_discounts.free_delivery_threshold
         standard_delivery_percentage = site_discounts.standard_delivery_percentage
 
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < free_delivery_threshold:
             self.delivery_cost = self.order_total * standard_delivery_percentage / 100
         else:

@@ -7,6 +7,11 @@ class OrderLineItemAdminInline(admin.TabularInline):
 
     readonly_fields = ('lineitem_total',)
 
+ #   if OrderLineItem.product_size == 'null':
+  #      fields = ('kicks', 'product_size', 'quantity', 'lineitem_total',)
+  #  else:
+  #      fields = ('accessory', 'quantity', 'lineitem_total',)
+
   #  def get_fields(self, request, product_size):
    #     if product_size:
     #        fields = ('accessory', 'quantity', 'lineitem_total',)

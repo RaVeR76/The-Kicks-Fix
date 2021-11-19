@@ -38,6 +38,15 @@
     border: 1px solid #121416;
 }
 
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
 
 /* Loader Taken From https://blog.hubspot.com/website/css-loading-animation */
 #loading-overlay {
@@ -47,14 +56,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #121416;
+    background: rgba(18, 20, 22, .97); /* Added RGB version for a little transparency */
     z-index: 9999;
 }
 
 .loader-text {
   position: relative;
   top: 25%;
-  
 }
 
 .ring

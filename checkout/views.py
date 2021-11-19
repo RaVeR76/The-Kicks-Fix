@@ -57,7 +57,7 @@ def checkout(request):
             for item_id, item_data in bag.items():
                 try:
                     if isinstance(item_data, int):
-                        accessory = Accessories.objects.get(sku=item_id) # I know Accessories has no sizes
+                        accessory = Accessories.objects.get(sku=item_id)
                         order_line_item = OrderLineItem(
                             order=order,
                             accessory=accessory,
@@ -65,7 +65,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        kicks = Kicks.objects.get(sku=item_id) # I know Kicks has sizes
+                        kicks = Kicks.objects.get(sku=item_id)
                         for size, quantity in item_data['kicks_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,

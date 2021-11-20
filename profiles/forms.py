@@ -1,11 +1,11 @@
 from django import forms
-from .models import UserProfile
+from .models import UserOrdersProfile
 
 
-class UserProfileForm(forms.ModelForm):
+class UserOrdersProfileForm(forms.ModelForm):
     class Meta:
-        model = UserProfile
-        exclude = ('user', 'fname', 'lname', 'dob', 'profile_image_url', 'profile_image', 'default_email',)
+        model = UserOrdersProfile
+        exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -20,6 +20,7 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
             'default_county': 'County, State or Locality',
+            'dob': 'Date of Birth',
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True

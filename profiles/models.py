@@ -6,18 +6,12 @@ from django.dispatch import receiver
 from django_countries.fields import CountryField
 
 
-class UserProfile(models.Model):
+class UserOrdersProfile(models.Model):
     """
     A simple user profile model for maintaining default
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    fname = models.CharField(max_length=50, null=True, blank=True)
-    lname = models.CharField(max_length=50, null=True, blank=True)
-    dob = models.DateField(max_length=8, null=True, blank=True)
-    profile_image_url = models.URLField(max_length=1024, null=True, blank=True)
-    profile_image = models.ImageField(null=True, blank=True)
-    default_email = models.EmailField(max_length=254, null=True, blank=True)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
     default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
@@ -31,11 +25,19 @@ class UserProfile(models.Model):
 
 
 @receiver(post_save, sender=User)
-def create_or_update_user_profile(sender, instance, created, **kwargs):
+def create_or_update_user_orders_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile info
     """
     if created:
-        UserProfile.objects.create(user=instance)
+        UserOrdersProfile.objects.create(user=instance)
     # Existing users: just save the profile
-    instance.userprofile.save()
+    instance.userordersprofile.save()
+
+
+   # default_email = models.EmailField(max_length=254, null=True, blank=True)
+   # fname = models.CharField(max_length=50, null=True, blank=True)
+   # lname = models.CharField(max_length=50, null=True, blank=True)
+   # dob = models.DateField(max_length=8, null=True, blank=True)
+   # profile_image_url = models.URLField(max_length=1024, null=True, blank=True)
+   # profile_image = models.ImageField(null=True, blank=True)

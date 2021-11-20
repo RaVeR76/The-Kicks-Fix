@@ -204,12 +204,21 @@
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'kicks' %}?category=sale_item" class="btn my-black-btn rounded-0 my-2">
-					<span class="icon mr-2">
-						<i class="fas fa-gifts"></i>
-					</span>
-					<span class="text-uppercase">Now check out the latest Kicks Sales!</span>
-				</a>
+                {% if from_order_history %}
+                    <a href="{% url 'order_history' %}" class="btn my-black-btn rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back To Order History</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'kicks' %}?category=sale_item" class="btn my-black-btn rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-gifts"></i>
+                        </span>
+                        <span class="text-uppercase">Now check out the latest Kicks Sales!</span>
+                    </a>
+                {% endif %}
 			</div>
 		</div>
     </div>

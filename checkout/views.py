@@ -7,8 +7,8 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 from kicks.models import Kicks
 from accessories.models import Accessories
-from profiles.forms import UserOrdersProfileForm
-from profiles.models import UserOrdersProfile
+from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
 from bag.contexts import bag_contents
 
 import stripe
@@ -118,7 +118,7 @@ def checkout(request):
         # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
-                profile = UserOrdersProfile.objects.get(user=request.user)
+                profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
@@ -130,7 +130,7 @@ def checkout(request):
                     'street_address2': profile.default_street_address2,  # NEED TO FIX REST OF PROFILE NAMES FROM PROFILE ADDRESS ETC ETC
                     'county': profile.default_county,
                 })
-            except UserOrdersProfile.DoesNotExist:
+            except UserProfile.DoesNotExist:
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
@@ -156,9 +156,9 @@ def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
-    profile_address = UserOrdersProfile.objects.get(user=request.user)
+    profile = UserProfile.objects.get(user=request.user)
     # Attach the user's profile address to the order
-    order.user_orders_profile = profile_address
+    order.user_profile = profile
     order.save()
 
     # Save the user's info
@@ -172,9 +172,9 @@ def checkout_success(request, order_number):
             'default_street_address2': order.street_address2,
             'default_county': order.county,
         }
-        user_orders_profile_form = UserOrdersProfileForm(profile_data, instance=profile_address)
-        if user_orders_profile_form.is_valid():
-            user_orders_profile_form.save()
+        user_profile_form = UserProfileForm(profile_data, instance=profile)
+        if user_profile_form.is_valid():
+            user_profile_form.save()
 
 
     messages.success(request, f'Order successfully processed! \

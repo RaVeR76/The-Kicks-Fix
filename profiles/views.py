@@ -1,17 +1,17 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 
-from .models import UserOrdersProfile
-from .forms import UserOrdersProfileForm
+from .models import UserProfile
+from .forms import UserProfileForm
 
 from checkout.models import Order
 
 
 def profile(request):
     """ Display the user's profile. """
-    profile = get_object_or_404(UserOrdersProfile, user=request.user)
+    profile = get_object_or_404(UserProfile, user=request.user)
 
-    form = UserOrdersProfileForm(instance=profile)
+    form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
@@ -25,16 +25,16 @@ def profile(request):
 
 def order_history(request):
     """ Display the user's delivery details & order history. """
-    profile_address = get_object_or_404(UserOrdersProfile, user=request.user)
+    profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        form = UserOrdersProfileForm(request.POST, instance=profile_address)
+        form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Delivery Info updated successfully')
 
-    form = UserOrdersProfileForm(instance=profile_address)
-    orders = profile_address.orders.all()
+    form = UserProfileForm(instance=profile)
+    orders = profile.orders.all()
 
     template = 'profiles/order_history.html'
     context = {

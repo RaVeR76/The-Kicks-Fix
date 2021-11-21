@@ -6,7 +6,7 @@ from django.dispatch import receiver
 from django_countries.fields import CountryField
 
 
-class UserOrdersProfile(models.Model):
+class UserProfile(models.Model):
     """
     A simple user profile model for maintaining default
     delivery information and order history
@@ -25,14 +25,14 @@ class UserOrdersProfile(models.Model):
 
 
 @receiver(post_save, sender=User)
-def create_or_update_user_orders_profile(sender, instance, created, **kwargs):
+def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile info
     """
     if created:
-        UserOrdersProfile.objects.create(user=instance)
+        UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
-    instance.userordersprofile.save()
+    instance.userprofile.save()
 
 
    # default_email = models.EmailField(max_length=254, null=True, blank=True)

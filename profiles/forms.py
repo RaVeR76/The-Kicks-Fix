@@ -1,5 +1,6 @@
 from django import forms
 from .models import UserProfile
+from django.contrib.auth.models import User
 
 
 class UserProfileForm(forms.ModelForm):
@@ -32,3 +33,25 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
+
+
+class UserTestProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        exclude = ('user', 'default_phone_number', 'default_postcode','default_town_or_city', 
+        'default_street_address1', 'default_street_address2', 'default_county', 'default_country',)
+
+    def __init__(self, *args, **kwargs):
+        """
+        Test Form
+        """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'fname': 'First Name',
+        }
+
+      #  self.fields['default_postcode'].widget.attrs['autofocus'] = True
+       # self.fields['user'].disabled = True
+      #  for field in self.fields:
+      #      self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
+       #     self.fields[field].label = False

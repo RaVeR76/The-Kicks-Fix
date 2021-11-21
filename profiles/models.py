@@ -8,8 +8,8 @@ from django_countries.fields import CountryField
 
 class UserProfile(models.Model):
     """
-    A simple user profile model for maintaining default
-    delivery information and order history
+    A simple user profile model for maintaining
+    default delivery information
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
@@ -35,9 +35,14 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     instance.userprofile.save()
 
 
-   # default_email = models.EmailField(max_length=254, null=True, blank=True)
-   # fname = models.CharField(max_length=50, null=True, blank=True)
-   # lname = models.CharField(max_length=50, null=True, blank=True)
-   # dob = models.DateField(max_length=8, null=True, blank=True)
-   # profile_image_url = models.URLField(max_length=1024, null=True, blank=True)
+#class UserAddInfoProfile(models.Model):
+    """
+    A user profile model for additional info
+    """
+  #  user = models.OneToOneField(User, on_delete=models.CASCADE)
+ #   dob = models.DateField(max_length=8, null=True, blank=True)
+ #   profile_image_url = models.URLField(max_length=1024, null=True, blank=True)
    # profile_image = models.ImageField(null=True, blank=True)
+
+ #   def __str__(self):
+ #       return self.user.username

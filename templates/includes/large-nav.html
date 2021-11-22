@@ -133,7 +133,7 @@
                 Accessories
             </a>
             <ul class="dropdown-menu" aria-labelledby="accessories">
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Types</a>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Type</a>
                     <ul class="dropdown-menu">
                         {% for type in types %}
                             <li><a class="dropdown-item" href="{% url 'accessories' %}?type={{ type.name }}">{{ type.friendly_name }}</a></li>

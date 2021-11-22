@@ -1,5 +1,8 @@
 from django.conf import settings
 from home.models import Home
+from kicks.models import Brand, Style
+from accessories.models import Type
+from common.models import Colour
 
 
 def context(request):
@@ -10,7 +13,11 @@ def context(request):
 def site_context(request):
 
     home = Home.objects.get(name='home')
-    
+    brands = Brand.objects.all()
+    styles = Style.objects.all()
+    types = Type.objects.all()
+    colours = Colour.objects.all()
+
     main_slogan = home.main_slogan
     promotion_bar = home.promotion_bar
     logo = home.logo.url
@@ -19,6 +26,10 @@ def site_context(request):
         'main_slogan': main_slogan,
         'promotion_bar': promotion_bar,
         'logo': logo,
+        'brands': brands,
+        'styles': styles,
+        'types': types,
+        'colours': colours,
     }
 
     return context

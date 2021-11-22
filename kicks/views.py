@@ -4,7 +4,6 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Kicks, Brand, Style
 from common.models import Category, Sex, Size, Colour
-from accessories.models import Type
 
 # Create your views here.
 
@@ -15,7 +14,6 @@ def all_kicks(request):
     kicks = Kicks.objects.all()
     brands = Brand.objects.all()
     styles = Style.objects.all()
-    types = Type.objects.all()
     colours = Colour.objects.all()
     query = None
     sort = None
@@ -75,6 +73,7 @@ def all_kicks(request):
                 chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
                 kicks_title = f"{chosen_sex.friendly_name}'s {chosen_style.friendly_name} Kicks"
 
+        # Filter ALL Kicks by the selected Colour
         if 'colour' in request.GET:
             chosen_colour = request.GET['colour'].split(',')
             kicks = kicks.filter(colour__name__in=chosen_colour)
@@ -119,10 +118,6 @@ def all_kicks(request):
         'kicks_title': kicks_title,
         'kicks': kicks,
         'search_word': query,
-        'brands': brands,
-        'styles': styles,
-        'types': types,
-        'colours': colours,
         'current_sorting': current_sorting,
     }
 
@@ -133,10 +128,6 @@ def kicks_detail(request, kicks_id):
     """ A view to show one pair of kicks & it's details """
 
     pair_of_kicks = get_object_or_404(Kicks, pk=kicks_id)
-    brands = Brand.objects.all()
-    styles = Style.objects.all()
-    types = Type.objects.all()
-    colours = Colour.objects.all()
 
     kids_sizes = Size.objects.get(name='kids_sizes')
     kids_sizes_uk = kids_sizes.size.get("uk")
@@ -155,10 +146,6 @@ def kicks_detail(request, kicks_id):
 
     context = {
         'kicks': pair_of_kicks,
-        'brands': brands,
-        'styles': styles,
-        'types': types,
-        'colours': colours,
         'kids_sizes_uk': kids_sizes_uk,
         'kids_sizes_eu': kids_sizes_eu,
         'kids_sizes_us': kids_sizes_us,

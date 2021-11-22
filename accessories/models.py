@@ -8,7 +8,7 @@ class Accessories(models.Model):
         verbose_name_plural = 'Accessories'
 
     category = models.ForeignKey('common.Category', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
+    sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
     type = models.ForeignKey('Type', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()

@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Kicks, Brand, Style
-from common.models import Category, Sex, Size
+from common.models import Category, Sex, Size, Colour
 from accessories.models import Type
 
 # Create your views here.
@@ -16,6 +16,7 @@ def all_kicks(request):
     brands = Brand.objects.all()
     styles = Style.objects.all()
     types = Type.objects.all()
+    colours = Colour.objects.all()
     query = None
     sort = None
     direction = None
@@ -74,6 +75,18 @@ def all_kicks(request):
                 chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
                 kicks_title = f"{chosen_sex.friendly_name}'s {chosen_style.friendly_name} Kicks"
 
+        if 'colour' in request.GET:
+            chosen_colour = request.GET['colour'].split(',')
+            kicks = kicks.filter(colour__name__in=chosen_colour)
+            chosen_colour = Colour.objects.filter(name__in=chosen_colour).first()
+            kicks_title = f"All {chosen_colour.friendly_name} Kicks"
+            # Filter Navbar Sex from the Colour filtered Kicks above
+            if 'sex' in request.GET:
+                chosen_sex = request.GET['sex'].split(',')
+                kicks = kicks.filter(sex__name__in=chosen_sex)
+                chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
+                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_colour.friendly_name} Kicks"
+
         # Filter ALL Kicks by Sex only
         if 'category' not in request.GET:
             pass
@@ -81,11 +94,13 @@ def all_kicks(request):
                 pass
                 if 'style' not in request.GET:
                     pass
-                    if 'sex' in request.GET: # Needed all the PASSES so it would just display SEX ONLY with Title too
-                        chosen_sex = request.GET['sex'].split(',')
-                        kicks = kicks.filter(sex__name__in=chosen_sex)
-                        chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
-                        kicks_title = f"All {chosen_sex.friendly_name}'s Kicks"
+                    if 'colour' not in request.GET:
+                        pass
+                        if 'sex' in request.GET: # Needed all the PASSES so it would just display SEX ONLY with Title too
+                            chosen_sex = request.GET['sex'].split(',')
+                            kicks = kicks.filter(sex__name__in=chosen_sex)
+                            chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
+                            kicks_title = f"All {chosen_sex.friendly_name}'s Kicks"
 
 
         # Filter ALL Kicks by name or description using tye search bar
@@ -107,6 +122,7 @@ def all_kicks(request):
         'brands': brands,
         'styles': styles,
         'types': types,
+        'colours': colours,
         'current_sorting': current_sorting,
     }
 
@@ -120,6 +136,7 @@ def kicks_detail(request, kicks_id):
     brands = Brand.objects.all()
     styles = Style.objects.all()
     types = Type.objects.all()
+    colours = Colour.objects.all()
 
     kids_sizes = Size.objects.get(name='kids_sizes')
     kids_sizes_uk = kids_sizes.size.get("uk")
@@ -141,6 +158,7 @@ def kicks_detail(request, kicks_id):
         'brands': brands,
         'styles': styles,
         'types': types,
+        'colours': colours,
         'kids_sizes_uk': kids_sizes_uk,
         'kids_sizes_eu': kids_sizes_eu,
         'kids_sizes_us': kids_sizes_us,

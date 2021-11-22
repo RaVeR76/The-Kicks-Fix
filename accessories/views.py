@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.db.models.functions import Lower
 from .models import Accessories, Type
 from kicks.models import Brand, Style
-from common.models import Category
+from common.models import Category, Colour
 
 # Create your views here.
 
@@ -14,6 +14,7 @@ def all_accessories(request):
     types = Type.objects.all()
     brands = Brand.objects.all()
     styles = Style.objects.all()
+    colours = Colour.objects.all()
     sort = None
     direction = None
     accessories_title = 'All Accessories'
@@ -54,6 +55,7 @@ def all_accessories(request):
         'types': types,
         'brands': brands,
         'styles': styles,
+        'colours': colours,
         'current_sorting': current_sorting,
     }
 
@@ -67,12 +69,14 @@ def accessory_detail(request, accessories_id):
     types = Type.objects.all()
     brands = Brand.objects.all()
     styles = Style.objects.all()
+    colours = Colour.objects.all()
 
     context = {
         'accessories': accessory,
         'types': types,
         'brands': brands,
         'styles': styles,
+        'colours': colours,
     }
 
     return render(request, 'accessories/accessory_detail.html', context)

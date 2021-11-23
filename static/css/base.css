@@ -125,28 +125,28 @@ body {
 }
 
 .my-black-btn {
-    background: #121416;  /* check out if this my colour or BLACK is better */
-    color: #F5F5F5;
+    background: black;
+    color: white;
 }
 
 .my-black-btn:hover,
 .my-black-btn:active,
 .my-black-btn:focus {
-    background: #222;
+    background: black;
     color: white;
 }
 
 .my-white-btn {
-    background: #F5F5F5;
-    color: #121416 !important; /* use important to override link colors for <a> elements */
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
 .my-white-btn:hover,
 .my-white-btn:active,
 .my-white-btn:focus {
-    background: #121416;
-    color: #F5F5F5 !important;
+    background: black;
+    color: white !important;
 }
 
 

@@ -40,8 +40,12 @@
   <body>
     <header class="container-fluid fixed-top">
         <div id="offer-banner" class="row text-center">
-            <div class="col my-white-back my-black-text">                       <!--£{{ free_delivery_threshold }}!-->
-                <h4 class="text-uppercase my-1">{{ promotion_bar }} £{{ free_delivery_threshold }} !!!!</h4>
+            <div class="col my-white-back my-black-text">
+                {% if promotion_bar|lower != 'none' %}                   
+                    <h4 class="text-uppercase my-1">{{ promotion_bar }} £{{ free_delivery_threshold }} !!!!</h4>
+                {% else %}
+                    <h4 class="text-uppercase my-1">New offers coming soon !!!</h4>
+                {% endif %}
             </div>
         </div>
         <div id="mainnav" class="row my-black-back pt-lg-2 d-none d-lg-flex">

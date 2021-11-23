@@ -16,19 +16,19 @@
             <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="text-uppercase text-dark mb-4">Kicks Management</h2>
-                <h5 class="text-muted">Add Kicks</h5>
+                <h5 class="text-muted">Edit Kicks</h5>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_kicks' %}" class="form mb-2 text-dark" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_kicks' kicks.id %}" class="form mb-2 text-dark" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
                         <a class="btn my-white-btn rounded-0" href="{% url 'kicks' %}">Cancel</a>
-                        <button class="btn my-black-btn rounded-0" type="submit">Add Kicks</button>
+                        <button class="btn my-black-btn rounded-0" type="submit">Update Kicks</button>
                     </div>
                 </form>
             </div>

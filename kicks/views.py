@@ -182,3 +182,29 @@ def add_kicks(request):
     }
 
     return render(request, template, context)
+
+
+def edit_kicks(request, kicks_id):
+    """ Edit some Kicks within the store """
+
+    kicks = get_object_or_404(Kicks, pk=kicks_id)
+
+    if request.method == 'POST':
+        form = KicksForm(request.POST, request.FILES, instance=kicks)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated the Kicks')
+            return redirect(reverse('kicks_detail', args=[kicks.id]))
+        else:
+            messages.error(request, 'Failed to update Kicks. Please ensure the form is valid')
+    else:
+        form = KicksForm(instance=kicks)
+        messages.info(request, f'You are editing {kicks.name}')
+
+    template = 'kicks/edit_kicks.html'
+    context = {
+        'form': form,
+        'kicks': kicks,
+    }
+
+    return render(request, template, context)

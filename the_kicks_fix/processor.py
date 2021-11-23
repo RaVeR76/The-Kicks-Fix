@@ -21,11 +21,13 @@ def site_context(request):
     main_slogan = home.main_slogan
     promotion_bar = home.promotion_bar
     logo = home.logo.url
+    toast_logo = home.toast_logo.url
 
     context = {
         'main_slogan': main_slogan,
         'promotion_bar': promotion_bar,
         'logo': logo,
+        'toast_logo': toast_logo,
         'brands': brands,
         'styles': styles,
         'types': types,

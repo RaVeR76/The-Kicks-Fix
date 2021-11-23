@@ -15,6 +15,8 @@ class Home(models.Model):
     discount_code = models.ForeignKey('Discount', null=True, blank=True, on_delete=models.SET_NULL)
     logo_url = models.URLField(max_length=1024, null=True, blank=True)
     logo = models.ImageField(null=True, blank=True)
+    toast_logo_url = models.URLField(max_length=1024, null=True, blank=True)
+    toast_logo = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.name

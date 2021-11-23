@@ -164,7 +164,18 @@ def kicks_detail(request, kicks_id):
 
 def add_kicks(request):
     """" Add new Kicks to the store """
-    form = KicksForm()
+
+    if request.method == 'POST':
+        form = KicksForm(request.POST, request.FILES)
+        if form.is_valid():
+            kicks = form.save()
+            messages.success(request, 'Successfully added the Kicks!')
+            return redirect(reverse('kicks_detail', args=[kicks.id]))
+        else:
+            messages.error(request, 'Failed to add the Kicks. Please ensure the form is valid.')
+    else:
+        form = KicksForm()
+
     template = 'kicks/add_kicks.html'
     context = {
         'form': form,

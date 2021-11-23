@@ -208,3 +208,12 @@ def edit_kicks(request, kicks_id):
     }
 
     return render(request, template, context)
+
+
+def delete_kicks(request, kicks_id):
+    """ Delete Kicks from the store """
+
+    kicks = get_object_or_404(Kicks, pk=kicks_id)
+    kicks.delete()
+    messages.success(request, 'Kicks deleted !')
+    return redirect(reverse('kicks'))

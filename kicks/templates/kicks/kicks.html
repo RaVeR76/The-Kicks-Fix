@@ -57,7 +57,7 @@
                                     </a>
                                     {% else %}
                                     <a href="{% url 'kicks_detail' kicks.id %}">
-                                        <img src="{{ MEDIA_URL }}noimage.png }}" alt="{{ kicks.name }}" class="card-img-top img-fluid">
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ kicks.name }}" class="card-img-top img-fluid">
                                     </a>
                                     {% endif %}
                                     <div class="card-body pb-0 border-top">
@@ -80,6 +80,12 @@
                                                         <i class="fas fa-star mr-1"></i>{{ kicks.style.friendly_name }}
                                                     </a>
                                                 </p>
+                                                {% endif %}
+                                                {% if request.user.is_superuser %}
+                                                    <small>
+                                                        <a href="{% url 'edit_kicks' kicks.id %}">Edit</a> | 
+                                                        <a class="text-danger" href="{% url 'delete_kicks' kicks.id %}">Delete</a>
+                                                    </small>
                                                 {% endif %}
                                             </div>
                                         </div>

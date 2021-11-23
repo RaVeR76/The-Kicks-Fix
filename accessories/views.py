@@ -77,7 +77,7 @@ def add_accessory(request):
         if form.is_valid():
             accessory = form.save()
             messages.success(request, 'Successfully added the Accessory !')
-            return redirect(reverse('add_accessory'))
+            return redirect(reverse('accessory_detail', args=[accessory.id]))
         else:
             messages.error(request, 'Failed to add the Accessory. Please ensure the form is valid.')
     else:
@@ -115,3 +115,12 @@ def edit_accessory(request, accessories_id):
     }
 
     return render(request, template, context)
+
+
+def delete_accessory(request, accessories_id):
+    """ Delete Accessory from the store """
+
+    accessory = get_object_or_404(Accessories, pk=accessories_id)
+    accessory.delete()
+    messages.success(request, 'Accessory deleted !')
+    return redirect(reverse('accessories'))

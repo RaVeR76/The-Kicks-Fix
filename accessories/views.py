@@ -89,3 +89,29 @@ def add_accessory(request):
     }
 
     return render(request, template, context)
+
+
+def edit_accessory(request, accessories_id):
+    """" Edit an Accessory to the store """
+
+    accessory = get_object_or_404(Accessories, pk=accessories_id)
+
+    if request.method == 'POST':
+        form = AccessoriesForm(request.POST, request.FILES, instance=accessory)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated Accessory !')
+            return redirect(reverse('accessory_detail', args=[accessory.id]))
+        else:
+            messages.error(request, 'Failed to add the Accessory. Please ensure the form is valid.')
+    else:
+        form = AccessoriesForm(instance=accessory)
+        messages.info(request, f'You are editing {accessory.name}')
+
+    template = 'accessories/edit_accessory.html'
+    context = {
+        'form': form,
+        'accessories': accessory,
+    }
+
+    return render(request, template, context)

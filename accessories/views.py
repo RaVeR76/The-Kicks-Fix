@@ -1,7 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models.functions import Lower
+from django.contrib import messages
+
 from .models import Accessories, Type
 from common.models import Category
+from .forms import AccessoriesForm
 
 # Create your views here.
 
@@ -64,3 +67,25 @@ def accessory_detail(request, accessories_id):
     }
 
     return render(request, 'accessories/accessory_detail.html', context)
+
+
+def add_accessory(request):
+    """" Add a new Accessory to the store """
+
+    if request.method == 'POST':
+        form = AccessoriesForm(request.POST, request.FILES)
+        if form.is_valid():
+            accessory = form.save()
+            messages.success(request, 'Successfully added the Accessory !')
+            return redirect(reverse('add_accessory'))
+        else:
+            messages.error(request, 'Failed to add the Accessory. Please ensure the form is valid.')
+    else:
+        form = AccessoriesForm()
+
+    template = 'accessories/add_accessory.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

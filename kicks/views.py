@@ -169,7 +169,7 @@ def add_kicks(request):
         form = KicksForm(request.POST, request.FILES)
         if form.is_valid():
             kicks = form.save()
-            messages.success(request, 'Successfully added the Kicks!')
+            messages.success(request, 'Successfully added the Kicks !')
             return redirect(reverse('kicks_detail', args=[kicks.id]))
         else:
             messages.error(request, 'Failed to add the Kicks. Please ensure the form is valid.')
@@ -193,7 +193,7 @@ def edit_kicks(request, kicks_id):
         form = KicksForm(request.POST, request.FILES, instance=kicks)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated the Kicks')
+            messages.success(request, 'Successfully updated the Kicks !')
             return redirect(reverse('kicks_detail', args=[kicks.id]))
         else:
             messages.error(request, 'Failed to update Kicks. Please ensure the form is valid')

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -162,8 +163,13 @@ def kicks_detail(request, kicks_id):
     return render(request, 'kicks/kicks_detail.html', context)
 
 
+@login_required
 def add_kicks(request):
     """" Add new Kicks to the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that.')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = KicksForm(request.POST, request.FILES)
@@ -184,8 +190,13 @@ def add_kicks(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_kicks(request, kicks_id):
     """ Edit some Kicks within the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that.')
+        return redirect(reverse('home'))
 
     kicks = get_object_or_404(Kicks, pk=kicks_id)
 
@@ -210,8 +221,13 @@ def edit_kicks(request, kicks_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_kicks(request, kicks_id):
     """ Delete Kicks from the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that.')
+        return redirect(reverse('home'))
 
     kicks = get_object_or_404(Kicks, pk=kicks_id)
     kicks.delete()

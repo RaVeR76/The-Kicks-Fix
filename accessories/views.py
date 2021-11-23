@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.contrib import messages
 
@@ -69,8 +70,13 @@ def accessory_detail(request, accessories_id):
     return render(request, 'accessories/accessory_detail.html', context)
 
 
+@login_required
 def add_accessory(request):
-    """" Add a new Accessory to the store """
+    """ Add a new Accessory to the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that.')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = AccessoriesForm(request.POST, request.FILES)
@@ -91,8 +97,13 @@ def add_accessory(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_accessory(request, accessories_id):
-    """" Edit an Accessory to the store """
+    """ Edit an Accessory to the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that.')
+        return redirect(reverse('home'))
 
     accessory = get_object_or_404(Accessories, pk=accessories_id)
 
@@ -117,8 +128,13 @@ def edit_accessory(request, accessories_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_accessory(request, accessories_id):
     """ Delete Accessory from the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that.')
+        return redirect(reverse('home'))
 
     accessory = get_object_or_404(Accessories, pk=accessories_id)
     accessory.delete()

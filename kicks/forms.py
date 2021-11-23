@@ -33,4 +33,4 @@ class KicksForm(forms.ModelForm):
         self.fields['style'].choices = style_friend_names
         self.fields['colour'].choices = colour_friend_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+            field.widget.attrs['class'] = 'border-dark rounded-0'

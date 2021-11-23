@@ -100,7 +100,7 @@
                                     </label>
                                 </div>
 
-                                    <select class="form-control rounded-0 w-50" name="{{ kicks.sex }}_size" id='kicks_size'>
+                                    <select class="form-control rounded-0 w-50 border-dark" name="{{ kicks.sex }}_size" id='kicks_size'>
                                         
                                         {% if kicks.sex|lower == 'kids' %}
                                             {% for size in kids_sizes_uk %}
@@ -133,7 +133,7 @@
                                                 </span>
                                             </button>
                                         </div>
-                                        <input class="form-control qty_input" type="number" 
+                                        <input class="form-control qty_input border-dark" type="number" 
                                             name="quantity" value="1" min="1" max="99" 
                                             data-item_id="{{ kicks.id }}" id="id_qty_{{ kicks.id }}">
                                         <div class="input-group-append">

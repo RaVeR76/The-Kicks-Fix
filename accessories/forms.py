@@ -1,6 +1,6 @@
 from django import forms
-from .models import Accessories, Type
 from common.models import Category, Colour
+from .models import Accessories, Type
 
 
 class AccessoriesForm(forms.ModelForm):
@@ -25,4 +25,4 @@ class AccessoriesForm(forms.ModelForm):
         self.fields['type'].choices = type_friend_names
         self.fields['colour'].choices = colour_friend_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+            field.widget.attrs['class'] = 'border-dark rounded-0'

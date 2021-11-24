@@ -12,27 +12,17 @@ from checkout.models import Order
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+    """ Display the user's profile info """
     profile = get_object_or_404(UserProfile, user=request.user)
 
-   #first_name = UserProfile.user.first_name
-
-    #print(first_name)
-   # print(last_name)
-
-    if request.method == 'POST':
-        form = UserTestProfileForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Profile updated successfully')
-
     form = UserTestProfileForm(instance=profile)
+
+    user_birthdate = '15/03/1976' # For display purposes only
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'on_profile_page': True, # Don't forget to delete this from toast success if unused
-       # 'orders': orders,
+        'user_birthdate': user_birthdate,
     }
 
     return render(request, template, context)

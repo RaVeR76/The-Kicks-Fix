@@ -73,11 +73,14 @@
                             </a>
                         </p>
                     {% endif %}
+
                     {% if request.user.is_superuser %}
-                        <small>
-                            <a href="{% url 'edit_kicks' kicks.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_kicks' kicks.id %}">Delete</a>
-                        </small>
+                        <p class="mt-1">
+                            <small>
+                                <a href="{% url 'edit_kicks' kicks.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_kicks' kicks.id %}">Delete</a>
+                            </small>
+                        </p>
                     {% endif %}
 
                     <p class="mt-3">{{ kicks.description }}</p>
@@ -119,8 +122,7 @@
                                     </select>
 
                             </div>
-
-
+                            
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">

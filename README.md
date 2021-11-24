@@ -232,9 +232,14 @@ I used [drawSQL](https://drawsql.app/) to construct my schema which is a free on
 - On each products details page, kicks or accessory, I have three images available that automatically scroll whilst you are there
 - I have added kicks size selection for UK, EU & US that allows the user to select either & then changes the dropdown options to suit (also takes into account sex)
 - The logged in user had a profile page for personal details and an order history page were they can view previous orders
-- 
 
 ### **Features To Be Implemented**
+
+- Wishlist feature that I had originally wanted from the start
+- Admin page for changing the landing image or logos which you can do through Django Admin, in the Home database
+- Admin page for adding discounts and changing delivery costs which again you can do though Django Admin, in the Discounts database
+- Registration by utilising Social accounts like Google or Facebook
+- Different payments types like Paypal or GooglePay although Stripe works well
 
 [Back to Top](#table-of-contents)
 

@@ -227,6 +227,13 @@ I used [drawSQL](https://drawsql.app/) to construct my schema which is a free on
 
 ### **Existing Features**
 
+- Registration & login functionality using the Allauth package from Django, to keep it simple
+- Good filtering within the Navbar dropdowns for finding specific Kicks quickly
+- On each products details page, kicks or accessory, I have three images available that automatically scroll whilst you are there
+- I have added kicks size selection for UK, EU & US that allows the user to select either & then changes the dropdown options to suit (also takes into account sex)
+- The logged in user had a profile page for personal details and an order history page were they can view previous orders
+- 
+
 ### **Features To Be Implemented**
 
 [Back to Top](#table-of-contents)
@@ -236,26 +243,33 @@ I used [drawSQL](https://drawsql.app/) to construct my schema which is a free on
 
 ### **Languages**
 
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS) 
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) 
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) 
+
 ### **Tools and Libraries**
-drawsql.app
+
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Stripe](https://stripe.com/gb)
+- [Git](https://en.wikipedia.org/wiki/Git) 
+- [GitPod](https://www.gitpod.io/)
+- [Heroku](https://id.heroku.com/login)
+- [jQuery](https://jquery.com/)
+- [Balsamiq](https://balsamiq.com/)
+- [W3C HTML Validation Service](https://validator.w3.org/)
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- [Font Awesome](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [drawSQL](https://drawsql.app/)
 
 [Back to Top](#table-of-contents)
 
 ## **Testing**
 ---
 
-### Heading 1
-
-#### User Story : Number 1
-
-* **Plan**
-* **Implementation**
-* **Test**  
-* **Result**
-* **Verdict**
-
-
-
+Testing can be found on [here](https://github.com/RaVeR76/the-kicks-fix/blob/master/testing.md) in a seperate file
 
 ### **Validation Checks**
 
@@ -267,12 +281,7 @@ drawsql.app
 ## **Bugs**
 ---
 
-### **BUG Title 1**
-
-* **Bug**
-* **Fix**
-* **Verdict**
-
+Bugs can be found on [here](https://github.com/RaVeR76/the-kicks-fix/blob/master/bugs.md) in a seperate file
 
 [Back to Top](#table-of-contents)
 

@@ -67,7 +67,6 @@ class Order(models.Model):
     def __str__(self):
         return self.order_number
 
-# I will add OrderLine Item later once I figure out how to differentiate between my two products
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False,

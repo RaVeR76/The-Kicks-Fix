@@ -72,7 +72,7 @@
                                                 {% if request.user.is_superuser %}
                                                 <small>
                                                     <a href="{% url 'edit_accessory' accessories.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="#" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                                                    <a class="text-danger" href="{% url 'delete_accessory' accessories.id %}">Delete</a>
                                                 </small>
                                                 {% endif %}    <!--{% url 'delete_accessory' accessories.id %}-->
                                             </div>
@@ -99,8 +99,6 @@
             <i class="fas fa-arrow-up my-black-text mx-auto my-auto"></i>
         </a>	
     </div>
-    
-{% include 'includes/confirm_accessory.html' %}
 {% endblock %}
 
 {% block postloadjs %}

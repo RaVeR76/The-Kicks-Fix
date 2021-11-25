@@ -7,7 +7,7 @@ from common.models import Colour
 # Available for testing images and links if required (tip from my mentor)
 def context(request):
     debug_flag = settings.DEBUG
-    return{"debug_flag":debug_flag}
+    return{"debug_flag": debug_flag}
 
 
 def site_context(request):

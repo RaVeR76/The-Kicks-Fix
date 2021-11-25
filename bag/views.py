@@ -63,7 +63,7 @@ def update_bag(request, item_id):
         size = request.POST['kicks_size']
 
     if size:
-        kicks = get_object_or_404(Kicks, sku=item_id)
+        #kicks = get_object_or_404(Kicks, sku=item_id)
         if quantity > 0:
             bag[item_id]['kicks_by_size'][size] = quantity
         else:
@@ -71,7 +71,7 @@ def update_bag(request, item_id):
             if not bag[item_id]['kicks_by_size']:
                 bag.pop(item_id)
     else:
-        accessory = get_object_or_404(Accessories, sku=item_id)
+       # accessory = get_object_or_404(Accessories, sku=item_id)
         if quantity > 0:
             bag[item_id] = quantity
         else:
@@ -91,12 +91,12 @@ def remove_from_bag(request, item_id):
             size = request.POST['kicks_size']
 
         if size:
-            kicks = get_object_or_404(Kicks, sku=item_id)
+            #kicks = get_object_or_404(Kicks, sku=item_id)
             del bag[item_id]['kicks_by_size'][size]
             if not bag[item_id]['kicks_by_size']:
                 bag.pop(item_id)
         else:
-            accessory = get_object_or_404(Accessories, sku=item_id)
+            #accessory = get_object_or_404(Accessories, sku=item_id)
             bag.pop(item_id)
 
         request.session['bag'] = bag

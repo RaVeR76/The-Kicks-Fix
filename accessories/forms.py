@@ -21,7 +21,6 @@ class AccessoriesForm(forms.ModelForm):
         colour = Colour.objects.all()
         colour_friend_names = [(c.id, c.get_friendly_name()) for c in colour]
 
-
         self.fields['category'].choices = cat_friend_names
         self.fields['type'].choices = type_friend_names
         self.fields['colour'].choices = colour_friend_names

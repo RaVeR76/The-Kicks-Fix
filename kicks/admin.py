@@ -3,6 +3,7 @@ from .models import Kicks, Brand, Style
 
 # Register your models here.
 
+
 class KicksAdmin(admin.ModelAdmin):
     list_display = (
         'brand',
@@ -16,6 +17,7 @@ class KicksAdmin(admin.ModelAdmin):
 
     ordering = ('brand',)
 
+
 class BrandAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
@@ -23,6 +25,7 @@ class BrandAdmin(admin.ModelAdmin):
     )
 
     ordering = ('friendly_name',)
+
 
 class StyleAdmin(admin.ModelAdmin):
     list_display = (

@@ -98,7 +98,8 @@ def all_kicks(request):
                     pass
                     if 'colour' not in request.GET:
                         pass
-                        if 'sex' in request.GET: # Needed all the PASSES so it would just display SEX ONLY with Title too
+# Needed all the PASSES so it would just display SEX ONLY with Title too
+                        if 'sex' in request.GET:
                             chosen_sex = request.GET['sex'].split(',')
                             kicks = kicks.filter(sex__name__in=chosen_sex)
                             chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()

@@ -64,19 +64,17 @@
                                         <div class="row">
                                             <div class="col">
                                                 <p class="lead mb-0 text-left font-weight-bold">£{{ accessories.price }}</p>
-                                                {% if accessories.type %}
                                                 <p class="small mt-1 mb-0">
                                                     <a href="{% url 'accessories' %}?type={{ accessories.type.name }}" class="text-muted">
                                                         <i class="fas fa-tag mr-1"></i>{{ accessories.type.friendly_name }}
                                                     </a>
                                                 </p>
-                                                {% endif %}
                                                 {% if request.user.is_superuser %}
                                                 <small>
                                                     <a href="{% url 'edit_accessory' accessories.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_accessory' accessories.id %}">Delete</a>
+                                                    <a class="text-danger" href="#" data-toggle="modal" data-target="#exampleModal">Delete</a>
                                                 </small>
-                                                {% endif %}
+                                                {% endif %}    <!--{% url 'delete_accessory' accessories.id %}-->
                                             </div>
                                         </div>
                                     </div>
@@ -101,6 +99,8 @@
             <i class="fas fa-arrow-up my-black-text mx-auto my-auto"></i>
         </a>	
     </div>
+    
+{% include 'includes/confirm_accessory.html' %}
 {% endblock %}
 
 {% block postloadjs %}

@@ -7,6 +7,7 @@ class AccessoriesForm(forms.ModelForm):
 
     class Meta:
         model = Accessories
+        exclude = ('image1_url', 'image2_url', 'image3_url',)
         fields = '__all__'
 
     def __init__(self, *args, **kwargs):

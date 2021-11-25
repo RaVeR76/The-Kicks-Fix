@@ -66,21 +66,17 @@
                                     <div class="card-footer bg-white pt-0 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
-                                                <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>
-                                                {% if kicks.brand %}
+                                                <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>  
                                                 <p class="small mt-1 mb-0">
                                                     <a href="{% url 'kicks' %}?brand={{ kicks.brand.name }}" class="text-muted">
                                                         <i class="fas fa-copyright mr-1"></i>{{ kicks.brand.friendly_name }}
                                                     </a>
                                                 </p>
-                                                {% endif %}
-                                                {% if kicks.style %}
                                                 <p class="small mt-1 mb-0">
                                                     <a href="{% url 'kicks' %}?style={{ kicks.style.name }}" class="text-muted">
                                                         <i class="fas fa-star mr-1"></i>{{ kicks.style.friendly_name }}
                                                     </a>
-                                                </p>
-                                                {% endif %}
+                                                </p>                                           
                                                 {% if request.user.is_superuser %}
                                                     <small>
                                                         <a href="{% url 'edit_kicks' kicks.id %}">Edit</a> | 

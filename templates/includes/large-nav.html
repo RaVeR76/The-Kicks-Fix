@@ -9,8 +9,8 @@
                 New In
             </a>
             <div class="dropdown-menu" aria-labelledby="new-in">
-                <a href="{% url 'kicks' %}?category=new_in&&sex=male,unisex" class="dropdown-item">Men</a>
-                <a href="{% url 'kicks' %}?category=new_in&&sex=female,unisex" class="dropdown-item">Women</a>
+                <a href="{% url 'kicks' %}?category=new_in&&sex=male" class="dropdown-item">Men</a>
+                <a href="{% url 'kicks' %}?category=new_in&&sex=female" class="dropdown-item">Women</a>
                 <a href="{% url 'kicks' %}?category=new_in&&sex=kids" class="dropdown-item">Kids</a>
                 <a href="{% url 'accessories' %}?category=new_in" class="dropdown-item">Accessories</a>
                 <a href="{% url 'kicks' %}?category=new_in" class="dropdown-item">All Kicks</a>
@@ -23,8 +23,8 @@
                 Sales
             </a>
             <div class="dropdown-menu" aria-labelledby="sales">
-                <a href="{% url 'kicks' %}?category=sale_item&&sex=male,unisex" class="dropdown-item">Men</a>
-                <a href="{% url 'kicks' %}?category=sale_item&&sex=female,unisex" class="dropdown-item">Women</a>
+                <a href="{% url 'kicks' %}?category=sale_item&&sex=male" class="dropdown-item">Men</a>
+                <a href="{% url 'kicks' %}?category=sale_item&&sex=female" class="dropdown-item">Women</a>
                 <a href="{% url 'kicks' %}?category=sale_item&&sex=kids" class="dropdown-item">Kids</a>
                 <a href="{% url 'accessories' %}?category=sale_item" class="dropdown-item">Accessories</a>
                 <a href="{% url 'kicks' %}?category=sale_item" class="dropdown-item">All Kicks</a>
@@ -168,7 +168,7 @@
         if (!$(this).next().hasClass('show')) {
             $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
         }
-        var $subMenu = $(this).next(".dropdown-menu");
+        let $subMenu = $(this).next(".dropdown-menu");
         $subMenu.toggleClass('show');
 
 

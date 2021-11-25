@@ -1,0 +1,1 @@
+web: gunicorn the_kicks_fix.wsgi:application

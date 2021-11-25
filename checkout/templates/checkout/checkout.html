@@ -150,13 +150,7 @@
     </div>
     <div id="loading-overlay">
         <div class="ring">
-
-            {% if debug_flag %}
                 <img src="{{ loader_logo }}" alt="Loader Logo Image" class="loader-text">
-            {% else %}
-                <img src="actual static link used in heroku">    <!-- Test this out once I deploy to Heroku (tip from my mentor posted on slack) -->
-            {% endif %}
-
             <p class="loader-text">Is Processing Your Payment</p>
             <span class="spin"></span>
         </div>

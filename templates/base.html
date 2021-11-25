@@ -66,13 +66,7 @@
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center">
                 <a href="{% url 'home' %}" class="nav-link">
-
-                    {% if debug_flag %}
                         <img src="{{ main_logo }}" alt="Logo Image">
-                    {% else %}
-                        <img src="actual static link used in heroku">    <!-- Test this out once I deploy to Heroku (tip from my mentor posted on slack) -->
-                    {% endif %}
-
                 </a>
             </div>
 

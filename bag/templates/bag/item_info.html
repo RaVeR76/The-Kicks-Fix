@@ -1,0 +1,5 @@
+<p class="my-0"><strong>{{ item.product.name }}</strong></p>
+{% if item.size %}
+    <p class="my-0"><strong>Size: </strong>{{ item.size|upper }}</p>
+{% endif %}
+<p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>

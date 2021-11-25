@@ -40,8 +40,8 @@
   <body>
     <header class="container-fluid fixed-top">
         <div id="offer-banner" class="row text-center">
-            <div class="col my-white-back my-black-text">
-                {% if promotion_bar|lower != 'none' %}                   
+            <div class="col my-white-back text-dark">
+                {% if promotion_bar|lower != 'none' %} <!-- Admin needs to input none if no promotionas available -->                  
                     <h4 class="text-uppercase my-1">{{ promotion_bar }} £{{ free_delivery_threshold }} !!!!</h4>
                 {% else %}
                     <h4 class="text-uppercase my-1">New offers coming soon !!!</h4>

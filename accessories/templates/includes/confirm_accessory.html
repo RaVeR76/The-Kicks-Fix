@@ -3,11 +3,7 @@
         <div class="modal-content">
             <div class="modal-header">
 
-                {% if debug_flag %}
                     <img src="{{ toast_logo }}" class="mt-1" alt="Modal Logo Image">
-                {% else %}
-                    <img src="actual static link used in heroku">    <!-- Test this out once I deploy to Heroku (tip from my mentor posted on slack) -->
-                {% endif %}
 
                 <h5 class="modal-title mx-auto" id="confirm_accessory">Delete Confirmation !</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

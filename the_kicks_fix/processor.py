@@ -4,7 +4,7 @@ from kicks.models import Brand, Style
 from accessories.models import Type
 from common.models import Colour
 
-
+# Available for testing images and links if required (tip from my mentor)
 def context(request):
     debug_flag = settings.DEBUG
     return{"debug_flag":debug_flag}

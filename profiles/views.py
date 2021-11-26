@@ -5,7 +5,6 @@ from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from .forms import UserProfileForm
-from .forms import UserTestProfileForm
 
 from checkout.models import Order
 
@@ -13,15 +12,11 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """ Display the user's profile info """
-    profile = get_object_or_404(UserProfile, user=request.user)
 
-    form = UserTestProfileForm(instance=profile)
-
-    user_birthdate = '15/03/1976' # For display purposes only
+    user_birthdate = '29/02/1980'
 
     template = 'profiles/profile.html'
     context = {
-        'form': form,
         'user_birthdate': user_birthdate,
     }
 

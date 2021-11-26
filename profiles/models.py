@@ -33,16 +33,3 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
-
-
-#class UserAddInfoProfile(models.Model):
-    """
-    A user profile model for additional info
-    """
-  #  user = models.OneToOneField(User, on_delete=models.CASCADE)
- #   dob = models.DateField(max_length=8, null=True, blank=True)
- #   profile_image_url = models.URLField(max_length=1024, null=True, blank=True)
-   # profile_image = models.ImageField(null=True, blank=True)
-
- #   def __str__(self):
- #       return self.user.username

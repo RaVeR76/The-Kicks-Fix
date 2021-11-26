@@ -1,7 +1,9 @@
 # Bugs
 
 ## Overview
-I know that most of the ***BUGS*** or ***ISSUES*** I found were relatively simple and probably downright stupidity, on my part, in some cases but for this project I had created an Excel spreadsheet to help me log them. It also had a diary of my work on a day to day basis and a page for ALL my bugs I encountered no matter how big or small. It also hand some project tips, comments as I went along, any credits for code, images, etc and ALL my Django model data as regards my Products and associated info like Brands, Colours, Types and so on.
+I know that most of the *BUGS* or *ISSUES* I found were relatively simple and probably downright stupidity, on my part in some cases but for this project I had created an Excel spreadsheet to help me log them, so I really did log everything I could .... the small ones and the big ones. It also had a diary of my work on a day to day basis and a page for ALL my bugs I encountered no matter how big or small. It also hand some project tips, comments as I went along, any credits for code, images, etc and ALL my Django model data as regards my Products and associated info like Brands, Colours, Types and so on.  
+Anyway below is all my bugs I encountered throughout my final project so I hope they don't bore you but I really hope they might help someone else out there going through the same learning process as me, as the bugs I couldn't fix myself, I found the solutions online so these kind of issues have happened to someone else at a time before :)  
+Also, I have linked each bug to my Github issues list, where I have also logged them too so you can have a look there but I have deffo expanded more on them within here, as I have had more time to explain them and show images to help !   
 
 
 ## **[Bug 1](https://github.com/RaVeR76/The-Kicks-Fix/issues/1)**   
@@ -546,9 +548,9 @@ Screenshot of the Heroku App log is shown below:
 ![Heroku App Error Log](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/heroku-log.png)  
 
 * **Fix**  
-I'm not sure this happened to be quite honest with you but I had forgot to make sure my manage.py was linked to mysql before doing a db.json dump so when I linked it all to postgres there was only one field there ha ha. Therefore my site was looking for objects that did not exist. I nearly had heart failure but with the help of student support we figured it out, or more so, they figured out the issue and helped me rectify it !!!
-I think I panic too much as I'm nearly at the end and just wanted this part to run smoothly so I could get all other issues like my README completed but sure .... this is what coding life is all about - Encountering Problems and Finding Solutions !
+I'm not sure this happened to be quite honest with you but I had forgot to make sure my ```manage.py``` was linked to mysql before doing a db.json dump so when I linked it all to postgres there was only one field there ha ha. Therefore my site was looking for objects that did not exist. I nearly had heart failure but with the help of student support we figured it out, or more so, they figured out the issue and helped me rectify it !!!  
+I think I panicked too much as I'm nearly at the end and just wanted this part to run smoothly so I could get all other issues like my README completed but sure .... this is what coding life is all about - Encountering Problems and Finding Solutions !  
 Worse coding day ever ha ha, well .... until the next one !!!
 
 * **Verdict**  
-I'm so glad I got my project deplayed on Heroku and it's working well
+I'm so glad I got my project deployed on Heroku as I always worry about this part but it's there for the **Whole World** to see and I am super proud of it :)

@@ -1,6 +1,6 @@
 # **The Kicks Fix**
 
-***Image goes here***
+![The Kicks Fix](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/readme-hero.png)
 
 ## **Goal for this project**
 

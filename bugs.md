@@ -3,10 +3,12 @@
 ## Overview
 I know that most of the ***BUGS*** or ***ISSUES*** I found were relatively simple and probably downright stupidity, on my part, in some cases but for this project I had created an Excel spreadsheet to help me log them. It also had a diary of my work on a day to day basis and a page for ALL my bugs I encountered no matter how big or small. It also hand some project tips, comments as I went along, any credits for code, images, etc and ALL my Django model data as regards my Products and associated info like Brands, Colours, Types and so on.
 
+
+## **[Bug 1](https://github.com/RaVeR76/The-Kicks-Fix/issues/1)**   
+
 ### **Dropdowns wouldn't work on any navbar menus**
 
-* [Bug 1](https://github.com/RaVeR76/The-Kicks-Fix/issues/1)  
-
+* **Issue**  
 I had labelled each dropdown-item as another dropdown-menu …. D'OH !
 
 * **Fix**  
@@ -16,10 +18,11 @@ Just correct the error above by labelling correctly, as drop-down items
 Simple bug to start off
 
 
+## **[Bug 2](https://github.com/RaVeR76/The-Kicks-Fix/issues/2)**  
+
 ### **Dropdown item hover custom CSS doesn't change the colour**
 
-* [Bug 2](https://github.com/RaVeR76/The-Kicks-Fix/issues/2)  
-
+* **Issue**  
 Couldn't get my dropdown item hover colour to change from the default white
 
 * **Fix**  
@@ -32,7 +35,6 @@ I tried my best for a few hours looking through Bootstrap documentation & within
 ### **Navbar Toggle Icon Not Displaying**
 
 * [Bug 3](https://github.com/RaVeR76/The-Kicks-Fix/issues/3)  
-
 My navbar toggle icon would not display at all when on mobile view
 
 * **Fix**  
@@ -45,7 +47,6 @@ I think it all looks and works well for the overall view on smaller screens
 ### **UPPERCASE CSS Wouldn't Work !**
 
 * [Bug 4](https://github.com/RaVeR76/The-Kicks-Fix/issues/4)  
-
 I tried to add my own CSS to change the titles of my project to UPPERCASE but it wouldn't work
 
 * **Fix**  
@@ -58,7 +59,6 @@ Another simple fix, thankfully
 ### **Model Errors At First Attempt**
 
 * [Bug 5](https://github.com/RaVeR76/The-Kicks-Fix/issues/5)  
-
 Tried my first model & loads of errors appeared !  
 I was going to split my apps into a Kicks app, an Accessories app & a Common app then link them all together.
 
@@ -78,8 +78,7 @@ I'm not a Django wizard by all means but I think it's an awesome framework and o
 ### **More Model Errors**
 
 * [Bug 6](https://github.com/RaVeR76/The-Kicks-Fix/issues/6)  
-
-Still had similar issues to previous bug, **Bug 5**, when I did a dry run on my Kicks App even though I had made my Common App first & imported the three models from my Common App
+Still had similar issues to previous bug, **Bug 5**, when I did a dry run on my Kicks App even though I had made my Common App first & imported the three models from my Common App.
 
 * **Fix**  
 This was due to the fact I needed to add *common*, i.e. ```common.Category```, instead of just *Category* to my ForeignKeys for all three imports. Plus I needed to install Pillow for my imageField to work. You can see this change in the secong image above.
@@ -93,7 +92,6 @@ Once I fixed the above issues, I was error free :)
 ### **Adding An Extra Field To Kicks Model Error**
 
 * [Bug 7](https://github.com/RaVeR76/The-Kicks-Fix/issues/7)  
-
 Forgot to add 'Price' to my Kicks model & when I tried to do it, it came up with an error saying I needed a 'Default' value.
 
 * **Fix**  
@@ -106,7 +104,6 @@ Simple enough fix but I just panic when I see migration errors ha ha
 ### **CSS Stopped Working !**
 
 * [Bug 8](https://github.com/RaVeR76/The-Kicks-Fix/issues/8)  
-
 My CSS just stopped working all of a sudden or maybe it didn't even work when I started my laptop to be honest but when I came to add some new CSS, it just wouldn't work. I tried 'Hard Refreshes' over & over again. I rebooted my laptop twice but still no joy. I trawled through my code to see if I had made a mistake but found nothing. I then tried another different project but this was the same so I knew it was a common CSS problem.  
 At first I thought it was a Gitpod update or something but could not find any online info about it. Next I thought it was due to the installation of my new webcam & the driver had messed sh!t up ..... believe me I was clutching at straws & my head was severely melted.
 
@@ -122,7 +119,6 @@ Rough evening was had by all, well me just, but I got there in the end and anoth
 ### **Image Wouldn't Display**
 
 * [Bug 9](https://github.com/RaVeR76/The-Kicks-Fix/issues/9)  
-
 Couldn't get my first image to work when I was testing. It worked perfectly until I added an if / else statement so that if there was no image, it would display 'No Image'
 
 * **Fix**  
@@ -136,7 +132,6 @@ Super annoying issue as it was a simple fix but took me a while to detect the er
 ### **Card Border Issue**
 
 * [Bug 10](https://github.com/RaVeR76/The-Kicks-Fix/issues/10) 
-
 Tried adding a border to each card image to separate the image from the name & price but it wouldn't work or display.
 
 * **Fix**  
@@ -167,7 +162,6 @@ All images look well on their main product pages respectively but more so on the
 ### **Django Admin Issue**
 
 * [Bug 12](https://github.com/RaVeR76/The-Kicks-Fix/issues/12)  
-
 I was trying to organise my Accessories Admin and it threw up an Attribute Error saying 'type' is ***not callable***
 
 ![Wee Admin Issue](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/accessory-admin-issue.png)
@@ -182,7 +176,6 @@ Another easy fix and an oversight on my part
 ### **Template Wouldn't Open**
 
 * [Bug 13](https://github.com/RaVeR76/The-Kicks-Fix/issues/13)  
-
 Created my accessory_detail views, urls & template but when I clicked on an accessory image it wouldn't open the accessory_detail page for that particular accessory.
 Checked the views & urls over again & again. When I added ```accessories/1``` onto the end of my project address, it would open my template no problem.
 
@@ -197,7 +190,6 @@ Another easy fix and another oversight on my part
 ### **Queries Not Working**
 
 * [Bug 14](https://github.com/RaVeR76/The-Kicks-Fix/issues/14)  
-
 I could not get my queries working at all for Category=new_in & Sex=male which was really my first query I tried.
 I knew once I figured this first one out then the rest would be easy.
 I tried everything for hours and then I had to contact Tutor Support.
@@ -213,10 +205,9 @@ I always try my best to solve these issues myself and I generally do but I deffo
 I couldn't stop querying after I knew how to do it ha ha !
 
 
-### **Brands Wouldn't Display In Navbar Dropdown**
+### **Brands Wouldn't Display In Navbar Dropdown**  
 
 * [Bug 15](https://github.com/RaVeR76/The-Kicks-Fix/issues/15)  
-
 I wanted to display ALL my available Brands in each submenu under Men (just for starters) but couldn't get it working.
 I created a FOR LOOP in my large-nav to iterate through all the Brands but it just wouldn't work.
 The submenu was just blank.
@@ -225,4 +216,77 @@ The submenu was just blank.
 I realised I needed to Import Brand to my home view, create a context dict with the Brands & pass it through to the home page. It worked so I could use the list to filter Kicks by Brands. I also needed to do this in my Kicks view too to make it work there.
 
 * **Verdict**  
-It took a wee while to figure it out but I have to say it looks so good and I was super happy with the end product
+It took a wee while to figure it out but I have to say it looks so good and I am super happy with the end product
+
+
+### **JavaScript Wouldn't Work When Moved From Template Page**  
+
+* [Bug 16](https://github.com/RaVeR76/The-Kicks-Fix/issues/16)  
+I made a JavaScript file in a JS folder in the main Static folder and I moved my JavaScript code for my Brands submenu into it but I could not get it to work so I had to move it back. This happened me before in a previous project and I had to keep it on the actual page that was using it and if another page required the same code, I would've had to copy it to that page too.
+
+* **Fix**  
+No fix for this bug but at least the JavaScript still works.
+
+
+* **Verdict**  
+Maybe later I look at it again (It works where it is, anyway)
+
+
+### **Types Disappeared After First Selection**  
+
+* [Bug 17](https://github.com/RaVeR76/The-Kicks-Fix/issues/17)  
+When I chose a Type from the Accessory menu, it displayed ALL the accessories of that type but when I went to the submenu again to choose another type my list of types had vanished. I checked my code & found the issue quite quickly thankfully !
+
+* **Fix**  
+In my accessories views, I had created a Type filter for when the user had selected a type from the navbar submenu. I had called my ```GET``` variable ```types``` so when I put this in the *context* it override my initial ```types``` variable, for **ALL** types. I simply changed my ```GET``` variable to ```chosen_type``` and this solved the issue.
+
+* **Verdict**  
+Simple fix for for a simple problem
+
+
+### **Sex Filter Overriding Everything**  
+
+* [Bug 18](https://github.com/RaVeR76/The-Kicks-Fix/issues/18)  
+My Kicks pages titles code ```{{ kicks_title }}``` worked no problem for New In and Sales but when I tried adding it to the Sex filter, this override the New In and Sales ones. It would only display titles like *'All Male Kicks'* instead of *'All New In Male Kicks'* like before
+
+* **Fix**  
+I added ```if 'category' not in request.GET:``` which allowed me to stop my sex queries overriding my Category Kicks title.
+I did encounter more issues with these filters down the line though and **Sex** was always at the center of it, see next bug too.
+
+* **Verdict**  
+I had to do trial and error to get this part right which I did in the end but when I added the filter bar .... a whole new level of pain was opened ha ha !
+
+
+### **Sex Filtering Again Causing An Issue**  
+
+* [Bug 19](https://github.com/RaVeR76/The-Kicks-Fix/issues/19)  
+SEX and 'BRAND OR STYLE' won't filter to display the images & title for the Navbar Sex only selection i.e. All Mens Kicks or All Womens Kicks.
+The title kept saying ALL Kicks & displayed All the Kicks images, it wouldn't filter as per chosen Sex on the Nav
+
+* **Fix**  
+I added a **PASS** for each of the 'Category', 'Brand' & 'Style' when ```not in request.Get```'s consecutively so eventually it gets to Sex and forgets about the rest allowing me to display my ALL ```chosen_sex``` Kicks title & the chosen 'Sex' kicks images. This bug tormented me as I wanted all my titles to display depending on what the user selected by nav or filter bar :)
+I added an image of what I mean below so you can understand, plus I have added Colours now too within my filters.
+
+![Sex Query Issue](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/sex-query-issue.png)
+
+* **Verdict**  
+I did have to mess about with my query code to try and get this right. It took a while but again I am super happy with how it turned out and displays on the page. 
+You can click on any of the Nav options, like Mens -> Brand -> Adidas, and it displays all the men's Adidas Kicks with the title changing to whatever the user has selected.
+This works for all options for Kicks and Accesories but there is no sex option for accessories though, as they are pretty much all unisex.  
+P.S. I know there is probably one line of code out there that can do this in one go but I made this work for me so I am happy.
+
+
+### **Two Different Products With Same PKs**  
+
+* [Bug 20](https://github.com/RaVeR76/The-Kicks-Fix/issues/20)  
+When I add an item from Kicks and an item from Accessories that have the same *id* number then the quantity adds together for that *id* number.
+I needed to formulate some way of separating these items or it was game over.
+
+* **Fix**  
+I changed my original **item_id** for Kicks from ```kicks.id``` to ```kicks.sku``` and for Accessories from ```accessories.id``` to ```accessories.sku```. This works so far and I can see the different items in my terminal accumulating :)
+
+* **Verdict**  
+I'm glad I got passed this issue at this moment in time but I knew similar issues would pop up later into this project. I think I maybe started off with not the greatest Schema by having two products in different apps but then a again there has to be some way around it. I'll look into this after my project is complete as this did cause me a lot of grief throughout my project.
+
+
+

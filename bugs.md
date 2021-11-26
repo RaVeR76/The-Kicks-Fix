@@ -6,10 +6,10 @@ I know that most of the ***BUGS*** or ***ISSUES*** I found were relatively simpl
 
 ## **[Bug 1](https://github.com/RaVeR76/The-Kicks-Fix/issues/1)**   
 
-### **Dropdowns wouldn't work on any navbar menus**
+### **Dropdowns Wouldn't Work On Any Navbar Menus**
 
 * **Issue**  
-I had labelled each dropdown-item as another dropdown-menu …. D'OH !
+I had labelled each dropdown-item as another dropdown-menu
 
 * **Fix**  
 Just correct the error above by labelling correctly, as drop-down items
@@ -20,7 +20,7 @@ Simple bug to start off
 
 ## **[Bug 2](https://github.com/RaVeR76/The-Kicks-Fix/issues/2)**  
 
-### **Dropdown item hover custom CSS doesn't change the colour**
+### **Dropdown Item hover Custom CSS Doesn't Change The Colour**
 
 * **Issue**  
 Couldn't get my dropdown item hover colour to change from the default white
@@ -29,7 +29,7 @@ Couldn't get my dropdown item hover colour to change from the default white
 No fix found and the bug is still *open* in my Github page
 
 * **Verdict**  
-I tried my best for a few hours looking through Bootstrap documentation & within the Slack Community but no joy. You could do it in previous versions but BS4 is a No No unfortunately. I think you can override it in the SCSS of BS but I don't want to mess things up as it's not that important. Just would've been a nice wee touch !
+I tried my best for a few hours looking through Bootstrap documentation and within the Slack Community but no joy. You could do it in previous versions but BS4 is a No No unfortunately. I think you can override it in the SCSS of BS but I don't want to mess things up as it's not that important. Just would've been a nice wee touch !
 
 ## **[Bug 3](https://github.com/RaVeR76/The-Kicks-Fix/issues/3)**  
 
@@ -39,7 +39,7 @@ I tried my best for a few hours looking through Bootstrap documentation & within
 My navbar toggle icon would not display at all when on mobile view
 
 * **Fix**  
-I added the 'navbar-light' class to my navbar in base.html which enabled the burger icon to appear & changed the background colour of the ```navbar-toggler``` in the CSS to my Minion Yellow
+I added the 'navbar-light' class to my navbar in base.html which enabled the burger icon to appear and changed the background colour of the ```navbar-toggler``` in the CSS to my Minion Yellow
 
 * **Verdict**  
 I think it all looks and works well for the overall view on smaller screens
@@ -64,8 +64,8 @@ Another simple fix, thankfully
 ### **Model Errors At First Attempt**
 
 * **Issue**  
-Tried my first model & loads of errors appeared !  
-I was going to split my apps into a Kicks app, an Accessories app & a Common app then link them all together.
+Tried my first model and loads of errors appeared !  
+I was going to split my apps into a Kicks app, an Accessories app and a Common app then link them all together.
 
 ![My First Migration](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/my-first-migration.png)
 
@@ -84,8 +84,8 @@ I'm not a Django wizard by all means but I think it's an awesome framework and o
 
 ### **More Model Errors**
 
-* **Issue** 
-Still had similar issues to previous bug, **Bug 5**, when I did a dry run on my Kicks App even though I had made my Common App first & imported the three models from my Common App.
+* **Issue**  
+Still had similar issues to previous bug, **Bug 5**, when I did a dry run on my Kicks App even though I had made my Common App first and imported the three models from my Common App.
 
 * **Fix**  
 This was due to the fact I needed to add *common*, i.e. ```common.Category```, instead of just *Category* to my ForeignKeys for all three imports. Plus I needed to install Pillow for my imageField to work. You can see this change in the secong image above.
@@ -101,7 +101,7 @@ Once I fixed the above issues, I was error free :)
 ### **Adding An Extra Field To Kicks Model Error**
 
 * **Issue**   
-Forgot to add 'Price' to my Kicks model & when I tried to do it, it came up with an error saying I needed a 'Default' value.
+Forgot to add 'Price' to my Kicks model and when I tried to do it, it came up with an error saying I needed a 'Default' value.
 
 * **Fix**  
 Added 'default=0.00' to my price field which solved the issue
@@ -112,14 +112,14 @@ Simple enough fix but I just panic when I see migration errors ha ha
 
 ## **[Bug 8](https://github.com/RaVeR76/The-Kicks-Fix/issues/8)**  
 
-### **CSS Stopped Working !**
+### **CSS Stopped Working**
 
 * **Issue**    
-My CSS just stopped working all of a sudden or maybe it didn't even work when I started my laptop to be honest but when I came to add some new CSS, it just wouldn't work. I tried 'Hard Refreshes' over & over again. I rebooted my laptop twice but still no joy. I trawled through my code to see if I had made a mistake but found nothing. I then tried another different project but this was the same so I knew it was a common CSS problem.  
-At first I thought it was a Gitpod update or something but could not find any online info about it. Next I thought it was due to the installation of my new webcam & the driver had messed sh!t up ..... believe me I was clutching at straws & my head was severely melted.
+My CSS just stopped working all of a sudden or maybe it didn't even work when I started my laptop to be honest but when I came to add some new CSS, it just wouldn't work. I tried 'Hard Refreshes' over and over again. I rebooted my laptop twice but still no joy. I trawled through my code to see if I had made a mistake but found nothing. I then tried another different project but this was the same so I knew it was a common CSS problem.  
+At first I thought it was a Gitpod update or something but could not find any online info about it. Next I thought it was due to the installation of my new webcam and the driver had messed sh!t up ..... believe me I was clutching at straws and my head was severely melted.
 
 * **Fix**  
-This BUG near killed me tonight as I have wasted a whole evening trying to fix it. In the end I needed to clear my Chrome browsing data which included 'Browsing History', 'Cookies and other site data' & 'Cached images and files'. I did this for the last 24 hrs as I wasn't sure how far I needed to go back. In the end this killed the BUG instead of me but I am still so annoyed about it. I guess I know that it won't take as long to solve it next time as this BUG is imprinted in my wee Coding Brain now :)
+This BUG near killed me tonight as I have wasted a whole evening trying to fix it. In the end I needed to clear my Chrome browsing data which included 'Browsing History', 'Cookies and other site data' and 'Cached images and files'. I did this for the last 24 hrs as I wasn't sure how far I needed to go back. In the end this killed the BUG instead of me but I am still so annoyed about it. I guess I know that it won't take as long to solve it next time as this BUG is imprinted in my wee Coding Brain now :)
 
 * **Verdict**  
 Rough evening was had by all, well me just, but I got there in the end and another hard lesson learnt
@@ -147,10 +147,10 @@ Super annoying issue as it was a simple fix but took me a while to detect the er
 ### **Card Border Issue**
 
 * **Issue**  
-Tried adding a border to each card image to separate the image from the name & price but it wouldn't work or display.
+Tried adding a border to each card image to separate the image from the name and price but it wouldn't work or display.
 
 * **Fix**  
-I guessed that the image was hiding the border so tried adding a 'border-top' to the Card Body & it worked
+I guessed that the image was hiding the border so tried adding a 'border-top' to the Card Body and it worked
 
 * **Verdict**  
 Simple enough fix to be fair
@@ -163,8 +163,7 @@ Simple enough fix to be fair
 * **Issue**    
 I made ALL images, apart from a few I missed unfortunately, 400px x 400px just for simplification and site display purposes. 
 I have only loading twelve images until I am sure everything is working properly throughout my project then I will add the rest at the end.
-
-When images 3.jpg & 6.jpg scrolled along in their image carousels .... the Carousel Indicators glitched very slightly, for some reason.
+When images 3.jpg and 6.jpg scrolled along in their image carousels .... the Carousel Indicators glitched very slightly, for some reason.
 
 * **Fix**  
 If you added the images again to the Django Kicks DB manually (which I did for all images and data), so they change names they worked okay although 6.jpg still has a slight glitch. 
@@ -196,12 +195,11 @@ Another easy fix and an oversight on my part
 ### **Template Wouldn't Open**
 
 * **Issue**   
-Created my accessory_detail views, urls & template but when I clicked on an accessory image it wouldn't open the accessory_detail page for that particular accessory.
-Checked the views & urls over again & again. When I added ```accessories/1``` onto the end of my project address, it would open my template no problem.
+Created my accessory_detail views, urls and template but when I clicked on an accessory image it wouldn't open the accessory_detail page for that particular accessory.
+Checked the views and urls over again and again. When I added ```accessories/1``` onto the end of my project address, it would open my template no problem.
 
 * **Fix**  
-Found that the issue was I hadn't added my href to the images in my accessories.html !!!  
-Simple solution & I'm glad to say it didn't take too long to solve but still, it had to be resolved :)
+Found that the issue was I hadn't added my href to the images in my accessories.html !!! Simple solution and I'm glad to say it didn't take too long to solve but still, it had to be resolved :)
 
 * **Verdict**  
 Another easy fix and another oversight on my part
@@ -212,7 +210,7 @@ Another easy fix and another oversight on my part
 ### **Queries Not Working**
 
 * **Issue**   
-I could not get my queries working at all for Category=new_in & Sex=male which was really my first query I tried.
+I could not get my queries working at all for Category=new_in and Sex=male which was really my first query I tried.
 I knew once I figured this first one out then the rest would be easy.
 I tried everything for hours and then I had to contact Tutor Support.
 We tried for more hours to solve it between us and eventually we got there in the end :)
@@ -220,7 +218,7 @@ We tried for more hours to solve it between us and eventually we got there in th
 * **Fix**  
 Firstly, I hadn't given my Sex model a name attribute so when I tried to filter this I was getting errors and I couldn't figure it out.  
 Secondly, in my Kicks views I had removed the ```.split(',')``` from ```sex = request.GET['sex'].split(',')``` so the images wouldn't display.  
-At the end I got there & that's all that matters even if my head was melted but sure ..... everyday is a school day !!!
+At the end I got there and that's all that matters even if my head was melted but sure ..... everyday is a school day !!!
 
 * **Verdict**  
 I always try my best to solve these issues myself and I generally do but I deffo neeeded help with this one and I'm glad **Tutor Support** was on hand to assist me.
@@ -237,7 +235,7 @@ I created a FOR LOOP in my large-nav to iterate through all the Brands but it ju
 The submenu was just blank.
 
 * **Fix**  
-I realised I needed to Import Brand to my home view, create a context dict with the Brands & pass it through to the home page. It worked so I could use the list to filter Kicks by Brands. I also needed to do this in my Kicks view too to make it work there.
+I realised I needed to Import Brand to my home view, create a context dict with the Brands and pass it through to the home page. It worked so I could use the list to filter Kicks by Brands. I also needed to do this in my Kicks view too to make it work there.
 
 * **Verdict**  
 It took a wee while to figure it out but I have to say it looks so good and I am super happy with the end product
@@ -263,7 +261,7 @@ Maybe later I look at it again (It works where it is, anyway)
 ### **Types Disappeared After First Selection**  
 
 * **Issue**    
-When I chose a Type from the Accessory menu, it displayed ALL the accessories of that type but when I went to the submenu again to choose another type my list of types had vanished. I checked my code & found the issue quite quickly thankfully !
+When I chose a Type from the Accessory menu, it displayed ALL the accessories of that type but when I went to the submenu again to choose another type my list of types had vanished. I checked my code and found the issue quite quickly thankfully !
 
 * **Fix**  
 In my accessories views, I had created a Type filter for when the user had selected a type from the navbar submenu. I had called my ```GET``` variable ```types``` so when I put this in the *context* it override my initial ```types``` variable, for **ALL** types. I simply changed my ```GET``` variable to ```chosen_type``` and this solved the issue.
@@ -292,11 +290,11 @@ I had to do trial and error to get this part right which I did in the end but wh
 ### **Sex Filtering Again Causing An Issue**  
 
 * **Issue**    
-SEX and 'BRAND OR STYLE' won't filter to display the images & title for the Navbar Sex only selection i.e. All Mens Kicks or All Womens Kicks.
-The title kept saying ALL Kicks & displayed All the Kicks images, it wouldn't filter as per chosen Sex on the Nav
+SEX and 'BRAND OR STYLE' won't filter to display the images and title for the Navbar Sex only selection i.e. All Mens Kicks or All Womens Kicks.
+The title kept saying ALL Kicks and displayed All the Kicks images, it wouldn't filter as per chosen Sex on the Nav
 
 * **Fix**  
-I added a **PASS** for each of the 'Category', 'Brand' & 'Style' when ```not in request.Get```'s consecutively so eventually it gets to Sex and forgets about the rest allowing me to display my ALL ```chosen_sex``` Kicks title & the chosen 'Sex' kicks images. This bug tormented me as I wanted all my titles to display depending on what the user selected by nav or filter bar :)
+I added a **PASS** for each of the 'Category', 'Brand' and 'Style' when ```not in request.Get```'s consecutively so eventually it gets to Sex and forgets about the rest allowing me to display my ALL ```chosen_sex``` Kicks title and the chosen 'Sex' kicks images. This bug tormented me as I wanted all my titles to display depending on what the user selected by nav or filter bar :)
 I added an image of what I mean below so you can understand, plus I have added Colours now too within my filters.
 
 ![Sex Query Issue](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/sex-query-issue.png)
@@ -333,8 +331,14 @@ I couldn't get the bag to add both Kicks and Accessories. I couldn't work it out
 * **Fix**  
 Within ```bag_contents``` in the ```contexts.py```, as I was using SKU because of the bug, *Bug20* above where the two different products had many of the same PKs, I needed to differentiate between the two SKUs for this bug. By luck I didn't have any proper SKUs for my Accessories that I found online so made these up and they all started with **RAVE** ha ha. So I just added a wee bit of code to check if the ```item_id``` in the bag had the word 'RAVE' in it. If it didn't have 'RAVE' it was a Kicks item so I get the object from my Kicks db and if it did have 'RAVE' it was an Accessory item so I get the object from my Accessories db. Talk about a stroke of luck tbh as my head was about to explode on this bug !!!
 
+My code below which solved this bug and before I refactored it:
+![Kicks or Accessory Before Refactoring](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/kicks-or-accessory-before.png) 
+
+My code below which solved this bug and after I refactored it:
+![Kicks or Accessory After Refactoring](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/kicks-or-accessory-after.png) 
+
 * **Verdict**  
-I the end this solve this bug at this time so I was happy again, although this piece of ingenious code was removed at a later date, as I utilised the fact that my Kicks would have sizes and my Accessories would not which made it a little easier to work with. Plus I used this fundamental difference on various occasions through my project to differentiate  between the two products.
+In the end this solve this bug at this time so I was happy again, although this piece of ingenious code was removed at a later date, as I utilised the fact that my Kicks would have sizes and my Accessories would not which made it a little easier to work with. Plus I used this fundamental difference on various occasions through my project to differentiate  between the two products.
 
 
 ## **[Bug 22](https://github.com/RaVeR76/The-Kicks-Fix/issues/22)**  
@@ -380,7 +384,7 @@ I know my code isn't the best but I was so happy to get this part of my project 
 ### **I Forgot About Unisex Option In My Kicks**  
 
 * **Issue**    
-After being so HAPPY to get my JavaScript working for the previous bug, Bug 23, for displaying ALL the different sizes for Kids, Females & Males depending on UK, EU or US being selected …... ANOTHER BUG arises ha ha !!!
+After being so HAPPY to get my JavaScript working for the previous bug, Bug 23, for displaying ALL the different sizes for Kids, Females and Males depending on UK, EU or US being selected …... ANOTHER BUG arises ha ha !!!
 I could curl up and die right now to be honest but hey, this is the coding life ain't it lol !!!
 I only went and forgot about my Kicks SEX option of UNISEX ..... so not sure how to go about that at this point as I love my Size Options for the others.
 I had some Kicks set out as Unisex so they would be displayed either within the Mens pages or the Females pages, as a lot of Kicks are Unisex. This worked really well for my navbar filters but when I came to this point, I needed to make a decision.
@@ -390,3 +394,161 @@ No fix for this issue at the moment
 
 * **Verdict**  
 I have left ALL unisex options out for my Kicks in the database and I am only using Male, Female or Kids as the selected options.
+
+
+## **[Bug 25](https://github.com/RaVeR76/The-Kicks-Fix/issues/25)**  
+
+### **Another Bag Issue**  
+
+* **Issue**    
+I can UPDATE my Accessories in the bag but my Kicks throw up an error so need to work on this !!!
+
+* **Fix**  
+I needed to add a hidden input for my Kicks Size to the form that I was updating, as my update_bag view was always looking for it. I thought it was already there because I was just updating the quantity but hey, you're always learning and I am glad I solved the bug :)
+
+* **Verdict**  
+Issue solved relatively easyily
+
+
+## **[Bug 26](https://github.com/RaVeR76/The-Kicks-Fix/issues/26)**  
+
+### **Changing Quantity Issues Within Kicks**  
+
+* **Issue**    
+When I have two of the same pair of Kicks selected but of different sizes, the first quantity +/- input will work and stop at 1 but the second lower down pair of Kicks can go into minus numbers etc. Hopefully I have time to look at this once the rest is finished :)
+
+* **Fix**  
+No fix as of yet
+
+* **Verdict**  
+Hopefully get back to this to solve it
+
+
+## **[Bug 27](https://github.com/RaVeR76/The-Kicks-Fix/issues/27)**  
+
+### **Order Line Item Bug Part 1**  
+
+* **Issue**    
+I have two products so NOT sure how to add a product to an Order Line Item model, as there will be some with the same PKs
+
+* **Fix**  
+Struggled with this one but had to settle for adding both options of Kicks and Accessories to my OrderLineItem model and work around that. 
+
+* **Verdict**
+Not happy with the outcome but it's the best I could come up with at present plus I'm too close to the finish line to waste more time trying to come up with a better solution, if there even is one.
+
+
+## **[Bug 28](https://github.com/RaVeR76/The-Kicks-Fix/issues/28)**  
+
+### **Order Line Item Bug Part 2**  
+
+* **Issue**    
+I can get my OrderLineItem to display in individual lines if I add it's own Admin but can't get it to display inline with orders
+
+* **Fix**  
+Forgot to add ```inlines = (OrderLineItemAdminInline,)``` to my OrderAdmin as I had already made this due to the above bug, as I was trying to figure out the best way to complete that at a later time.
+
+* **Verdict**  
+Silly oversight again but one I caught on quickly to
+
+
+## **[Bug 29](https://github.com/RaVeR76/The-Kicks-Fix/issues/29)**  
+
+### **Order Line Item Bug Part 3**  
+
+* **Issue**    
+Just a continuous of Bug 27 above, I can get my OrderLineItem to display inline now in my OrderAdmin and therefore in Django admin but I still want to be able to display either Kicks or Accessories NOT both, depending on the actual order.
+
+* **Fix**  
+I tried for ages to work around this by trying if / else statements in my OrderLineItem admin but I just couldn't get it working tbh. It would only display one item or the other but not both when using an if / else statement.
+I had to settle for displaying both Kicks and Accessory fields within each Order Line Item but just leave an item blank if that product wasn't purchased.
+
+* **Verdict**  
+Unfortunately, a lot of my bugs have came form the fact of how I structured my initial database but it's a steep learning curve and one I know to look out for in the future.
+I'm still happy I have got it nearly right tbh because I had sat for about 4 hours the other night scratching my head and thinking how am I gonna get passed this BUG !!!!
+
+
+## **[Bug 30](https://github.com/RaVeR76/The-Kicks-Fix/issues/30)**  
+
+### **Terminal Issue**  
+
+* **Issue**    
+Billing, Shipping and Meta data not displaying in my terminal intent
+
+* **Fix**  
+I had imported JSON at the top of my webhooks.py so it didn't work for some reason but when I moved it down after everything else it worked ….. OR SO I THOUGHT !!!!
+I had restarted my laptop at the same time but tried the above first and it worked but only after it had thrown a Country Error first for United Kingdom which it hadn't previously so I knew something had changed.
+I still didn't believe that moving the JSON import had solved it because I googled if this would have been the issue and it wasn't clear at all. So being me I put the JSON import back at the top and tried it ..... it still worked ha ha !!!!
+
+* **Verdict**  
+I honestly do not know how I solved it but it must have been the RESTART to be honest but sure, it's working now .... damn coding confusion !
+
+
+## **[Bug 31](https://github.com/RaVeR76/The-Kicks-Fix/issues/31)**  
+
+### **Navbar Submenu Items Disappeared Again**  
+
+* **Issue**    
+I noticed that when I went to the Bag page, that the navbar dropdown submenus for Kicks Brands, Style, Colour and also Accessories Types were not displaying anything. They were just blank so the user could never select these options from anywhere other than Home, Kicks or Accessories views but this is the way I had originally laid it out :(
+See *BUG 15* for original issue so this was just an advance on this bug.
+
+* **Fix**  
+I therefore added Kicks Brand, Style, Colour and also Accessories Type to my ```processor.py``` file in my main The Kicks Fix folder so that I could add them to my Sites Context and therefore utilise them anywhere I want across the site. I then proceeded to delete all the unrequired code from within my Home, Kicks and Accessories views were I had originally been passing them through their contexts ..... Jobs a good un .... I hope !!!!
+
+* **Verdict**  
+This actually saved a lot of code by doing it this way but I wish I had've figured this out at the start as it would have saved a lot of time for me. If the truth be told I should have remembered from the lessons but when you are trying to learn so much so fast, so you have plenty of time left to develop your own project, it becomes quite hazy at times. I deffo learned a lot more about Django doing my own project as I went along which is a good thing.
+
+
+## **[Bug 32](https://github.com/RaVeR76/The-Kicks-Fix/issues/32)**  
+
+### **Needed Accessories Category Removed From Options**  
+
+* **Issue**    
+When adding my Product Management - ```add_kicks``` form to the template, I had added a *for loop* to display ALL my Categories friendly names within this form. Upon inspection of the form, within my add_kicks template I noticed that their was an option for **Accessories** which I do not require as I am only adding **NEW KICKS** here.
+
+* **Fix**  
+My original code was ```categories = Category.objects.all()``` but with a simple mode, I changed it to ```categories = Category.objects.all().exclude(name='accessories')```.
+
+* **Verdict**  
+This rectified the issue and my form now displays the rest of the options. I also had to do the opposite for my Add Accessory form and eliminate the Kicks option but all is good and it looks well.
+
+
+## **[Bug 33](https://github.com/RaVeR76/The-Kicks-Fix/issues/33)**  
+
+### **Loading My DB.JSON Caused An Error**  
+
+* **Issue**    
+As I was getting ready to deploy to Heroku, I followed the tutorials and got to the ```python3 manage.py loaddata db.json``` stage, were I was loading my database data into postgres for working on Heroku. I was nervous enough about getting this whole deployment process right, even if I had done it a few times before but I had seen some deployment horror stories in Slack, so my nerves were banjo-ed. Anyway I was at this stage and straight away, it threw an error up ..... defibrillator please !!!
+
+Screenshot of the error that occurred is shown below:
+![loadata db.json Error](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/loaddata-error-dbjson.png) 
+
+* **Fix**  
+I kept calm and checked through our Slack community and found the answer, it was because I had made a few orders using a Country's full name whereas I had changed it use CountryField which uses the two letter codes for orders.
+I simply went in and deleted the majority of my orders starting with the oldest and then tried this step again .... Hey Presto, it worked !!!
+
+* **Verdict**  
+Issue fixed but not before I needed a change of underpants. Anyway, you soon realise that a lot of bugs or issues aren't just unique to you and someone somewhere else has generally encountered the same issues before, so it's just a matter of searching the usual outlets for the answer.
+
+
+## **[Bug 34](https://github.com/RaVeR76/The-Kicks-Fix/issues/34)**  
+
+### **Heroku Error On My First App Try After Deployment**  
+
+* **Issue**    
+I followed the online course instructions, well I thought I did, and when I tried my Heroku app for the first time to see if it would work, it threw up an error .....   Defibrillator again please !!!!  
+I honestly thought I was going to faint and I tried briefly to see if I could figure it out but I knew this was a job for Student Support !  
+
+Screenshot of the app error that occurred is shown below:
+![Heroku App Error At First Attempt](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/heroku-error.png)   
+
+Screenshot of the Heroku App log is shown below:
+![Heroku App Error Log](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/heroku-log.png)  
+
+* **Fix**  
+I'm not sure this happened to be quite honest with you but I had forgot to make sure my manage.py was linked to mysql before doing a db.json dump so when I linked it all to postgres there was only one field there ha ha. Therefore my site was looking for objects that did not exist. I nearly had heart failure but with the help of student support we figured it out, or more so, they figured out the issue and helped me rectify it !!!
+I think I panic too much as I'm nearly at the end and just wanted this part to run smoothly so I could get all other issues like my README completed but sure .... this is what coding life is all about - Encountering Problems and Finding Solutions !
+Worse coding day ever ha ha, well .... until the next one !!!
+
+* **Verdict**  
+I'm so glad I got my project deplayed on Heroku and it's working well

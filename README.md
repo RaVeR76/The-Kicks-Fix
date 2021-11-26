@@ -301,6 +301,14 @@ Bugs can be found on [here](https://github.com/RaVeR76/the-kicks-fix/blob/master
 ## **Conclusion**
 ---
 
+I spent a lot of time getting the images right and then I had to scroll through the internet for decriptions, SKUs, estimated prices etc etc. This took so much time to sort out which I didn't realise and deffo had a knock on effect by not getting everything I wanted within my website completed. Whilst some of the images aren't the best and the descriptions are the best I could find especially for the Accessories. I t was hard work and very manoutinous looking for all the info for the images I had downloaded form Kaggle. The file was 8.46 Gb of kick images which I trawled through for the best sets I could. I had anothe folder from Kaggle which was only 383 Mb but there was only one image of each Kicks here And I realy wanted the three for my wee carousel. Also spending all that time cutting, editimg and resizing them all to 400x400 pixels deffo made the overall display look more universal with no odd shaped images throwing it all off tilt. In the real world there would this would be a job for another colleague to get these pics / images raedy for the site so during this project not only was I the developer but also the graphic designer too. I even made the wee logo to go with it all.
+
+At the end of the day I put my heart and soul into this project and sat for a month and a hald every week night and ALL weekends trying to do the best that I could. Like I said whilst I didn't get some things completed like my Wishlist function and so so happy with the overall look and fucntionality of my website. 
+
+
+
+
+
 Difference between BS4 & BS5 - https://www.geeksforgeeks.org/difference-between-bootstrap-4-and-bootstrap-5/ 
 
 

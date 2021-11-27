@@ -467,11 +467,7 @@ The more I play around and practise with Django and databases then the more conf
 ## **Testing**
 ---
 
-Testing can be found on [here](https://github.com/RaVeR76/the-kicks-fix/blob/master/testing.md) in a seperate file
-
-### **Validation Checks**
-
-### **User Questionnaire And Overall Feedback**
+Testing can be found on [here](https://github.com/RaVeR76/the-kicks-fix/blob/master/testing.md) in a seperate file  
 
 [Back to Top](#table-of-contents)
 

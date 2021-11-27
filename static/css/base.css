@@ -356,5 +356,9 @@ body {
         padding: .25rem .5rem !important;
     }
 
+    h2.text-uppercase.kicks-title {
+        font-size: .9rem;
+    }
+
 
 }

@@ -11,6 +11,7 @@
 #### User Goals : The website will have to work well on all devices
 
 #### **Test**
+I utilised my own laptop connected to a large screen, my work laptop which has a failry small screen, my tablet, my mobile phone and of course Chrome DevTools to test reponsiveness across various platforms
 
 #### **Results**
 
@@ -150,3 +151,6 @@
 
 #### **Verdict**
 
+
+
+# Validators

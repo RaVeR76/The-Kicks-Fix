@@ -211,8 +211,8 @@ Anyway, you can have a wee look at my wireframes below:
 For my database structure I had to think about this for a while hence why I have added before I'm about to start adding my models to my project.
 To be honest it took me while to get my head around it but I think I got there. After watching the Code Institute tutorials again, endless Youtube videos and 
 undeniable assistance from my lengendary mentor, I have produced my first Database Schema. I didn't lay one out for my MS3 which cost me valuable marks but for this project, I wasn't going to make the same mistake.
-The Kicks Fix Schema is shown below where I have set up 14 models and have shown the various relationships between them. I may add more if required as my project develops
-& I think of new features that can be implemented but these are the main models that my project needs and I am very happy with the structure.
+The Kicks Fix Schema is shown below where I have set up 15 models and have shown the various relationships between them. I may add more if required as my project develops
+and I think of new features that can be implemented but these are the main models that my project needs and I am very happy with the structure.
 I used [drawSQL](https://drawsql.app/) to construct my schema which is a free online app and really awesome, once you get the hang of it !
 
 ![The-Kicks-Fix Schema](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/schema.png)
@@ -407,6 +407,12 @@ Original Bag | original_bag | models.TextField | null=False, blank=False, defaul
 Stripe PID | stripe_pid | models.CharField | max_length=254, null=False, blank=False, default=''
 
 
+### **Data Modelling Conclusion**
+
+I struggled a little at the start with this but the more I got into the project I started to understand most of it and how it all worked. Don't get me wrong, I still have a lot to learn which will come when the pressure to meet the project deadline is off and I can test Django out at my own pace. I never got to utilise my Wishlist for the user to have their own personal wishlists or Social for ALL the social icons that I was going to link but I'll just add these to Features to be Implemented. I did try my best to add as much to the backend as possible like the logos, delivery costs, delivery threshold etc so that if any changes needed to be made for these, it would be much simplier.  
+The more I play around and practise with Django and databases then the more confident and experienced I'll become, which is only a good thing, but while I had many head scratching evenings after work, I think the overall structure is okay and far from perfect but it works and that's the main aim here.
+
+
 
 ## **Features**
 ---
@@ -426,6 +432,7 @@ Stripe PID | stripe_pid | models.CharField | max_length=254, null=False, blank=F
 - Admin page for adding discounts and changing delivery costs which again you can do though Django Admin, in the Discounts database
 - Registration by utilising Social accounts like Google or Facebook
 - Different payments types like Paypal or GooglePay although Stripe works well
+- Utilise the discount code on my checkout page so that when a user inputs one, it checks it for validation, and then deducts the associated discount percentage from the total
 
 [Back to Top](#table-of-contents)
 

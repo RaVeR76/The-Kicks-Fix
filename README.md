@@ -218,8 +218,194 @@ I used [drawSQL](https://drawsql.app/) to construct my schema which is a free on
 ![The-Kicks-Fix Schema](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/schema.png)
 
 
-*** DO A WRITE UP ON YOUR SCHEMA TO EXPLAIN IT BETTER ***
-*** REMOVE IMAGE_URL's AS NOT REQUIRED ***
+### **Database choice**
+
+During the development, I worked with **sqlite3** databases, installed with Django.
+For production, I've used a **PostgreSQL** database which is provided in Heroku as an add-on.
+
+- The **User model** I have used in this project was provided by Django Allauth. It is a part of default `django.contrib.auth.models`.  
+
+### **Data Modelling**
+
+#### **Profiles App**  
+
+##### **User Profile**  
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+User | user | OneToOneField 'User' | on_delete=models.CASCADE
+Phone Number | default_phone_number | models.CharField | max_length=20, null=True, blank=True
+Street Address 1 | default_street_address1 | models.CharField | max_length=80, null=True, blank=True
+Street Address 2 | default_street_address2 | models.CharField | max_length=80, null=True, blank=True
+Town or City | default_town_or_city | models.CharField | max_length=40, null=True, blank=True
+County | default_county | models.CharField | max_length=80, null=True, blank=True
+Postcode | default_postcode | models.CharField | max_length=20, null=True, blank=True
+Country | default_country | CountryField | blank_label='Country', null=True, blank=True
+
+
+#### **Home App**
+
+##### **Home**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254, default='home'
+Main Slogan | main_slogan | models.CharField | max_length=254
+Promotional Bar | promotion_bar | models.CharField | max_length=254
+Social Icon | social_icon | models.ForeignKey 'Social' | null=True, blank=True, on_delete=models.SET_NULL
+Discount Code | discount_code | models.ForeignKey 'Discount' | null=True, blank=True, on_delete=models.SET_NULL
+Main Logo URL | main_logo_url | models.URLField | max_length=1024, null=True, blank=True
+Main Logo | main_logo | models.ImageField | null=True, blank=True
+Toast Logo URL | toast_logo_url | models.URLField | max_length=1024, null=True, blank=True
+Toast Logo | toast_logo | models.ImageField | null=True, blank=True
+Loader Logo URL | loader_logo_url | models.URLField | max_length=1024, null=True, blank=True
+Loader Logo | loader_logo | models.ImageField | null=True, blank=True
+
+##### **Social**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254
+Friendly Name | friendly_name | models.CharField | max_length=254, null=True, blank=True
+Image URL | image_url | models.URLField | max_length=1024, null=True, blank=True
+Image | image | models.ImageField | null=True, blank=True
+
+##### **Discount**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254, default='discount'
+Discount Code | discount_code | models.CharField | max_length=25
+Discount Percentage | discount_percentage | models.DecimalField | max_digits=2, decimal_places=0, default=0
+Free Delivery Threshold | free_delivery_threshold | models.DecimalField | max_digits=2, decimal_places=0, default=0
+Standard Delivery Percentage | standard_delivery_percentage | models.DecimalField | max_digits=2, decimal_places=0, default=0
+
+
+#### **Common App**
+
+##### **Category**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254
+Friendly Name | friendly_name | models.CharField | max_length=254, null=True, blank=True
+
+##### **Colour**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=50
+Friendly Name | friendly_name | models.CharField | max_length=50, null=True, blank=True
+
+
+##### **Size**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=50, , default='size'
+Friendly Name | friendly_name | models.CharField | max_length=50, null=True, blank=True
+Size | size | models.JSONField | default=list
+
+
+##### **Sex**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=50
+Friendly Name | friendly_name | models.CharField | max_length=50, null=True, blank=True
+
+
+
+#### **Kicks App**
+
+##### **Kicks**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Category | category | models.ForeignKey 'common.Category' | null=True, blank=True, on_delete=models.SET_NULL
+Sex | sex | models.ForeignKey 'common.Sex' | null=True, blank=True, on_delete=models.SET_NULL
+SKU | sku | models.CharField | max_length=254
+Brand | brand | models.ForeignKey 'Brand' | null=True, blank=True, on_delete=models.SET_NULL
+Name | name | models.CharField | max_length=254
+Style | style | models.ForeignKey 'Style' | null=True, blank=True, on_delete=models.SET_NULL
+Description | description | models.TextField |
+Price | price | models.DecimalField | max_digits=6, decimal_places=2, default=0.00
+Colour | colour | models.ForeignKey 'common.Colour' | null=True, blank=True, on_delete=models.SET_NULL
+Image1 URL | image1_url | models.URLField | max_length=1024, null=True, blank=True
+Image1 | image1 | models.ImageField | null=True, blank=True
+Image2 URL | image2_url | models.URLField | max_length=1024, null=True, blank=True
+Image2 | image2 | models.ImageField | null=True, blank=True
+Image3 URL | image3_url | models.URLField | max_length=1024, null=True, blank=True
+Image3 | image3 | models.ImageField | null=True, blank=True
+
+##### **Brand**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254
+Friendly Name | friendly_name | models.CharField | max_length=254, null=True, blank=True
+
+##### **Style**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254
+Friendly Name | friendly_name | models.CharField | max_length=254, null=True, blank=True
+
+
+#### **Accessories App**
+
+##### **Accessories**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Category | category | models.ForeignKey 'common.Category' | null=True, blank=True, on_delete=models.SET_NULL
+SKU | sku | models.CharField | max_length=254
+Name | name | models.CharField | max_length=254
+Type| type | models.ForeignKey 'Type' | null=True, blank=True, on_delete=models.SET_NULL
+Description | description | models.TextField |
+Price | price | models.DecimalField | max_digits=6, decimal_places=2, default=0.00
+Colour | colour | models.ForeignKey 'common.Colour' | null=True, blank=True, on_delete=models.SET_NULL
+Image1 URL | image1_url | models.URLField | max_length=1024, null=True, blank=True
+Image1 | image1 | models.ImageField | null=True, blank=True
+Image2 URL | image2_url | models.URLField | max_length=1024, null=True, blank=True
+Image2 | image2 | models.ImageField | null=True, blank=True
+Image3 URL | image3_url | models.URLField | max_length=1024, null=True, blank=True
+Image3 | image3 | models.ImageField | null=True, blank=True
+
+##### **Type**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254
+Friendly Name | friendly_name | models.CharField | max_length=254, null=True, blank=True
+  
+
+
+#### **Checkout App**
+
+##### **Order**
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Order Number | order_number | models.CharField | max_length=32, null=False, editable=False
+User Profile | user_profile | models.ForeignKey 'UserProfile' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+Full Name | full_name | models.CharField | max_length=50, null=False, blank=False
+Email | email | models.EmailField | max_length=254, null=False, blank=True
+Phone Number | phone_number | models.CharField | max_length=20, null=False, blank=False
+Country | country | CountryField | blank_label='Country *', null=False, blank=False
+Postcode | postcode | models.CharField | max_length=20, null=True, blank=True
+Town or City | town_or_city | models.CharField | max_length=40, null=False, blank=False
+Street Address 1 | street_address1 | models.CharField | max_length=80, null=False, blank=False
+Street Address 2 | street_address2 | models.CharField | max_length=80, null=True, blank=True
+County | county | models.CharField | max_length=80, null=True, blank=True
+Date | date | models.DateTimeField | auto_now_add=True
+Delivery Cost | delivery_cost | models.DecimalField | max_digits=6, decimal_places=2, null=False, default=0
+Order Total | order_total | models.DecimalField | max_digits=10, decimal_places=2, null=False, default=0
+Grand Total | grand_total | models.DecimalField | max_digits=10, decimal_places=2, null=False, default=0
+Original Bag | original_bag | models.TextField | null=False, blank=False, default=''
+Stripe PID | stripe_pid | models.CharField | max_length=254, null=False, blank=False, default=''
+
 
 
 ## **Features**

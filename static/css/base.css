@@ -360,7 +360,7 @@ body {
         font-size: 1.2rem;
     }
 
-    ul.dropdown-menu.submenu-scroll {
+    ul.dropdown-menu.submenu-wrapper {
         height: 200px;
         overflow: auto;
     }

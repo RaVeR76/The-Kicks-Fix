@@ -433,6 +433,7 @@ The more I play around and practise with Django and databases then the more conf
 - Registration by utilising Social accounts like Google or Facebook
 - Different payments types like Paypal or GooglePay although Stripe works well
 - Utilise the discount code on my checkout page so that when a user inputs one, it checks it for validation, and then deducts the associated discount percentage from the total
+- Add accessories to the search funtionailty of the search bar
 
 [Back to Top](#table-of-contents)
 

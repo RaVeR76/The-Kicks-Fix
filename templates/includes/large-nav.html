@@ -42,7 +42,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="men">
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Brand</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for brand in brands %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?brand={{ brand.name }}&&sex=male">{{ brand.friendly_name }}</a></li>
                         {% endfor %}       
@@ -50,7 +50,7 @@
                 </li>
                 
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Style</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for style in styles %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?style={{ style.name }}&&sex=male">{{ style.friendly_name }}</a></li>
                         {% endfor %}       
@@ -58,7 +58,7 @@
                 </li>
 
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Colour</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for colour in colours %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?colour={{ colour.name }}&&sex=male">{{ colour.friendly_name }}</a></li>
                         {% endfor %}       
@@ -76,21 +76,21 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="women">
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Brand</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for brand in brands %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?brand={{ brand.name }}&&sex=female">{{ brand.friendly_name }}</a></li>
                         {% endfor %}       
                     </ul>
                 </li>
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Style</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for style in styles %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?style={{ style.name }}&&sex=female">{{ style.friendly_name }}</a></li>
                         {% endfor %}       
                     </ul>
                 </li>
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Colour</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for colour in colours %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?colour={{ colour.name }}&&sex=female">{{ colour.friendly_name }}</a></li>
                         {% endfor %}       
@@ -107,21 +107,21 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="kids">
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Brand</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for brand in brands %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?brand={{ brand.name }}&&sex=kids">{{ brand.friendly_name }}</a></li>
                         {% endfor %}       
                     </ul>
                 </li>
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Style</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for style in styles %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?style={{ style.name }}&&sex=kids">{{ style.friendly_name }}</a></li>
                         {% endfor %}       
                     </ul>
                 </li>
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Colour</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for colour in colours %}
                             <li><a class="dropdown-item" href="{% url 'kicks' %}?colour={{ colour.name }}&&sex=kids">{{ colour.friendly_name }}</a></li>
                         {% endfor %}       
@@ -138,7 +138,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="accessories">
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Type</a>
-                    <ul class="dropdown-menu submenu-scroll">
+                    <ul class="dropdown-menu submenu-wrapper">
                         {% for type in types %}
                             <li><a class="dropdown-item" href="{% url 'accessories' %}?type={{ type.name }}">{{ type.friendly_name }}</a></li>
                         {% endfor %}       

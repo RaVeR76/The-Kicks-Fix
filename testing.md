@@ -140,7 +140,7 @@ The folowing tests are listed below that I complied and carried out :
 - Try to Lggin in with the wrong email address
 
 #### **Results**
-For some reason the reset password isn't working. I can follow the reset password instructions but NO EMAIL arrives with a link for the user to reset the password.
+For some reason the **reset password** isn't working. I can follow the reset password instructions but NO EMAIL arrives with a link for the user to reset the password.
 I've tried looking into it breifly but I will if I have time at the end, if not it will have to be put down as a BUG at this late stage.   
 Everything else works but this has annoyed me a little.
 
@@ -149,19 +149,62 @@ All in all, everything works well apart from the Allauth reset password logic is
 
 
 
-### Products 
+### Main Products Pages
 
 #### User Story : I want to be able to see all products with ease as I scroll down the items
+
+#### **Test**
+When I refer to products in this section, it means either a Kicks product or an Accessory products the functionality is pretty much the same apart from Kicks have a sizes option to chooses from but that will be explained in the details pages.
+
+- Click on SHOP NOW and it should take the user to the main Kicks page where ALL Kicks within the shop will be displayed
+- Title should display what products are being displayed on the page depending on whatever option a user has selected from the navbar or Filter Box
+- If a user clicks on one of the product cards they should be navigated to the details page for the chosen product
+- When the uses any of the navigation options in the navbar then the products should filter down by their selection as mentioned in Navagtion and Filering Testing Section previously
+- Number of products available should be displayed in top left section of main screen
+- When a user hovers over a product the card will increase in scale by 1.02, to make it stand out a litltle
+- If a user clicks on either the Brand or Style located under the price on the one of the Kicks cards, this should navigate the user to ALL the Kicks from this Brand or Style respectively. The page title should also change to confirm this
+- If a user clicks on the Type located under the price on the one of the Accessories cards, this should navigate the user to ALL the Accessories from this Type. The page title should also change to confirm this
+- When the user selects **Price (low to high)** from the Filter Box then ALL the Products on the page will display from the lowest price to the highest price
+- When the user selects **Price (high to low)** from the Filter Box then ALL the Products on the page will display from the highest price to the lowest price
+- When the user selects **Name (A to Z)** from the Filter Box then ALL the Products on the page will display from the lowest letter of the alphabet to the highest letter in the alphabet by, their **Name**
+- When the user selects **Name (Z to A)** from the Filter Box then ALL the Products on the page will display from the highest letter of the alphabet to the lowest letter in the alphabet, by their **Name**
+- When the user selects **Brand (A to Z)** from the Filter Box then ALL the Kicks on the page will display from the lowest letter of the alphabet to the highest letter in the alphabet, by their **Brand**
+- When the user selects **Brand (Z to A)** from the Filter Box then ALL the Kicks on the page will display from the highest letter of the alphabet to the lowest letter in the alphabet, by their **Brand**
+- When the user selects **Style (A to Z)** from the Filter Box then ALL the Kicks on the page will display from the lowest letter of the alphabet to the highest letter in the alphabet, by their **Style**
+- When the user selects **Style (Z to A)** from the Filter Box then ALL the Kicks on the page will display from the highest letter of the alphabet to the lowest letter in the alphabet, by their **Style**
+- When the user selects **Type (A to Z)** from the Filter Box then ALL the Accessories on the page will display from the lowest letter of the alphabet to the highest letter in the alphabet, by their **Type**
+- When the user selects **Type (Z to A)** from the Filter Box then ALL the Accessories on the page will display from the highest letter of the alphabet to the lowest letter in the alphabet, by their **Type**
+
+#### **Results**
+Everything works well as tested above with no issues which was pretty awesome. Maybe that's because I had a fair few issues building my code and getting my querying perfected but now I can see the benefits of all that time fine tuning them all :)  
+
+#### **Verdict**
+I know that some of the descriptions aren't the best ( I haven't even read half of them tbh) and the prices look ridiculous but I had to go with the images I got from Kaggle and there were only two sets of images available under the Sneakers tag. One was a small set and only had one image per set of Kicks. The set I used was massive and some Kicks had 30 or 40 images a set so I stil had to filter these down to three…. It was seriously monotonous, I sh1t you not.  
+I know that some of the images I edited aren't the best but I spent a lot of time filtering through Kicks image after Kicks image just to get the selected three per Kicks set. I then had to edit these until the were a square shape and then resize them all until they were ALL 400px x 400 px. In between that I located each Kick online and found a SKU, description and what style they are. The majority of these Kicks if not them all aren't available anymore which made even harder to locate any info on them at all. I'm sure I spent the guts of the first week of starting this project getting ALL that right before I even started into the coding part.  
+As regards the Accessories, I got a lot of them from Etsy and Ebay but still had a lot of editing to do as well.  
+I'm hoping you can see that within my website as there are 91 sets of Kicks and 22 accessories to select from …. so that’s 339 images I had to edit and 113 descriptions / SKUs / prices / Styles I had to find on the internet but you know what when I look through my wee website that pain was totally worth it.    
+Overall I am so so happy with each of the two main products page and the way they look and feel. It actually looks like a proper Kicks site where me personnally, I could spend a lot of money as I am such a Kicks fanatic to be honest.
+
+
+
+
+
+
+
+### Products Details Page
+
 #### User Story : I want to be able purchase any product I desire
 #### User Story : I want to be able to see individual products with one click and their various unique details like description, price, available sizes and so on
 
 #### **Test**
 
+#### **Results**
 I was testing all my products and when I tried Carol Christian kicks it threw up an error, I figured it out that the SKU was AM/2684 BIUS-PTC/03 which must have been causing the issue because it had back slashes in it so I changed it to AM-2684 BIUS-PTC-03 which solved the issue
 
-#### **Results**
-
 #### **Verdict**
+
+
+
 
 
 

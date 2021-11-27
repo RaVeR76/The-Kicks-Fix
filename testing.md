@@ -102,7 +102,7 @@ Overall, I love The Kicks Fix homepage and as the User Story says, I am enthrall
 #### User Story : I want to be able to register for an account so that I can have access to unique promotions and discounts
 
 #### **Test**
-The folowing test are listed below that I complied and carried out :
+The folowing tests are listed below that I complied and carried out :
 
 - Click on the *sign in* link and make sure it takes the user to login page (so that if the user has registered before)
 - Click on the Register link in Account dropdown
@@ -113,13 +113,13 @@ The folowing test are listed below that I complied and carried out :
 - Try to register with the same existing username
 - Try to Register with a wrong email address, by leaving out the @ or using a comma instead of a dot
 - Chaeck that an ALert Message appears after registration has been successful to say an email has been sent to the email address used at registration
-- Check that the confirmation email has a link to confimr registration and that when he link is clicked ... the user is directed to The Kicks Fix confirmation page
+- Check that the confirmation email has a link to confirm registration and that when he link is clicked ... the user is directed to The Kicks Fix confirmation page
 - Check that when the user confirms their email on The Kicks Fix confirmation page that they are navigated to the login page
 
 #### **Results**
- All tests passed that were tried above. When errors where input, Allauth displayed an error message stipulating what the issue was like *Password too common* or you need to use 8 characters for the passord. I tired everything to get passed Allauth but Allauth says NO .... well, without properly registering for The Kicks Fix. I did add a few wee changes to the email confirmation message as it needed a little touch up in areas, once I read it through but apart from that everything else was excellent
+ All tests passed that were tried above. When errors where input, Allauth displayed an error message stipulating what the issue was like *Password too common* or you need to use 8 characters for the passord. I tired everything to get passed Allauth but Allauth says NO .... well, without properly registering for The Kicks Fix. I did add a few wee changes to the email confirmation message as it needed a little touch up in areas, once I read it through but apart from that everything else was excellent.
 
-### **Verdict**
+#### **Verdict**
 Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
 
@@ -128,25 +128,24 @@ Tests passed, works as expected, no bugs were found during the testing. Function
 #### User Story : I want to be able to login and logout with ease
 
 #### **Test**
+The folowing tests are listed below that I complied and carried out :  
 
 - Click on the *sign up* link and make sure it takes the user to registration page (so if the user has NOT registered before)
- - Click on the Login link
- - Click on Logout
-   - Try to Loggin in with empty input fields
-   - Click on Forgot Password link
-     - Try to Loggin in with incorrect credentials
-     
-  - Try to Loggin in with an incorrect password
-    - Try to Loggin in with the wrong email address
+- Click on the Login link in Account dropdown
+- Click on Logout link in Account dropdown
+- Try to Login in with empty input fields
+- Click on Forgot Password link
+- Try to Login in with incorrect credentials
+- Try to Login in with an incorrect password
+- Try to Lggin in with the wrong email address
 
 #### **Results**
-
-  - Login page with login form is displayed
-   - When Successfully logged into account success message is displayed
-    - When the logout link is clicked, the user is transferred to Home Page and a success message is displayed
+For some reason the reset password isn't working. I can follow the reset password instructions but NO EMAIL arrives with a link for the user to reset the password.
+I've tried looking into it breifly but I will if I have time at the end, if not it will have to be put down as a BUG at this late stage.   
+Everything else works but this has annoyed me a little.
 
 #### **Verdict**
-
+All in all, everything works well apart from the Allauth reset password logic isn't sending an email, for the user to reset their password by clicking the link.
 
 
 

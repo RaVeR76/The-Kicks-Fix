@@ -44,13 +44,15 @@ After throughly going through my website with a fine tooth comb, I did find some
 ### Navigation & Search Functions
 
 #### User Goal : Navigate around the website with ease and pleasure
-#### User Story : I want be able to search / filter the products by various options like male, female, kids, sizes, brands and so on
+#### User Story : I want be able to search / filter the products by various options like male, female, kids, brands, styles and so on
 
 #### **Test**
 The various tests I carried out for the navaigation and search functions are listed below:
 
 - Click on the **Shop Now** button and make sure it takes the user to the ALL Kicks page
 - Click on each navigation link to make sure it directs the user to the correct page
+- Check that when the user clicks on any dropdown submenu links that it takes them to the correct page
+- Check that when the user arrives on the selected page that the associated Title is displayed, i.e Women's Adidas Kicks or Kid's Running Kicks
 - Check ALL navigation is functioning through my 'hamburger button' on tablets and mobile devices
 - Hover over dropdown navigation links to see if hover style has been applied
 - Check if the dropdown navigation link has applied style when clicked and directed to a page
@@ -80,24 +82,45 @@ All in all, I am very happy with everything apart from the qunatity button issue
 #### User Goal : An enticing landing page that will make any user enthralled to delve deeper into my website
 
 #### **Test**
-
-Hero image adjusted for smaller screens
+To be honest there is nothing really to test here as the majorty of the testing was done previously with ALL the navigation links tested. Realistically, there is only a Hero image, slogan and enter the shop button. These all test perfectly. The navbar and all links were tested above. 
+I tested the logo so that it would return the user to this homepage as well. I can change the slogan in Django admin and it will change on screen. I really wanted some site Admin to be able to make all these changes but again I have added this to future upgrades, as time is of the essence. 
 
 #### **Results**
+I had quite a few hero images downloaded from the internet for testing out on my homepage and I'm sure evreyone of them would've looked good here.   
+But once I utilised two of my chosen colours from the start for this project, ***Eerie Black*** and ***Minion Yellow*** as my main navbar colours, I knew straight away that this was the image, that was to be my Hero ! It's simple, it's dark and mysterious and it says I need new pair of Kicks right now because let's face facts, we all have a few pairs of ropey, well used Kicks floating about the house .... just like the pair in the image !  
+I only had to adjust the hero image to make it smaller so it would display better but this was way at the start of the project.
+Although last night when I started looking at everything on the smaller screens, I noticed that the Kicks in the image were nowhere to be seen which kind of annoyed me. So I added a bit of CSS to fix this for the smaller screens and, I'll be honest, for such a small change it just makes the Homepage look so much better. I used CSS to position the Kicks part of the image as centrally as I could on smaller screens.  
+
+The code I used is below:
+![Hero Image Positioning On Smaller Screens](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/hero-image-centrally.png)
 
 #### **Verdict**
-
+Overall, I love The Kicks Fix homepage and as the User Story says, I am enthralled to delve deeper to see what is behind this dark and wonderful image .... and buy me some Kicks of course !
 
 ### Registration
 
 #### User Story : I want to be able to register for an account so that I can have access to unique promotions and discounts
 
 #### **Test**
+The folowing test are listed below that I complied and carried out :
+
+- Click on the *sign in* link and make sure it takes the user to login page (so that if the user has registered before)
+- Click on the Register link in Account dropdown
+- Try to Register with empty input fields
+- Try to register with two different passwords
+- Try to register with a password less than 8 characters
+- Try to register with a password that is common word, like ***qwerty12***
+- Try to register with the same existing username
+- Try to Register with a wrong email address, by leaving out the @ or using a comma instead of a dot
+- Chaeck that an ALert Message appears after registration has been successful to say an email has been sent to the email address used at registration
+- Check that the confirmation email has a link to confimr registration and that when he link is clicked ... the user is directed to The Kicks Fix confirmation page
+- Check that when the user confirms their email on The Kicks Fix confirmation page that they are navigated to the login page
 
 #### **Results**
+ All tests passed that were tried above. When errors where input, Allauth displayed an error message stipulating what the issue was like *Password too common* or you need to use 8 characters for the passord. I tired everything to get passed Allauth but Allauth says NO .... well, without properly registering for The Kicks Fix. I did add a few wee changes to the email confirmation message as it needed a little touch up in areas, once I read it through but apart from that everything else was excellent
 
 ### **Verdict**
-
+Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
 
 ### Login / Logout
@@ -106,7 +129,21 @@ Hero image adjusted for smaller screens
 
 #### **Test**
 
+- Click on the *sign up* link and make sure it takes the user to registration page (so if the user has NOT registered before)
+ - Click on the Login link
+ - Click on Logout
+   - Try to Loggin in with empty input fields
+   - Click on Forgot Password link
+     - Try to Loggin in with incorrect credentials
+     
+  - Try to Loggin in with an incorrect password
+    - Try to Loggin in with the wrong email address
+
 #### **Results**
+
+  - Login page with login form is displayed
+   - When Successfully logged into account success message is displayed
+    - When the logout link is clicked, the user is transferred to Home Page and a success message is displayed
 
 #### **Verdict**
 

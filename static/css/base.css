@@ -305,7 +305,7 @@ body {
 @media (max-width: 991px) {
 
     body {
-        background-position: 14% 80%; /* So Kicks part of image stays more center on smaller screens */
+        background-position: 14% 80%; /* So Kicks part of image stays more central on smaller screens */
     }
 
     .header-container {

@@ -14,7 +14,7 @@
     <div class="container-fluid my-black-text">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="text-uppercase kicks-title">{{ kicks_title }}</h2>
+                <h2 class="text-uppercase product-title">{{ kicks_title }}</h2>
                 <hr class="w-50 mb-1">  
             </div>
         </div>
@@ -91,7 +91,7 @@
                         {% endfor %}
                     </div>
                 {% else %}
-                <p class="lead my-black-text mt-5 mb-5">Sorry, no {{ kicks_title }} available !</p>
+                <p class="lead my-black-text mt-5 mb-5">Sorry, no {{ kicks_title }} available!</p>
                 <a href="{% url 'kicks' %}" class="btn my-white-btn rounded-0 btn-lg">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>

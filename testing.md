@@ -13,9 +13,33 @@
 #### **Test**
 I utilised my own laptop connected to a large screen, my work laptop which has a failry small screen, my tablet, my mobile phone and of course Chrome DevTools to test reponsiveness across various platforms
 
+I noticed that my ```{{ kicks_title }}``` were still large on on smaller screens so were wrapping like mad so I added some CSS to reduce the size on smaller screens. I had to settle for a happy medium here so the lerger titles in length may wrap a little on smaller screens but it means the smaller titles are not super small on the larger small screens, if you get what I mean.
+
+```
+h2.text-uppercase.product-title {
+    font-size: 1.2rem;
+}
+```
+
+I noticed on mobile that my navbar submenus were only showing the top options whilst the rest were off the bottom of the screen.
+I added a submenu-scroll class to each submenu and added some CSS to combat this. This is the problem when you build your project on a large screen but also the bnefits of doing testing and really getting into your project on the smallest screen in DevTools.
+
+```
+ul.dropdown-menu.submenu-scroll {
+    height: 200px;
+    overflow: auto;
+}
+```
+
+I set my text to center, on smaller screens, for when there are no Kicks or accessories are available because it looks much better in my opinion
+
+
+Profile not working and NO order history on small scrrens ffs
+
 #### **Results**
 
 #### **Verdict**
+After throughly going through my app with a fine tooth comb, I did find some issues with the responsiveness as logged above but overall, I think it looks well and works well on all devices. 
 
 
 ### Home Page
@@ -23,6 +47,8 @@ I utilised my own laptop connected to a large screen, my work laptop which has a
 #### User Goal : An enticing landing page that will make any user enthralled to delve deeper into my website
 
 #### **Test**
+
+Hero image adjusted for smaller screens
 
 #### **Results**
 
@@ -74,6 +100,8 @@ I utilised my own laptop connected to a large screen, my work laptop which has a
 #### User Story : I want to be able to see individual products with one click and their various unique details like description, price, available sizes and so on
 
 #### **Test**
+
+I was testing all my products and when I tried Carol Christian kicks it threw up an error, I figured it out that the SKU was AM/2684 BIUS-PTC/03 which must have been causing the issue because it had back slashes in it so I changed it to AM-2684 BIUS-PTC-03 which solved the issue
 
 #### **Results**
 

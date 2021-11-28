@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+   <div class="overlay"></div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="text-uppercase my-black-text mb-4">Contact Us</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 my-black-text">
+                <p>Hey {{ user }},</p>
+                <p>We really hope you are enjoying the <strong>The Kicks Fix</strong> and all the cool kicks 
+                   we have to offer you. Don't forget about all the accessories too, in case you want to bring your old 
+                   kicks back to life again or simply funk up your new ones.
+                <br>
+                   If you ever need help with anything or want to let us know how we are doing, just give us a shout
+                   on any of the contact options below.
+                </p>
+                <p>Also, if you are having any issues with:</p>
+                <ul class="list-unstyled">
+                        <ul>
+                            <li>Registration</li>
+                            <li>Log In / Log Out</li>
+                            <li>Your Profile</li>
+                            <li>Our Products</li>
+                            <li>Orders</li>
+                            <li>Other</li>
+                        </ul>
+                  </ul>
+                <p>Please do not hesitate to contact us</p>
+
+                <p class="contact-details">
+                    <a href="mailto:help@thekicksfix.com" id="mailto" aria-label="Email us" target="_blank">help@thekicksfix.com </a>
+                    <span class="d-block">+44 20 123 45678</span>
+                    <span class="d-block">+44 77 123 45678</span>
+                    <a href="https://wa.me/123456789" class="ml-1" target="_blank" rel="noopener" aria-label="Text us on whatsapp">
+                        <i class="fab fa-whatsapp fa-lg"></i>
+                    </a>
+                    <a href="mailto:help@thekicksfix.com" class="ml-1" target="_blank" aria-label="Email us">
+                        <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>           
+                    </a>
+                </p>   
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -421,11 +421,14 @@ All in all I am super happy with ALL admin functions and there functionality :)
 #### User Goal : A chilled out site so that they will want to come back again and again
 
 #### **Test**
+There aren't really any tests left to do as regards this, as I have already completed these in the Responsiveness and Navigation sections.
+I believe that the above User Goals have been completed because the website has good navigation, good filtering as the per navbar options, the overall functionality ALL works bar a couple of bugs with the quantity buttons bug and the Reset email bug. The visual experience works well across ALL screens after a few minor adjustments and from the homepage to the checkout page everything looks really well.
 
 #### **Results**
+Overall, very happy with the final product and I really hope the user enjoys their experience trawling through The Kicks Fix for some hidden gems. As long as the price of some of the Premier Kicks doesn't scared them off (these were genuine prices by the way and in fact I had to reduce them, as some were unbelieveably extortionate)
 
 #### **Verdict**
-
+Love my wee website and I super proud of my achievement in the short space of time .... I really hope you all love it too !
 
 
 # Validators

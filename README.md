@@ -432,7 +432,8 @@ The more I play around and practise with Django and databases then the more conf
 - Admin page for adding discounts and changing delivery costs which again you can do though Django Admin, in the Discounts database
 - Registration by utilising Social accounts like Google or Facebook
 - Different payments types like Paypal or GooglePay although Stripe works well
-- Utilise the discount code on my checkout page so that when a user inputs one, it checks it for validation, and then deducts the associated discount percentage from the total
+- Add the users DOB so that I can send special birthday offers (another discount code like below) automatically by email close to that date
+- Utilise the discount code on the checkout page so that when a user inputs one, it checks it for validation, and then deducts the associated discount percentage from the total
 - Add accessories to the search funtionailty of the search bar
 
 [Back to Top](#table-of-contents)

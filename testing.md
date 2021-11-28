@@ -274,31 +274,31 @@ All test worked above so I am super happy again with the overall fucntionality o
 
 #### **Test**
 
-- The user will be able to see a n Order Summary of their products before they finalise their purchase
+- The user will be able to see an Order Summary of their products before they finalise their purchase
 - The user wil be able to input their details as in full name and email address if they are not a registered user
 - The user will have their email address populated if they are a registered user and also logged in
-- The user will be able to add their delivery details even if they are not a registerer user
+- The user will be able to add their delivery details even if they are not a registered user
 - The user will be able to purchase products even if they are not a registered user
-- The user will have the option to to Create an account ot login on the checkout page if they are not registered or logged in
-- The user if registered and logged in will have the option to seave their default delivery details for future usage
+- The user will have the option to to Create an account ot Login on the checkout page if they are not registered or logged in
+- The user if registered and logged in will have the option to save their default delivery details for future usage
 - The user will also be able to return to bag to make adjustments if needed by clicking on the *Adjust Bag* button
-- The card image will change depending on what their card is like Visa or Mastercard
+- The card image will change depending on what their card is, like Visa or Mastercard
 - The user will get an error message if their is any issues with their card details (Stripe Validation)
-- The user will see the amount their card is going to be charged in RED directly below the *Complete Order/* button so they know one final time before purchase the total amount
+- The user will see the amount their card is going to be charged in RED directly below the *Complete Order* button so they know one final time before proceeding with payment
 - The user, once all details and card details have been validated will be able to click *Complete Order* button and make the purchase
 - The user should see The Kicks Fix loader as the purchase process is being carried out
 - The user will see a Success message depicting that the order was successful and an email has been sent
-- The user will get a confirmation page whether they are registered or not
-- The user will be able to return to the Kicks Sales page from the confirmation page after the purchase has been made by clicking the available button
+- The user will be navigated to a checkout success page whether they are registered or not
+- The user will see an overview of their order on the checkout success page
 - The user will get a confirmation email whether they are registered or not
-
-
+- The user will be able to return to the Kicks Sales page from the checkout success page after the purchase has been made, by clicking the large button
 
 #### **Results**
 All tests passed with no issues.
 
 #### **Verdict**
-Very happy with how the checkout page looks and its overall functionality, although I would have liked the users name to have been added at Registration process so their name would be pre populated here or at least the users name to be saved at this point too. I did look into this funtionality but I would have to had changed the regristration page to make this happen at the and preferably at the start of the project so for now the user will  ahve to manually input their Full Name.
+Very happy with how the checkout page looks and its overall functionality, although I would have liked the users name to have been added at Registration process so their name would be pre-populated here or at least the users full name to be saved at this point. I did look into this funtionality but I would have to had changed the regristration page to make this happen and preferably at the start of the project so for now the user will have to manually input their Full Name.  
+I have added names in Django Admin for some of my test user profiles so it deffo adds a little personal touch when it can be seen at checkout.
 
 
 ### Profile
@@ -309,11 +309,24 @@ Very happy with how the checkout page looks and its overall functionality, altho
 
 
 #### **Test**
+Nothing here to test really as it's just a Profile page. I wanted to do so much more to this but I never got round to it.
+At the minute there is the username and their email address. If the Django Admin can add their First Name and KLast name then this will be populated as well.
+As I mentioned above, I wanted to add these but it says online that it's better to add these at the start of the build within the UserProfile models. I was going to add them in towards the end but I was scared in case I messed the UserProfiles up. In future Django projects I will deffo add this feature so that my projects can add that personal touch by using their first names through the project.  
+The users wishlist is my biggest let down by not getting it done. I never even got time to even start it if the truth be told but I have added this also to Features to be Implemented in the future. I would had this showing on the users profile page or added a heart onto the navbar that would have taken the user to their personal Wishlist page where their selected wishlist products would be displayed. Obviously, the wishlist heart would only appear if the user was authenicated but look, this is one for the future.   
+I also wanted to add the users Date of Birth because at the design part of my project, I really wanted to be able to offer registered users a Biryhday treat every year on their Birthday or in the weeks coming up to their birthdays. A simple automatic email would be sent out to the user, say 2 weeks before their birthdays, with a 10% discount code that they could use before their birthday date had passed. The email would be personal to them as would the code and they could have input it at the Bag page and after I validate the code the discount would be calculated on their current total and subtracted from it given them a special Birthday Treat.  
+I also wanted the user to be able to add a profile pic like in my last project but again this can be done at a later time.
 
 #### **Results**
+No results as there are no tests :(
+
 
 #### **Verdict**
+Profile page needs some work to it and I did try to add AdditionalUserInfoProfile and a form so they could make changes on their Profile pages but it was beginning to get messy and look even worse so in the end I just scrapped the idea and deleted my test code. I still have a fake DOB displayed which I will remove shortly and as long as you add the users name in Django Admin then it will be displayed here too.  
+I wish I had've made this happen as it would have been perfect for the user to check their profile and request changes if required :)
 
+Below is an image of the way it should've looked after full registration:
+
+![Profile Page](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/profile-image.png)
 
 
 ### Admin Functions

@@ -13,14 +13,9 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile info """
 
-    user_birthdate = '29/02/1980'
-
     template = 'profiles/profile.html'
-    context = {
-        'user_birthdate': user_birthdate,
-    }
 
-    return render(request, template, context)
+    return render(request, template)
 
 
 @login_required

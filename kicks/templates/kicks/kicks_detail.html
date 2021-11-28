@@ -74,6 +74,20 @@
                         </p>
                     {% endif %}
 
+                    {% if kicks.sex %}
+                        <p class="small mt-1 mb-0">
+                            <a href="{% url 'kicks' %}?sex={{ kicks.sex.name }}" class="text-muted">
+                                {% if kicks.sex|lower == 'kids' %}
+                                    <i class=" fas fa-child fa-lg mr-1"></i>{{ kicks.sex.friendly_name }}s
+                                {% elif kicks.sex|lower == 'female' %}
+                                    <i class="fas fa-female fa-lg mr-1"></i> {{ kicks.sex.friendly_name }}
+                                {% elif kicks.sex|lower == 'male' %}
+                                    <i class="ml-1 fas fa-male fa-lg mr-1"></i> {{ kicks.sex.friendly_name }}
+                                {% endif %}
+                            </a>
+                        </p>
+                    {% endif %}
+
                     {% if request.user.is_superuser %}
                         <p class="mt-1">
                             <small>

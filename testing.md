@@ -156,7 +156,7 @@ All in all, everything works well apart from the Allauth reset password logic is
 #### **Test**
 When I refer to products in this section, it means either a Kicks product or an Accessory products the functionality is pretty much the same apart from Kicks have a sizes option to chooses from but that will be explained in the details pages.
 
-- Click on SHOP NOW and it should take the user to the main Kicks page where ALL Kicks within the shop will be displayed
+- Click on *SHOP NOW* and it should take the user to the main Kicks page where ALL Kicks within the shop will be displayed
 - Title should display what products are being displayed on the page depending on whatever option a user has selected from the navbar or Filter Box
 - If a user clicks on one of the product cards they should be navigated to the details page for the chosen product
 - When the uses any of the navigation options in the navbar then the products should filter down by their selection as mentioned in Navagtion and Filering Testing Section previously
@@ -198,15 +198,44 @@ Overall I am so so happy with each of the two main products page and the way the
 
 #### **Test**
 
+- There should be three images displayed one at a time and there should be no glitching or weirdness as I made ALL images the same size
+- The images should automatically scroll right to left displaying the 3 images per product and the carousel indicators should move left to right
+- If a user clicks on the left or right arrows then they will be able to move the images themselves in any direction (obviously either left or right only ha ha)
+- The carousel indicators should move left to right as the images auto scroll
+- The user can click in the indicators too, to move to the image they want
+- If the user clicks on an image that it opens up that image in a new tab
+- If a user clicks on either the Brand or Style located under the price, this should navigate the user to ALL the Kicks from this Brand or Style respectively. The page title should also change to confirm this
+- If a user clicks on the Sex located under the price, this should navigate the user to ALL the Kicks available for this sex. The page title should also change to confirm this (I added this whilst typing this up by the way so I hope it looks okay)
+- If a user clicks on the Type located under the price on the one of the Accessories cards, this should navigate the user to ALL the Accessories from this Type. The page title should also change to confirm this
+- Depending on whether the Kicks are for Male , Female or Children the size options will change to suit on page load (there will only be one size range available but for the three areas)
+- The user can select UK, EU or US by pressing the select button and the dropdown menu options will switch to that size range for the sex that the Kicks is for 
+- The user can select what size the want selecting an option from the dropdown
+- The CSS will highlight the options *blue* as they hover over them in the dropdown menu
+- The users chosen size will remain in the selector box until they chose a different region or add to bag
+- The user will be able to choose their quantity by adding or taking away using the quantity buttons available
+- The user will not be able to selct a quantity less than one or higher than 99
+- The quantity buttons will become disabled when the user reaches 1 or 99
+- Validation will show an error if the user types quantity outside this range
+- Apon the user had selected what they require, if they click on the *ADD TO BAG* button the Kicks with their size and qunatity will be added to the bag
+- Apon Adding To Bag a success message will pop up and display a message but also the items just selected in the Success Toast
+- The *BAG TOTAL* in the top right, will also update with the total if nothing was originally in the bag or add to the total, if there was a total already there
+- The user can either add the same Kicks again either with the same size, different sizes from different regions or just click on the *Keep Shopping* button and return to the *All Kicks* page
+
+
 #### **Results**
-I was testing all my products and when I tried Carol Christian kicks it threw up an error, I figured it out that the SKU was AM/2684 BIUS-PTC/03 which must have been causing the issue because it had back slashes in it so I changed it to AM-2684 BIUS-PTC-03 which solved the issue
+When I was testing all my products and when I tried Carol Christian kicks it threw up an error, nearly fainted again as I was thinking oh no not , I figured it out that the SKU was AM/2684 BIUS-PTC/03 which must have been causing the issue because it had back slashes in it so I changed it to AM-2684 BIUS-PTC-03 which solved the issue
+
+![Kicks SKU Issue](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/kicks-sku-issue.png)
+
+Anyway, everything working well and looking super cool. I'm glad I added the Sex icons and code, on the fly, as now the user knows who the Kicks are for. Like I say and keep repeating myself, this wouldn't be required in a proper E-commerce shop as there would be the same Kicks available for ALL sexes generally but for this project, I needed to add it in so the user will know before they click on the Kicks. It would be worse if they loved a set of Kicks and when they went to select their size, it was only available in another sex size, other than their own. It may not be the best but at least it helps the user see before they select the Kicks.
 
 #### **Verdict**
+I love this page the most if the truth be told, here and my homepage anyway. The image carousel really brings the page alive and this is were all my hard work editing the images pays off. Also the size selector too is so cool and I'm glad I stuck at the JavaScript to get it working. I know it's not the prettiest code but after a fair few hours trying to get it working and I did, I wasn't going to touch it or move it again lol.
+I know it's probably missing the fact that it dowsn't tell you if it's for a male, female or child, let's say if you click from the New In pages as I only assumed they would be clicking from Mens, Womens or Kids. So they user will only know by the sizes on show. This is were my unisex option fell down but in future upgrades I will add this in and make it even better. 
 
+Just so you know as I was typing this up I thought just show what sex the Kicks are for .... so spontaniously, I have. I know in reality there should generally be the same Kicks available for ALL sexes in a proper shop and I would have made this happen if I had more time but I don't so for now I added this liitle bit of code below so at least the user will know what sex the Kicks are for from the main Kicks page and the details page when they have clicked on an Kicks card. It's not perfect by any means but at least the user knows before they get to the size selection options whether the Kicks are for Male, Female or Children !
 
-
-
-
+![Kicks Sex Displaying Now](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/show-sex-for-kicks.png)
 
 
 ### The Bag Area

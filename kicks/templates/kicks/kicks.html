@@ -76,7 +76,20 @@
                                                     <a href="{% url 'kicks' %}?style={{ kicks.style.name }}" class="text-muted">
                                                         <i class="fas fa-star mr-1"></i>{{ kicks.style.friendly_name }}
                                                     </a>
-                                                </p>                                           
+                                                </p>  
+
+                                                <p class="small mt-1 mb-0">
+                                                    <a href="{% url 'kicks' %}?sex={{ kicks.sex.name }}" class="text-muted">
+                                                        {% if kicks.sex|lower == 'kids' %}
+                                                            <i class=" fas fa-child fa-lg mr-1"></i>{{ kicks.sex.friendly_name }}s
+                                                        {% elif kicks.sex|lower == 'female' %}
+                                                            <i class="fas fa-female fa-lg mr-1"></i> {{ kicks.sex.friendly_name }}
+                                                        {% elif kicks.sex|lower == 'male' %}
+                                                            <i class="ml-1 fas fa-male fa-lg mr-1"></i> {{ kicks.sex.friendly_name }}
+                                                        {% endif %}
+                                                    </a>
+                                                </p>
+                                                
                                                 {% if request.user.is_superuser %}
                                                     <small>
                                                         <a href="{% url 'edit_kicks' kicks.id %}">Edit</a> | 

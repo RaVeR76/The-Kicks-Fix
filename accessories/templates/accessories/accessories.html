@@ -72,9 +72,9 @@
                                                 {% if request.user.is_superuser %}
                                                 <small>
                                                     <a href="{% url 'edit_accessory' accessories.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_accessory' accessories.id %}">Delete</a>
+                                                    <a class="text-danger " href="{% url 'delete_accessory' accessories.id %}">Delete</a>
                                                 </small>
-                                                {% endif %}    <!--{% url 'delete_accessory' accessories.id %}-->
+                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>
@@ -99,6 +99,7 @@
             <i class="fas fa-arrow-up my-black-text mx-auto my-auto"></i>
         </a>	
     </div>
+
 {% endblock %}
 
 {% block postloadjs %}
@@ -131,4 +132,5 @@
             }
         })
     </script>
+
 {% endblock %}

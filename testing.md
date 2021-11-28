@@ -413,8 +413,6 @@ So glad I found that bug when testing today and also added a quick fix within th
 All in all I am super happy with ALL admin functions and there functionality :)
 
 
-
-
 ### Overall Website Navigation, Functionality & Visual Experience
 
 #### User Goal : An aesthetically pleasing and visually appealing website

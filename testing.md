@@ -237,6 +237,7 @@ Just so you know as I was typing this up I thought just show what sex the Kicks 
 ### The Bag Area
 
 #### User Story : I want to see my total spend as I continue my shopping spree within the site
+#### User Goal : Free delivery once a certain amount has been spent, depending on location
 
 #### **Test**
 
@@ -268,16 +269,36 @@ All test worked above so I am super happy again with the overall fucntionality o
 ### The Checkout
 
 #### User Goal : Be able to make a purchase with ease
-#### User Goal : Free delivery once a certain amount has been spent, depending on location
 #### User Story : I want to be able to add my payment details with ease and possibly store them safely, for future usage (only as a registered user obviously)
 #### User Story : I want confirmation of my order by an instant pop up and a follow up email
 
 #### **Test**
 
+- The user will be able to see a n Order Summary of their products before they finalise their purchase
+- The user wil be able to input their details as in full name and email address if they are not a registered user
+- The user will have their email address populated if they are a registered user and also logged in
+- The user will be able to add their delivery details even if they are not a registerer user
+- The user will be able to purchase products even if they are not a registered user
+- The user will have the option to to Create an account ot login on the checkout page if they are not registered or logged in
+- The user if registered and logged in will have the option to seave their default delivery details for future usage
+- The user will also be able to return to bag to make adjustments if needed by clicking on the *Adjust Bag* button
+- The card image will change depending on what their card is like Visa or Mastercard
+- The user will get an error message if their is any issues with their card details (Stripe Validation)
+- The user will see the amount their card is going to be charged in RED directly below the *Complete Order/* button so they know one final time before purchase the total amount
+- The user, once all details and card details have been validated will be able to click *Complete Order* button and make the purchase
+- The user should see The Kicks Fix loader as the purchase process is being carried out
+- The user will see a Success message depicting that the order was successful and an email has been sent
+- The user will get a confirmation page whether they are registered or not
+- The user will be able to return to the Kicks Sales page from the confirmation page after the purchase has been made by clicking the available button
+- The user will get a confirmation email whether they are registered or not
+
+
+
 #### **Results**
+All tests passed with no issues.
 
 #### **Verdict**
-
+Very happy with how the checkout page looks and its overall functionality, although I would have liked the users name to have been added at Registration process so their name would be pre populated here or at least the users name to be saved at this point too. I did look into this funtionality but I would have to had changed the regristration page to make this happen at the and preferably at the start of the project so for now the user will  ahve to manually input their Full Name.
 
 
 ### Profile

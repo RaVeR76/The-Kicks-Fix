@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                    {% if accessories.image1 %}
+                    {% if accessories.image1 and accessories.image2 and accessories.image3 %}
                     <div id="accessory_carousel" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#accessory_carousel" data-slide-to="0" class="active"></li>
@@ -49,7 +49,7 @@
                         </a>
                     </div>
                     {% else %}
-                    <a href="">
+                    <a href="#">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ accessories.name }}">
                     </a>
                     {% endif %}

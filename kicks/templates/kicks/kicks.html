@@ -51,7 +51,7 @@
                         {% for kicks in kicks %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                                 <div class="card h-100 border-1 shadow">
-                                    {% if kicks.image1 %}
+                                    {% if kicks.image1 and kicks.image2 and kicks.image3 %}
                                     <a href="{% url 'kicks_detail' kicks.id %}">
                                         <img class="card-img-bottom img-fluid" src="{{ kicks.image1.url }}" alt="{{ kicks.name }}">
                                     </a>

@@ -329,6 +329,18 @@ Below is an image of the way it should've looked after full registration:
 ![Profile Page](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/profile-image.png)
 
 
+
+### Order History
+
+#### **Test**
+
+#### **Results**
+
+#### **Verdict**
+
+
+
+
 ### Admin Functions
 
 #### Admin Story : I want to be able to ADD products easily
@@ -338,9 +350,54 @@ Below is an image of the way it should've looked after full registration:
 
 #### **Test**
 
+- See if a user can access admin functions through the url, if they are not logged in (should redirect them to login page)
+- See if a logged in user can type the appropiate url to access add / edit functions
+- See if an Error message appears saying "Sorry, only store admin can do that", if the user tries to access these functions through the url
+- See if a superuser / admin can access these functions through the urls
+- See if a superuser / admin has the options available to edit or remove any product on either their main page or individual details page
+- See if a superuser / admin can access the Add Kicks or Add Accessory forms from their Account dropdown in the navbar
+- See if a superuser / admin can add a product using the forms avalable
+- See if a Success message appears on completion of Adding a new product and redirects them to the new products details page
+- Check that everything has been added to that new product and all looks well
+- See if the superuser / admin can edit this new product by clicking on the edit link
+- See if an Alert message appears confirming to them that they are editing a product
+- See if the superuser / admin can edit that product and click the *Update Product* button
+- See if a Success message appears after successfully updating a product
+- Make sure that product appears within the main products page
+- Check that if *Cancel* button is clicked on either the Add or Edit pages that the superuser / admin is returned to the main page for that specific product
+- Check that when a product had been removed by deletion that it does not exist within the database
+- Check that a Success message appears on completion of the product deletion
+- Check ALL forms validation for both Adding and Editing a product by leaving out required fields and inputting a price larger than 6 digits
+- Check that if no images are added, a *no image* image appears instead of a blank area
+- Check that even with no image the product can be added to the bag
+
+
 #### **Results**
+All tests passed with flying colours ..... BUT .... there is always a BUT, I noticed that because of my carousel there has to be three images added so if I only added one then it would througn up an error. I love fixing code on the fly, it makes you feel so good .... so I did, see below.
+
+Below is my code before the fix:
+
+![Admin Add Products Image Issue](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/add-img-admin1.png)
+
+Below is my code after the fix:
+
+![Admin Add Products Image Issue](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/add-img-admin2.png)
+
+
+I know it is a simple solution but I have tested it and it works. If there aren't three images then it displays the default *no image* image.
+I also added this to the Kicks details page too so everything is cool. I tried adding one image to image2 and tested it too and also with image3. Unless there are 3 images the carousel will not display any images only the default one.  
+I also added ```{% if accessories.image1 and accessories.image2 and accessories.image3 %}``` to the accessories page too, as I didn't want an image, as in image1, displaying here then nothing on the details page so I have unity across my website. I did this for Kicks too.  
+
+So if there aren't three images uploaded to the products database, there will be **NO IMAGE** for this product on display .... simple as that !!! (I hope this was the right decision ha ha).
 
 #### **Verdict**
+Deffo would like to add Admin forms for slogans, promotions, logos, discount codes, discount percentages, delivery costs, etc , etc but you can still utilise this within thye Django Admin so at least it saves changing code and deploying again causing major site downtime which is what we don't want ..... my mentor said try and keep as much Backend as possible as it will save you a load of pain in the future. I totally understand were he is coming from and will always use this concept in the future.  
+At present the two forms for adding and editing, and the delete options work well so I am not going to beat myself up over not getting the other Admin additions not completed.
+I have aleady added this to the Features to be implemented in my README which is getting bigger by the minute ha ha but I can only get better at planning things and I deffo sopent way too much time on the images and info but sure it all looks good anyways.  
+So glad I found that bug when testing today and also added a quick fix within the code. I probably should have made ALL images required in my model and then I wouldn't have had this issue but it's a learning curve and I am still learning.  
+
+All in all I am super happy with ALL admin functions and there functionality :)
+
 
 
 

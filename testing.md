@@ -282,6 +282,7 @@ All test worked above so I am super happy again with the overall fucntionality o
 - The user will have the option to to Create an account ot Login on the checkout page if they are not registered or logged in
 - The user if registered and logged in will have the option to save their default delivery details for future usage
 - The user will also be able to return to bag to make adjustments if needed by clicking on the *Adjust Bag* button
+- The form has to be filled out as per the validation and will through up validation errors if not
 - The card image will change depending on what their card is, like Visa or Mastercard
 - The user will get an error message if their is any issues with their card details (Stripe Validation)
 - The user will see the amount their card is going to be charged in RED directly below the *Complete Order* button so they know one final time before proceeding with payment
@@ -334,11 +335,24 @@ Below is an image of the way it should've looked after full registration:
 
 #### **Test**
 
+- Check that the user can not see their order order history if they are not logged in
+- Check that a new registered user has no order history and that there is no default delivery information
+- Check that when a new user makes an order and if the *"Save default delivery info"* box **is not** ticked that their details are not saved
+- Check that when a new user makes an order and if the *"Save default delivery info"* box **is** ticked that their details are saved
+- Check that when a new user makes an order that their order is located in their Order History
+- Check that the basic elements of their order are displayed like order number (first few characters), date, items and order total
+- Check that if a user amends their delivery information that this updates correctly
+- Check that when a user updates their Delivery Information that a Success message appears informing them of this
+- Check that the users orders are listed by oldest first and descending to newest
+- Check that if a user clicks on an order by Order Number that it navigates them to their previous orders page and displays the orders details
+- Check that when a user clicks on an order by Order Number that an Alert message appears informing of this process
+- Check that all details can't be removed and this will be saved on update
+
 #### **Results**
+All tests passed with no bugs which is always a good thing
 
 #### **Verdict**
-
-
+Order history works well and does what it was designed to. It allows users to access and update their personal Delivery Information for a quicker checkout and more importantly the user can see basic details of ALL previous orders and then access their previous orders in more detail by clicking the Order Numbers.
 
 
 ### Admin Functions
@@ -391,7 +405,7 @@ I also added ```{% if accessories.image1 and accessories.image2 and accessories.
 So if there aren't three images uploaded to the products database, there will be **NO IMAGE** for this product on display .... simple as that !!! (I hope this was the right decision ha ha).
 
 #### **Verdict**
-Deffo would like to add Admin forms for slogans, promotions, logos, discount codes, discount percentages, delivery costs, etc , etc but you can still utilise this within thye Django Admin so at least it saves changing code and deploying again causing major site downtime which is what we don't want ..... my mentor said try and keep as much Backend as possible as it will save you a load of pain in the future. I totally understand were he is coming from and will always use this concept in the future.  
+Deffo would like to add Admin forms for slogans, promotions, logos, discount codes, discount percentages, delivery costs, etc , etc but you can still utilise this within the Django Admin so at least it saves changing code and deploying again causing major site downtime which is what we don't want ..... my mentor said try and keep as much Backend as possible as it will save you a load of pain in the future. I totally understand were he is coming from and will always use this concept in the future.  
 At present the two forms for adding and editing, and the delete options work well so I am not going to beat myself up over not getting the other Admin additions not completed.
 I have aleady added this to the Features to be implemented in my README which is getting bigger by the minute ha ha but I can only get better at planning things and I deffo sopent way too much time on the images and info but sure it all looks good anyways.  
 So glad I found that bug when testing today and also added a quick fix within the code. I probably should have made ALL images required in my model and then I wouldn't have had this issue but it's a learning curve and I am still learning.  

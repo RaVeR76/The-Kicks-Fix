@@ -186,11 +186,6 @@ I'm hoping you can see that within my website as there are 91 sets of Kicks and 
 Overall I am so so happy with each of the two main products page and the way they look and feel. It actually looks like a proper Kicks site where me personnally, I could spend a lot of money as I am such a Kicks fanatic to be honest.
 
 
-
-
-
-
-
 ### Products Details Page
 
 #### User Story : I want to be able purchase any product I desire
@@ -218,6 +213,7 @@ Overall I am so so happy with each of the two main products page and the way the
 - Validation will show an error if the user types quantity outside this range
 - Apon the user had selected what they require, if they click on the *ADD TO BAG* button the Kicks with their size and qunatity will be added to the bag
 - Apon Adding To Bag a success message will pop up and display a message but also the items just selected in the Success Toast
+- If the user decides to click the *Secure Checkout* button within this success message then they will be navigated to the Secure Checkout page
 - The *BAG TOTAL* in the top right, will also update with the total if nothing was originally in the bag or add to the total, if there was a total already there
 - The user can either add the same Kicks again either with the same size, different sizes from different regions or just click on the *Keep Shopping* button and return to the *All Kicks* page
 
@@ -244,11 +240,29 @@ Just so you know as I was typing this up I thought just show what sex the Kicks 
 
 #### **Test**
 
+- Products images are displayed clearly within the bag area for the user to see
+- Products SKU's for ALL Products will be displayed and Products Sizes if that Product is a pair of Kicks
+- The Products individual price will be displayed before the quantity
+- The Products quantity will be displayed within the quantity box
+- The user will be able to adjust the quantity and click on the update link which in turn will update everything including the totals
+- The user will be able to remove a prodcut by clicking the remove link and therefore reove the costs from the totals
+- The user will be able to see their current total under the bag icon in the top right hand of the navbar
+- The user will be able to see their bag total and grand total including delivery (if any) just above the *Secure Checkout* button
+- If the total is less than the ```free_delivery_threshold``` set in Django Admin then the delivery cost will be calculated and displayed within the delivery (set at 10% at the minute)
+- If the total is less than the ```free_delivery_threshold``` set in Django Admin then a red warning will display under the Grand Total telling them to spend X amount for free delivery
+- The user should see not success messages for updating products within the bag area as I removed these because they were not required in my opinion
+- If the user clicks on the *Continue Shopping* button they will be returned to the ALL Kicks page but their current total will continue to be on display under the bag icon
+- If the user clicks on the *Secure Checkout* buttn they will be taken to the Checkout page to continue with their purchase
+
 #### **Results**
+I know the quantity buttons don't disable on large screens and I still have the issue with them not disabling if the user has added the same Kicks but different sizes because I am using SKU as my ID for the bag code but I will just have to put these down as unsolved bugs at the minute as I have no time to rectify these. I did try my best but couldn't come up with a solution in the time I allowed myself to have a go. I will look at it after I get my final result as it's annoying me so hang fire on this one.  
+I did have some issues getting my code right for passing either product to the bag hence why I used SKU to begin with and sizes too, instead of the products PKs as this caused me major headaches at the start due to the fact I had two different products.
+
+Apart from the quantity button issues, everything else passed the above tests and it all works really well. I maybe could have had small buttons instead of links for the *update* and *remove* options but these come as the projects get updated. It looks well on small screens after some refactoring at the end by overall I am happy with the functionality 
+
 
 #### **Verdict**
-
-
+All test worked above so I am super happy again with the overall fucntionality of my bag page and it looks good on all devices. I did want to have Discount codes working so the user could input the special code at the bag area and a discount would be applied offering more reductions on the overall costs. I will have this option available for future implementation but for now I had to let it go !
 
 
 ### The Checkout

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+   <div class="overlay"></div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="text-uppercase my-black-text mb-4">Kicks Fix Club</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 my-black-text">
+                <p>Hey {{ user }},</p>
+                <p>What is the <strong>Kicks Fix Club</strong> I hear you ask?     
+                <p>Well, let me tell you my friend. It's a unique club for Kicks Fanatics where members get free shipping, exclusive rewards
+                   and once in a lifetime offers that are worth their weight in gold. 
+                <p>
+                   As a member, you will accumulate points with every purchase and once certain milestones are reached, you will receive special
+                   discount codes that you can use at The Kicks Fix checkout.
+                </p>
+                </p>
+                   Also, there are special prizes to be won every month and 
+                   all <strong>you</strong> have to do .... is become a member. It's as simple as that !                
+                </p>
+                <p>So come join the KFC .... It's Finger Kickin' Good !!!</p>
+                <p class="contact-details">
+                    <a href="mailto:kfclub@thekicksfix.com" id="mailto" aria-label="Email us" target="_blank">kfclub@thekicksfix.com </a>
+                    <span class="d-block">+44 20 123 45678</span>
+                    <span class="d-block">+44 77 123 45678</span>
+                    <a href="https://wa.me/123456789" class="ml-1" target="_blank" rel="noopener" aria-label="Text us on whatsapp">
+                        <i class="fab fa-whatsapp fa-lg"></i>
+                    </a>
+                    <a href="mailto:kfclub@thekicksfix.com" class="ml-1" target="_blank" aria-label="Email us">
+                        <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>           
+                    </a>
+                </p>  
+                <p>Send us an email or text, to become an inclusive member.</p> 
+            </div>
+        </div>
+    </div>
+{% endblock %}

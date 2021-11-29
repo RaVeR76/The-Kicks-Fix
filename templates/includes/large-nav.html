@@ -37,7 +37,7 @@
 
         <!-- Men Navbar Dropdown Menu With Added Submenus For Brands & Styles -->
         <li class="nav-item dropdown">
-            <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="men" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="men" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Men
             </a>
             <ul class="dropdown-menu" aria-labelledby="men">
@@ -71,7 +71,7 @@
 
         <!-- Women Navbar Dropdown Menu With Added Submenus For Brands & Styles -->
         <li class="nav-item dropdown">
-            <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="women" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="women" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Women
             </a>
             <ul class="dropdown-menu" aria-labelledby="women">
@@ -102,7 +102,7 @@
 
         <!-- Kids Navbar Dropdown Menu With Added Submenus For Brands & Styles -->
         <li class="nav-item dropdown">
-            <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="kids" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="kids" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Kids
             </a>
             <ul class="dropdown-menu" aria-labelledby="kids">
@@ -133,7 +133,7 @@
 
         <!-- Accessories Navbar Dropdown Menu With Added Submenus For Types -->
         <li class="nav-item dropdown">
-            <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="accessories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="accessories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
             <ul class="dropdown-menu" aria-labelledby="accessories">
@@ -148,17 +148,14 @@
             </ul>
         </li>
 
-        <!-- TLC Navbar Dropdown Menu -->
-        <li class="nav-item dropdown">
-            <a href="" class="nav-link my-yellow-text font-weight-bold mr-5" id="tlc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                TLC
+        <!-- The KFC exclusively for registered users -->
+        {% if request.user.is_authenticated and not request.user.is_superuser %}
+        <li class="nav-item">
+            <a href="{% url 'kicks_club' %}" class="nav-link my-yellow-text font-weight-bold mr-5">
+                KFC
             </a>
-            <div class="dropdown-menu" aria-labelledby="tlc">
-                <a href="" class="dropdown-item">Kick Kindness</a>
-                <a href="" class="dropdown-item">Type</a>
-                <a href="" class="dropdown-item">Add New Link</a>  <!-- Will add more at a later time -->
-            </div>
         </li>
+        {% endif %}
 
     </ul>
 </div>

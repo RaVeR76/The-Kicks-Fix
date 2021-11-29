@@ -84,18 +84,20 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-account">
                             {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a href="{% url 'add_accessory' %}" class="dropdown-item">Accessory Admin</a>
-                                <a href="{% url 'add_kicks' %}" class="dropdown-item">Kicks Admin</a>
-                            {% endif %}
+                                {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_accessory' %}" class="dropdown-item">Accessory Admin</a>
+                                    <a href="{% url 'add_kicks' %}" class="dropdown-item">Kicks Admin</a>
+                                {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'order_history' %}" class="dropdown-item">My Order History</a>
-                                <a href="{% url 'contact_us' %}" class="dropdown-item">Contact Us</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
+                                {% if not request.user.is_superuser %}
+                                    <a href="{% url 'contact_us' %}" class="dropdown-item">Contact Us</a>
+                                {% endif %}
                         </div>
                     </li>
                     <li class="list-inline-item">

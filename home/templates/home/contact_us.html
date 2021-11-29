@@ -22,13 +22,15 @@
 
         <div class="row">
             <div class="col-12 col-md-6 my-black-text">
-                <p>Hey {{ user }},</p>
-                <p>We really hope you are enjoying the <strong>The Kicks Fix</strong> and all the cool kicks 
-                   we have to offer you. Don't forget about all the accessories too, in case you want to bring your old 
-                   kicks back to life again or simply funk up your new ones.
+                <p>Hey {% if request.user.is_authenticated %}{{ user }}{% else %}you{% endif %},</p>
+                <p>We really hope you are enjoying <strong>The Kicks Fix</strong> and all the cool Kicks 
+                   we have to offer you. We always endeavour to bring you the best Kicks in town and at the lowest prices too.
+                <br>   
+                   Also, don't forget about all the Accessories too, in case you want to bring your Old Skool
+                   Kicks back to life again or simply funk up your new ones.
                 <br>
-                   If you ever need help with anything or want to let us know how we are doing, just give us a shout
-                   on any of the contact options below.
+                   If you ever need help with anything or want to let us know how we are doing, just give us a shout,
+                   we are here for you{% if request.user.is_authenticated %} {{ user }}{% endif %}.
                 </p>
                 <p>Also, if you are having any issues with:</p>
                 <ul class="list-unstyled">
@@ -38,6 +40,7 @@
                             <li>Your Profile</li>
                             <li>Our Products</li>
                             <li>Orders</li>
+                            <li>Payment Queries</li>
                             <li>Other</li>
                         </ul>
                   </ul>

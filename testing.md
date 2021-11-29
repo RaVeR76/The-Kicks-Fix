@@ -306,7 +306,6 @@ I have added names in Django Admin for some of my test user profiles so it deffo
 
 #### User Story : I want my own personal space after registering by means of a profile page
 #### User Story : I want to be able to create a wishlist of products for future purchasing
-#### User Story : I want to be able to contact the site owner, in case I have any issues or payment queries
 
 
 #### **Test**
@@ -411,6 +410,41 @@ I have aleady added this to the Features to be implemented in my README which is
 So glad I found that bug when testing today and also added a quick fix within the code. I probably should have made ALL images required in my model and then I wouldn't have had this issue but it's a learning curve and I am still learning.  
 
 All in all I am super happy with ALL admin functions and there functionality :)
+
+
+### Contact Us and the KFC - Kicks Fix Club
+
+#### User Story : I want to be able to contact the site owner, in case I have any issues or payment queries
+
+#### **Test**
+
+- Check that a non-registered user can see the Contact Us link
+- Check that a non-registered user cannot see the KFC link
+- Check that registered user can see the Contact Us link
+- Check that a registered user can see the KFC link
+- Check that a superuser cannot see the Contact Us link
+- Check that a superuser cannot see the KFC link
+- Check that a non-registered user cannot see their name within the Contact Us page (it would say Anonymous User)
+- Check that a registered user can see their name within the Contact Us page
+- Check that a registered user can see their name within the KLC page
+- Check that the Contact Us email link opens an New Email for the user and populates with the **To** section 
+- Check that the KFC membership email link opens an New Email for the user and populates with the **To** section 
+
+#### **Results**
+All tests passed as expected but these were simple add ons at the end of the project just to finalise it and complete one last User Story.  
+I had made the KFC available to all users but I have changed it to registered users ONLY, as it saved some code within the kicks_club page I was using, to display certain text depending on a users status.
+I also removed the KFC from superusers because they don't need to see it or join, more to the point.
+I also moved the Contact Us link so non registered user could see it in the Account dropdown as the site isn't just for registered ones and everyone should have the availabilty to Contact Us, at The Kicks Fix with issues.
+I also removed the Contact us from superusers as they do not require that either.
+
+#### **Verdict**
+I added the Contact Us page last night and it's fairly simple but at least it's there for a user to contact The Kicks Fix with any issues they have.  
+As for the KFC, the Kicks Fix Club, this just came to me at the end here, so bare with it as it's one of those spontanious ideas I sometimes have. It was orginally going to be TLC which stood for Trainer Loving Care but with the website being called Kicks and all, I thought this would just have been like a white elephant in the room and spoil the overall feel. The TLC page was just going to have some pointers / tips about how to keep you Kicks clean, fresh and looking good. I was going to have a few links to my maintenance products in Accessories too. I just thought this would have been a bit boring hence why I've went a totally different route at the last minute.   
+I then decided it was going to be Kicks Fix Care but I thought this would just be like the Contact Us page so I've let my mind go here and came up with KFC - Kicks Fix Club, which as you know is play on letters so to speak. I'm super sorry if it seems cheesy and the fact I left this to the end but I think my website deserves a club, for all the Kicks Fanatics out there like moi !  
+Obviously I would have to develop this membership scenario so so much more, if the user was to accumulate points and this would be added to their profile pages, also the special offers, discount codes and everything I said on the KFC page would have to have code written for it.
+This all evolved within my head in the space of about 5 minutes tonight if I am being honest but I am going to go with it just to finish the project off.  
+
+Overall, I think this was a better option than TLC which if you look at my *Git Commits* was there in the Navbar right until tonight so you know this last minute change wasn't even on the radar at all. Given that, with the right development I beleve this would be a much better attraction for the overall site and would make users want to join the club to earn some nice savings, as they purchase Kicks or Accessories.
 
 
 ### Overall Website Navigation, Functionality & Visual Experience

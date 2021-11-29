@@ -759,7 +759,7 @@ At the end of the day I put my heart and soul into this project and sat for a mo
 
 * All Kicks images taken from this humongous set, only 9.32Gb of images, at [Kaggle](https://www.kaggle.com/sebastiaanjohn/sneakers)
 
-* Wireframe Kick Icon - https://www.flaticon.com/search?author_id=292&style_id=983&type=standard&word=sneaker
+* [Wireframe Kick Icon](https://www.flaticon.com/search?author_id=292&style_id=983&type=standard&word=sneaker)
 
 * Hero Image from Pexels, by [CrimsonPeak](https://www.pexels.com/photo/black-and-white-low-top-sneakers-on-rack-1667434/) and edited for my site
 
@@ -767,7 +767,7 @@ At the end of the day I put my heart and soul into this project and sat for a mo
 
 **Other Credits**
 
-* Kicks prices and descriptions From [StockX](https://stockx.com/) and [GOAT](https://www.goat.com/)
+* Kicks prices and descriptions searched for from [StockX](https://stockx.com/) and [GOAT](https://www.goat.com/)
 
 * [ETSY](https://www.etsy.com/uk/) and [Ebay](https://www.ebay.co.uk/) for Accessories Images and descriptions
 

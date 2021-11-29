@@ -553,4 +553,4 @@ I think I panicked too much as I'm nearly at the end and just wanted this part t
 Worse coding day ever ha ha, well .... until the next one !!!
 
 * **Verdict**  
-I'm so glad I got my project deployed on Heroku as I always worry about this part but it's there for the **Whole World** to see and I am super proud of it :)
+I'm so glad I got my project deployed on Heroku as I always worry about this part but it's there now ..... for the **Whole World** to see and I am super proud of it :)

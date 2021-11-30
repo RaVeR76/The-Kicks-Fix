@@ -24,7 +24,7 @@
     - [CSS](#css)
     - [JavaScript](#javascript)
     - [Python](#python)
-    - [Debug = True](#debug---true)*
+    - [Debug = True](#debug---true)
 
 ## Manual Testing
 

@@ -1,3 +1,4 @@
+/* Profile CSS */
 .order-history {
     max-height: 416px; /* height of order history form + submit button */
     overflow-y: auto;

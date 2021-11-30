@@ -20,7 +20,6 @@
                 <hr class="w-50 mb-1">  
             </div>
         </div>
-        
         <div class="row">
             <div class="kicks-container col-10 offset-1">
                 {% if kicks %}
@@ -81,7 +80,6 @@
                                                         <i class="fas fa-star mr-1"></i>{{ kicks.style.friendly_name }}
                                                     </a>
                                                 </p>  
-
                                                 <p class="small mt-1 mb-0">
                                                     <a href="{% url 'kicks' %}?sex={{ kicks.sex.name }}" class="text-muted">
                                                         {% if kicks.sex|lower == 'kids' %}
@@ -92,8 +90,7 @@
                                                             <i class="ml-1 fas fa-male fa-lg mr-1"></i> {{ kicks.sex.friendly_name }}
                                                         {% endif %}
                                                     </a>
-                                                </p>
-                                                
+                                                </p>                                               
                                                 {% if request.user.is_superuser %}
                                                     <small>
                                                         <a href="{% url 'edit_kicks' kicks.id %}">Edit</a> | 

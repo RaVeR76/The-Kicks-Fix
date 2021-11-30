@@ -25,7 +25,6 @@
                 <hr>
             </div>
         </div>
-
         <div class="row">
             <!-- Order Summary Details -->
             <div class="col-12 col-lg-6 order-lg-last mb-5">
@@ -37,8 +36,7 @@
                     <div class="col-3 text-right">
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
-                </div>
-                
+                </div>     
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
@@ -126,7 +124,6 @@
                         <!-- Pass the client secret to the view so we can get the payment intent id -->
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
-
                     <div class="submit-button text-right mt-5 mb-2">                    
 						<a href="{% url 'view_bag' %}" class="btn my-white-btn rounded-0">
 							<span class="icon">

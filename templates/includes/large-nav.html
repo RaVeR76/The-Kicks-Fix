@@ -1,13 +1,11 @@
 <div class="collapse navbar-collapse" id="large-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        
+    <ul class="navbar-nav w-auto mx-auto"> 
         <!-- Home Link For Small Screens -->
         <li class="nav-item d-block d-md-none">
-            <a class="nav-link my-yellow-text font-weight-bold mr-5" href="{% url 'home' %}" id="home-link">
+            <a href="{% url 'home' %}" class="nav-link my-yellow-text font-weight-bold mr-5" id="home-link">
                 Home
             </a>
         </li>
-
         <!-- New In Navbar Menu With Filters Depending On Link Selected -->
         <li class="nav-item dropdown">
             <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="new-in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -21,7 +19,6 @@
                 <a href="{% url 'kicks' %}?category=new_in" class="dropdown-item">All Kicks</a>
             </div>
         </li>
-
         <!-- Sales Navbar Menu With Filters Depending On Link Selected -->
         <li class="nav-item dropdown">
             <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="sales" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,7 +32,6 @@
                 <a href="{% url 'kicks' %}?category=sale_item" class="dropdown-item">All Kicks</a>
             </div>
         </li>
-
         <!-- Men Navbar Dropdown Menu With Added Submenus For Brands & Styles -->
         <li class="nav-item dropdown">
             <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="men" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,7 +45,6 @@
                         {% endfor %}       
                     </ul>
                 </li>
-                
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Style</a>
                     <ul class="dropdown-menu submenu-wrapper">
                         {% for style in styles %}
@@ -57,7 +52,6 @@
                         {% endfor %}       
                     </ul>
                 </li>
-
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Colour</a>
                     <ul class="dropdown-menu submenu-wrapper">
                         {% for colour in colours %}
@@ -65,11 +59,9 @@
                         {% endfor %}       
                     </ul>
                 </li>
-
                 <li><a href="{% url 'kicks' %}?sex=male" class="dropdown-item">All Men Kicks</a></li>
             </ul>
         </li>
-
         <!-- Women Navbar Dropdown Menu With Added Submenus For Brands & Styles -->
         <li class="nav-item dropdown">
             <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="women" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -100,7 +92,6 @@
                 <li><a href="{% url 'kicks' %}?sex=female" class="dropdown-item">All Women Kicks</a></li>
             </ul>
         </li>
-
         <!-- Kids Navbar Dropdown Menu With Added Submenus For Brands & Styles -->
         <li class="nav-item dropdown">
             <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="kids" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -131,7 +122,6 @@
                 <li><a href="{% url 'kicks' %}?sex=kids" class="dropdown-item">All Kids Kicks</a></li>  <!-- Will add more at a later time -->
             </ul>
         </li>
-
         <!-- Accessories Navbar Dropdown Menu With Added Submenus For Types -->
         <li class="nav-item dropdown">
             <a href="#" class="nav-link my-yellow-text font-weight-bold mr-5" id="accessories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -148,7 +138,6 @@
                 <li><a href="{% url 'accessories' %}" class="dropdown-item">All Accessories</a></li>  <!-- Will add more at a later time -->
             </ul>
         </li>
-
         <!-- The KFC exclusively for registered users -->
         {% if request.user.is_authenticated and not request.user.is_superuser %}
         <li class="nav-item">
@@ -157,7 +146,6 @@
             </a>
         </li>
         {% endif %}
-
     </ul>
 </div>
 

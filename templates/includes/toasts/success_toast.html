@@ -1,7 +1,8 @@
-
+<!-- Success Toast -->
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
+    <!-- Toast Header With The Kicks Fix Logo -->
     <div class="toast-header bg-white text-dark">
         <img src="{{ toast_logo }}" alt="Toast Logo Image">
         <strong class="ml-3 mr-auto mt-1">Success !</strong>
@@ -9,6 +10,7 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+    <!-- Toast Body With Message, Current Bag Items & Totals -->
     <div class="toast-body bg-white text-dark">
         <div class="row">
             <div class="col">
@@ -49,6 +51,7 @@
                             Spend <strong>£{{ free_delivery_topup }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
+                    <!-- Checkout Button For Faster Access To Checkout -->
                     <a href="{% url 'checkout' %}" class="btn my-black-btn btn-block rounded-0">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span class="icon">

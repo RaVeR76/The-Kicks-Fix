@@ -1,10 +1,10 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
   <head>
 
     {% block meta %}
+    <!-- meta information -->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ MEDIA_URL }}favicon32x32.png">
 
+    <!-- Meta tags for description, keyswords and author -->
     {% block extra_meta %}
+    <meta name="description" content="The Kicks Fix. Cool Kicks For All Ages">
+    <meta name="keywords" content="Kicks, Sneakers, Trainers, ">
+    <meta name="author" content="Lee Foster">
     {% endblock %}
 
     {% block corecss %}
@@ -42,9 +46,10 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
+        <!-- Promotion Bar and Delivery Threshhold -->
         <div id="offer-banner" class="row text-center">
             <div class="col my-white-back text-dark">
-                {% if promotion_bar|lower != 'none' %} <!-- Admin needs to input none if no promotionas available -->                  
+                {% if promotion_bar|lower != 'none' %} <!-- Admin needs to input none if no promotions available -->                  
                     <h4 class="text-uppercase my-1">{{ promotion_bar }} £{{ free_delivery_threshold }} !!!!</h4>
                 {% else %}
                     <h4 class="text-uppercase my-1">New offers coming soon !!!</h4>

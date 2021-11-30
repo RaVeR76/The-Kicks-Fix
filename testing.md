@@ -6,7 +6,7 @@
 - [**Testing**](#--testing--)
   * [Table of contents](#table-of-contents)
     + [Responsiveness](#responsiveness)
-    + [Navigation & Search Functions](#navigation)
+    + [Navigation & Search Functions](#navigation---search-functions)
     + [Home Page](#home-page)
     + [Registration](#registration)
     + [Login / Logout](#login---logout)

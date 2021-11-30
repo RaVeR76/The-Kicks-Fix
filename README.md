@@ -27,31 +27,44 @@ Anyways, thank you for checking my final project out and I really hope you love 
 
 ---
 
-## Table of contents 
+## Table of contents
+
 - [**UX**](#ux)
-  * [**User Goals**](#user-goals)
-  * [**User Stories**](#user-stories)
-  * [**Site Owner Goals**](#site-owner-goals-)
-  * [**User Requirements and Expectations**](#user-requirements-and-expectations)
-    + [Requirements](#requirements)
-    + [Expectations](#expectations)
-  * [**Design Choices**](#design-choices)
-    + [Fonts](#fonts)
-    + [Icons](#icons)
-    + [Colours](#colours)
+  - [**User Goals**](#user-goals)
+  - [**User Stories**](#user-stories)
+  - [**Site Owner Goals**](#site-owner-goals)
+  - [**User Requirements and Expectations**](#user-requirements-and-expectations)
+    - [Requirements](#requirements)
+    - [Expectations](#expectations)
+  - [**Design Choices**](#design-choices)
+    - [Fonts](#fonts)
+    - [Icons](#icons)
+    - [Colours](#colours)
 - [**Wireframes**](#wireframes)
+    - [Mobile Wireframes](#mobile-wireframes)
+    - [Tablet Wireframes](#tablet-wireframes)
+    - [Desktop Wireframes](#desktop-wireframes)
 - [**Database Structure**](#database-structure)
+  - [**Database choice**](#database-choice)
+  - [**Data Modelling**](#data-modelling)
+    - [**Profiles App**](#profiles-app)
+    - [**Home App**](#home-app)
+    - [**Common App**](#common-app)
+    - [**Kicks App**](#kicks-app)
+    - [**Accessories App**](#accessories-app)
+    - [**Checkout App**](#checkout-app)
+  - [**Data Modelling Conclusion**](#data-modelling-conclusion)
 - [**Features**](#features)
-  * [**Existing Features**](#existing-features)
-  * [**Features To Be Implemented**](#features-to-be-implemented)
+  - [**Existing Features**](#existing-features)
+  - [**Features To Be Implemented**](#features-to-be-implemented)
 - [**Technologies Utilised**](#technologies-utilised)
-  * [**Languages**](#languages)
-  * [**Tools and Libraries**](#tools-and-libraries)
+  - [**Languages**](#languages)
+  - [**Tools and Libraries**](#tools-and-libraries)
 - [**Testing**](#testing)
 - [**Bugs**](#bugs)
 - [**Deployment**](#deployment)
-  * [Local Deployment](#local-deployment)
-  * [Heroku Deployment](#heroku-deployment)
+  - [Local Deployment](#local-deployment)
+  - [Heroku Deployment](#heroku-deployment)
 - [**Conclusion**](#conclusion)
 - [**Credits**](#credits)
 
@@ -107,7 +120,7 @@ Anyways, thank you for checking my final project out and I really hope you love 
 #### Requirements 
 
 * A landing page that when the user sees it they automatically think .... I need to see more please !!!
-* Easy navigation by utilising a responsive navbar and a personal designed unique logo, with homepage link attached
+* Easy navigation by utilising a responsive navbar and a personally designed unique logo, with homepage link attached
 * The ability to purchase a product or a multitude of products, in the simpliest but safest possible way
 * Contact information like an email and phone number or possible a helpline for assistance
 * A history of previous purchases within the users personal space
@@ -116,10 +129,11 @@ Anyways, thank you for checking my final project out and I really hope you love 
 
 #### Expectations
 
+* I expect the user to register easily and with no issues
 * I expect ALL navigation links to function correctly
 * I expect a comfirmation email of my details and my purchases made
 * I expect the user to be able to see any product easily on any device of their choice
-* 
+* I expect the user to come back because they love this site
 
 ### **Design Choices**
 
@@ -165,8 +179,8 @@ So a better breakdown of the colours are shown below:
 
 ## **Wireframes**
 ---
-The software that I used for my wireframes was Balsamiq. This was the fourth time I used this software & I really enjoy designing my project layouts using this. The software allows you design the basic layout of your website on devices such as a desktop, tablet and mobile. They are just simple 2D sketches but I now understand how important these really are :) 
-I think my wireframes look good & deffo give me a great starting point for the design process !
+The software that I used for my wireframes was Balsamiq. This was the fourth time I used this software and I really enjoy designing my project layouts using this. The software allows you design the basic layout of your website on devices such as a desktop, tablet and mobile. They are just simple 2D sketches but I now understand how important these really are :) 
+I think my wireframes look good and deffo give me a great starting point for the design process !
 
 Anyway, you can have a wee look at my wireframes below:
 
@@ -208,7 +222,7 @@ Anyway, you can have a wee look at my wireframes below:
 
 ## **Database Structure**
 ---
-For my database structure I had to think about this for a while hence why I have added before I'm about to start adding my models to my project.
+For my database structure I had to think about this for a long time before I started my project.
 To be honest it took me while to get my head around it but I think I got there. After watching the Code Institute tutorials again, endless Youtube videos and 
 undeniable assistance from my lengendary mentor, I have produced my first Database Schema. I didn't lay one out for my MS3 which cost me valuable marks but for this project, I wasn't going to make the same mistake.
 The Kicks Fix Schema is shown below where I have set up 15 models and have shown the various relationships between them. I may add more if required as my project develops
@@ -412,17 +426,17 @@ Stripe PID | stripe_pid | models.CharField | max_length=254, null=False, blank=F
 I struggled a little at the start with this but the more I got into the project I started to understand most of it and how it all worked. Don't get me wrong, I still have a lot to learn which will come when the pressure to meet the project deadline is off and I can test Django out at my own pace. I never got to utilise my Wishlist for the user to have their own personal wishlists or Social for ALL the social icons that I was going to link but I'll just add these to Features to be Implemented. I did try my best to add as much to the backend as possible like the logos, delivery costs, delivery threshold etc so that if any changes needed to be made for these, it would be much simplier.  
 The more I play around and practise with Django and databases then the more confident and experienced I'll become, which is only a good thing, but while I had many head scratching evenings after work, I think the overall structure is okay and far from perfect but it works and that's the main aim here.
 
-
+[Back to Top](#table-of-contents)
 
 ## **Features**
 ---
 
 ### **Existing Features**
 
-- Registration & login functionality using the Allauth package from Django, to keep it simple
+- Registration and login functionality using the Allauth package from Django, to keep it simple
 - Good filtering within the Navbar dropdowns for finding specific Kicks quickly
 - On each products details page, kicks or accessory, I have three images available that automatically scroll whilst you are there
-- I have added kicks size selection for UK, EU & US that allows the user to select either & then changes the dropdown options to suit (also takes into account sex)
+- I have added kicks size selection for UK, EU and US that allows the user to select either and then changes the dropdown options to suit (also takes into account sex)
 - The logged in user had a profile page for personal details and an order history page were they can view previous orders
 
 ### **Features To Be Implemented**
@@ -432,11 +446,10 @@ The more I play around and practise with Django and databases then the more conf
 - Admin page for adding discounts and changing delivery costs which again you can do though Django Admin, in the Discounts database
 - Registration by utilising Social accounts like Google or Facebook
 - Different payments types like Paypal or GooglePay although Stripe works well
-- Add the users DOB so that I can send special birthday offers (another discount code like below) automatically by email close to that date
+- Add the users DOB so that The Kicks Fix can send special birthday offers (another discount code like below) automatically by email, close to that date
 - Utilise the discount code on the checkout page so that when a user inputs one, it checks it for validation, and then deducts the associated discount percentage from the total
 - Add accessories to the search functionailty of the Nav Search Bar
 
-[Back to Top](#table-of-contents)
 
 ## **Technologies Utilised**
 ---
@@ -464,14 +477,13 @@ The more I play around and practise with Django and databases then the more conf
 - [Google Fonts](https://fonts.google.com/)
 - [drawSQL](https://drawsql.app/)
 
-[Back to Top](#table-of-contents)
+
 
 ## **Testing**
 ---
 
 Testing can be found on [here](https://github.com/RaVeR76/the-kicks-fix/blob/master/testing.md) in a seperate file  
 
-[Back to Top](#table-of-contents)
 
 
 ## **Bugs**
@@ -728,12 +740,34 @@ This set up will allow your site to use Postgres in deployment and sqlite3 in de
 
 **The Kicks Fix** is now deployed on Heroku with AWS storing media files and static files ..... **ENJOY !!!**
 
+[Back to Top](#table-of-contents)
+
 ## **Conclusion**
 ---
 
-I spent a lot of time getting the images right and then I had to scroll through the internet for decriptions, SKUs, estimated prices etc etc. This took so much time to sort out which I didn't realise and deffo had a knock on effect by not getting everything I wanted within my website completed. Whilst some of the images aren't the best and the descriptions are the best I could find especially for the Accessories. I t was hard work and very manoutinous looking for all the info for the images I had downloaded form Kaggle. The file was 8.46 Gb of kick images which I trawled through for the best sets I could. I had anothe folder from Kaggle which was only 383 Mb but there was only one image of each Kicks here And I realy wanted the three for my wee carousel. Also spending all that time cutting, editimg and resizing them all to 400x400 pixels deffo made the overall display look more universal with no odd shaped images throwing it all off tilt. In the real world there would this would be a job for another colleague to get these pics / images raedy for the site so during this project not only was I the developer but also the graphic designer too. I even made the wee logo to go with it all.
+I spent a lot of time getting the images right and then I had to scroll through the internet for decriptions, SKUs, estimated prices etc etc. This took so much time to sort out which I didn't realise and deffo had a knock on effect by not getting everything I wanted within my website completed. Whilst some of the images aren't the best looking and the descriptions, they are the best I could find, especially for the Accessories. It was hard work and very manoutinous looking for all the info for the images I had downloaded form Kaggle. The file was 8.46 Gb of kick images which I trawled through for the best sets I could. I had another folder from Kaggle which was only 383 Mb but there was only one image of each Kicks here And I realy wanted the three for my wee carousel. Also spending all that time cutting, editing and resizing them all to 400x400 pixels deffo made the overall display look more universal with no odd shaped images throwing it all off tilt. There are a lot more Adidas Kicks than any other, a lot more Lifestyle styles than any other and prices may not just be right but you need to look past this at this point, as it's mainly about the code but I still don't want you to forget the effort in getting the data ha ha .... holy moly, there are even a pair of **Green Puma Rihanna sandals** threw in there for good measure ha ha !!!   
+In the real world, this would be a job for another colleague to get these pics / images raedy for the site so during this project not only was I the developer but also the graphic designer too ha ha. I even made the wee logo to go with it all.   
 
-At the end of the day I put my heart and soul into this project and sat for a month and a hald every week night and ALL weekends trying to do the best that I could. Like I said whilst I didn't get some things completed like my Wishlist function and so so happy with the overall look and fucntionality of my website. 
+Just so you know how much effort I put into this project too, I have added PDF versions of my my Excel Spreadsheet that I kept a log on with everything, as I went along.  
+There was my diary, my bugs, my Django model data, all my Kicks data and all my Accessory data that I gathered online .... all on one wee spreadsheet. Please check the various sections out below if you want:   
+
+- [The Kicks Fix Diary](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/kicks-fix-diary.pdf)
+
+- [The Kicks Fix Bugs](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/kicks-fix-bugs.pdf)
+
+- [The Kicks Fix Django Models Data](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/kicks-fix-django-model-data.pdf)
+
+- [The Kicks Fix - All Kicks Data](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/kicks-fix-all-kicks-data.pdf)
+
+- [The Kicks Fix - All Accessories Data](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/wireframes/kicks-fix-all-accessory-data.pdf)
+
+At the end of the day, I have fully put my heart and soul into this project and sat for a month and a half every week night and ALL weekend EVERY weekend, trying to do the best that I could. Like I said whilst I didn't get some things completed that I wanted, like my Wishlist function, I am still so so happy with the overall look and functionality of my website. It actually looks like a **E-Commerce WEBSITE !!!**  
+
+Anyway, as sad as it is, that this is my last Project on the course, and it is sad ... believe me, but I cannot believe how far I have came in a year. A year ago I didn't even know what HTML stood for, I still don't ha ha, only messing but what I have learned, the friends I have gained in the Slack community, my mentor who I adore and basically the whole Coding Community (such a clever bunch of people) .... I personally would not have gotten this far without it ALL !!!!   
+
+So thank you to anyone who is reading this and if you helped me along the way (high five peeps) .... I really hope you enjoy this project because it's acumulated from a year of high, lows, tears, laughter, imposter syndrome, hating JavaScript then loving JavaScript, pesking extra commas and so on ... you all know the score because you've all been there.  
+
+Anyways, I'm off to watch TV because I haven't seen one for the last month and a half ha ha but listen ... deep down, I REALLY hope you enjoy ........ **THE KICKS FIX** !!!
 
 
 ## **Credits**

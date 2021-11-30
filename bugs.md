@@ -1,7 +1,7 @@
 # Bugs
 
 ## Overview
-I know that most of the *BUGS* or *ISSUES* I found were relatively simple and probably downright stupidity, on my part in some cases but for this project I had created an Excel spreadsheet to help me log them, so I really did log everything I could .... the small ones and the big ones. It also had a diary of my work on a day to day basis and a page for ALL my bugs I encountered no matter how big or small. It also hand some project tips, comments as I went along, any credits for code, images, etc and ALL my Django model data as regards my Products and associated info like Brands, Colours, Types and so on.  
+I know that most of the *BUGS* or *ISSUES* I found were relatively simple and probably downright stupidity, on my part in some cases but for this project I had created an Excel spreadsheet to help me log them, so I really did log everything I could .... the small ones and the big ones. I also had a diary of my work on a day to day basis and a page for ALL my bugs I encountered no matter how big or small. It also ALL my Django model data as regards my Products and associated info like Brands, Colours, Types and so on.  
 Anyway below is all my bugs I encountered throughout my final project so I hope they don't bore you but I really hope they might help someone else out there going through the same learning process as me, as the bugs I couldn't fix myself, I found the solutions online so these kind of issues have happened to someone else at a time before :)  
 Also, I have linked each bug to my Github issues list, where I have also logged them too so you can have a look there but I have deffo expanded more on them within here, as I have had more time to explain them and show images to help !   
 
@@ -164,7 +164,7 @@ Simple enough fix to be fair
 
 * **Issue**    
 I made ALL images, apart from a few I missed unfortunately, 400px x 400px just for simplification and site display purposes. 
-I have only loading twelve images until I am sure everything is working properly throughout my project then I will add the rest at the end.
+I have only loaded twelve images until I am sure everything is working properly throughout my project then I will add the rest at the end.
 When images 3.jpg and 6.jpg scrolled along in their image carousels .... the Carousel Indicators glitched very slightly, for some reason.
 
 * **Fix**  
@@ -223,7 +223,7 @@ Secondly, in my Kicks views I had removed the ```.split(',')``` from ```sex = re
 At the end I got there and that's all that matters even if my head was melted but sure ..... everyday is a school day !!!
 
 * **Verdict**  
-I always try my best to solve these issues myself and I generally do but I deffo neeeded help with this one and I'm glad **Tutor Support** was on hand to assist me.
+I always try my best to solve these issues myself and I generally do but I deffo needed help with this one and I'm glad **Tutor Support** was on hand to assist me.
 I couldn't stop querying after I knew how to do it ha ha !
 
 
@@ -284,7 +284,7 @@ I added ```if 'category' not in request.GET:``` which allowed me to stop my sex 
 I did encounter more issues with these filters down the line though and **Sex** was always at the center of it, see next bug too.
 
 * **Verdict**  
-I had to do trial and error to get this part right which I did in the end but when I added the filter bar .... a whole new level of pain was opened ha ha !
+I had to do trial and error to get this part right which I did in the end but when I added the sorting bar .... a whole new level of pain was opened ha ha !
 
 
 ## **[Bug 19](https://github.com/RaVeR76/The-Kicks-Fix/issues/19)**  
@@ -331,16 +331,16 @@ I'm glad I got passed this issue at this moment in time but I knew similar issue
 I couldn't get the bag to add both Kicks and Accessories. I couldn't work it out as I was using SKU for both products when added to bag but it was causing all sorts of errors when I was checking an Accessory SKU within the Kicks database and vice versa. In the end I figured a method out which might not be right or the best way but it works for now.
 
 * **Fix**  
-Within ```bag_contents``` in the ```contexts.py```, as I was using SKU because of the bug, *Bug20* above where the two different products had many of the same PKs, I needed to differentiate between the two SKUs for this bug. By luck I didn't have any proper SKUs for my Accessories that I found online so made these up and they all started with **RAVE** ha ha. So I just added a wee bit of code to check if the ```item_id``` in the bag had the word 'RAVE' in it. If it didn't have 'RAVE' it was a Kicks item so I get the object from my Kicks db and if it did have 'RAVE' it was an Accessory item so I get the object from my Accessories db. Talk about a stroke of luck tbh as my head was about to explode on this bug !!!
+Within ```bag_contents``` in the ```contexts.py```, as I was using SKU because of the bug, **Bug20**, above where the two different products had many of the same PKs, I needed to differentiate between the two SKUs for this bug. By luck I didn't have any proper SKUs for my Accessories that I found online so made these up and they all started with **RAVE** ha ha. So I just added a wee bit of code to check if the ```item_id``` in the bag had the word 'RAVE' in it. If it didn't have 'RAVE' it was a Kicks item so I get the object from my Kicks db and if it did have 'RAVE' it was an Accessory item so I get the object from my Accessories db. Talk about a stroke of luck tbh as my head was about to explode on this bug !!!
 
 My code below which solved this bug and before I refactored it:
 ![Kicks or Accessory Before Refactoring](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/kicks-or-accessory-before.png) 
 
-My code below which solved this bug and after I refactored it:
+My code below which solved this bug and after I refactored it:  
 ![Kicks or Accessory After Refactoring](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/kicks-or-accessory-after.png) 
 
 * **Verdict**  
-In the end this solve this bug at this time so I was happy again, although this piece of ingenious code was removed at a later date, as I utilised the fact that my Kicks would have sizes and my Accessories would not which made it a little easier to work with. Plus I used this fundamental difference on various occasions through my project to differentiate  between the two products.
+In the end this solved this bug at this time so I was happy again, although this piece of ingenious code was removed at a later date, as I utilised the fact that my Kicks would have sizes and my Accessories would not which made it a little easier to work with. Plus I used this fundamental difference on various occasions through my project to differentiate  between the two products.
 
 
 ## **[Bug 22](https://github.com/RaVeR76/The-Kicks-Fix/issues/22)**  
@@ -361,7 +361,7 @@ And here is my code for splitting them up so I could give the user the three dif
 
 * **Verdict**  
 To be honest maybe sizes wasn't the best option to use it for, as realistically the sizes won't change but at least I got it working and may be handier used in future projects.
-This was probably my proudest part of the whole project, getting this working on the Kicks details page and I did have to mess about with the JavaScript, see Bug 23 below, to get it to work but I got there and personally, I think it's an amazing wee touch !!!
+This was probably my proudest part of the whole project, getting this working on the Kicks details page and I did have to mess about with the JavaScript, see **Bug 23** below, to get it to work but I got there and personally, I think it's an amazing wee touch !!!
 
 
 ## **[Bug 23](https://github.com/RaVeR76/The-Kicks-Fix/issues/23)**  
@@ -386,7 +386,7 @@ I know my code isn't the best but I was so happy to get this part of my project 
 ### **I Forgot About Unisex Option In My Kicks**  
 
 * **Issue**    
-After being so HAPPY to get my JavaScript working for the previous bug, Bug 23, for displaying ALL the different sizes for Kids, Females and Males depending on UK, EU or US being selected …... ANOTHER BUG arises ha ha !!!
+After being so HAPPY to get my JavaScript working for the previous bug, **Bug 23**, for displaying ALL the different sizes for Kids, Females and Males depending on UK, EU or US being selected …... ANOTHER BUG arises ha ha !!!
 I could curl up and die right now to be honest but hey, this is the coding life ain't it lol !!!
 I only went and forgot about my Kicks SEX option of UNISEX ..... so not sure how to go about that at this point as I love my Size Options for the others.
 I had some Kicks set out as Unisex so they would be displayed either within the Mens pages or the Females pages, as a lot of Kicks are Unisex. This worked really well for my navbar filters but when I came to this point, I needed to make a decision.
@@ -409,7 +409,7 @@ I can UPDATE my Accessories in the bag but my Kicks throw up an error so need to
 I needed to add a hidden input for my Kicks Size to the form that I was updating, as my update_bag view was always looking for it. I thought it was already there because I was just updating the quantity but hey, you're always learning and I am glad I solved the bug :)
 
 * **Verdict**  
-Issue solved relatively easyily
+Issue solved relatively easily
 
 
 ## **[Bug 26](https://github.com/RaVeR76/The-Kicks-Fix/issues/26)**  
@@ -423,8 +423,7 @@ When I have two of the same pair of Kicks selected but of different sizes, the f
 No fix as of yet
 
 * **Verdict**  
-Hopefully get back to this to solve it
-
+Haven't solved this as of yet but will have another look after I get my final result. I am handing my project in, in a couple of hours, so I just don't have the time unfortunately. It's still *OPEN* in my Gighub page so I will come back to it at a later date.
 
 ## **[Bug 27](https://github.com/RaVeR76/The-Kicks-Fix/issues/27)**  
 
@@ -436,7 +435,7 @@ I have two products so NOT sure how to add a product to an Order Line Item model
 * **Fix**  
 Struggled with this one but had to settle for adding both options of Kicks and Accessories to my OrderLineItem model and work around that. 
 
-* **Verdict**
+* **Verdict**  
 Not happy with the outcome but it's the best I could come up with at present plus I'm too close to the finish line to waste more time trying to come up with a better solution, if there even is one.
 
 
@@ -459,14 +458,14 @@ Silly oversight again but one I caught on quickly to
 ### **Order Line Item Bug Part 3**  
 
 * **Issue**    
-Just a continuous of Bug 27 above, I can get my OrderLineItem to display inline now in my OrderAdmin and therefore in Django admin but I still want to be able to display either Kicks or Accessories NOT both, depending on the actual order.
+Just a continuous of **Bug 27** above, I can get my OrderLineItem to display inline now in my OrderAdmin and therefore in Django admin but I still want to be able to display either Kicks or Accessories NOT both, depending on the actual order.
 
 * **Fix**  
 I tried for ages to work around this by trying if / else statements in my OrderLineItem admin but I just couldn't get it working tbh. It would only display one item or the other but not both when using an if / else statement.
-I had to settle for displaying both Kicks and Accessory fields within each Order Line Item but just leave an item blank if that product wasn't purchased.
+I had to settle for displaying both Kicks and Accessory fields within each Order Line Item but just leave an field blank if that product wasn't purchased.
 
 * **Verdict**  
-Unfortunately, a lot of my bugs have came form the fact of how I structured my initial database but it's a steep learning curve and one I know to look out for in the future.
+Unfortunately, a lot of my bugs have came from the fact of how I structured my initial database but it's a steep learning curve and one I know to look out for in the future.
 I'm still happy I have got it nearly right tbh because I had sat for about 4 hours the other night scratching my head and thinking how am I gonna get passed this BUG !!!!
 
 
@@ -491,8 +490,8 @@ I honestly do not know how I solved it but it must have been the RESTART to be h
 ### **Navbar Submenu Items Disappeared Again**  
 
 * **Issue**    
-I noticed that when I went to the Bag page, that the navbar dropdown submenus for Kicks Brands, Style, Colour and also Accessories Types were not displaying anything. They were just blank so the user could never select these options from anywhere other than Home, Kicks or Accessories views but this is the way I had originally laid it out :(
-See *BUG 15* for original issue so this was just an advance on this bug.
+I noticed that when I went to the Bag page, that the navbar dropdown submenus for Kicks Brands, Style, Colour and also Accessories Types were not displaying anything. They were just blank so the user could never select these options from anywhere other than Home, Kicks or Accessories views but this is the way I had originally laid it out !  
+See **BUG 15** for original issue so this was just an advance on this bug.
 
 * **Fix**  
 I therefore added Kicks Brand, Style, Colour and also Accessories Type to my ```processor.py``` file in my main The Kicks Fix folder so that I could add them to my Sites Context and therefore utilise them anywhere I want across the site. I then proceeded to delete all the unrequired code from within my Home, Kicks and Accessories views were I had originally been passing them through their contexts ..... Jobs a good un .... I hope !!!!
@@ -539,7 +538,7 @@ Issue fixed but not before I needed a change of underpants. Anyway, you soon rea
 
 * **Issue**    
 I followed the online course instructions, well I thought I did, and when I tried my Heroku app for the first time to see if it would work, it threw up an error .....   Defibrillator again please !!!!  
-I honestly thought I was going to faint and I tried briefly to see if I could figure it out but I knew this was a job for Student Support !  
+I honestly thought I was going to faint and I tried briefly to see if I could figure it out but I knew this was a job for **Student Support** !  
 
 Screenshot of the app error that occurred is shown below:
 ![Heroku App Error At First Attempt](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/heroku-error.png)   

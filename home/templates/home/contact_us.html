@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- Contact Us -->
    <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
@@ -21,6 +22,7 @@
         </div>
 
         <div class="row">
+            <!-- Contact Us Explanation -->
             <div class="col-12 col-md-6 my-black-text">
                 <p>Hey {% if request.user.is_authenticated %}{{ user }}{% else %}you{% endif %},</p>
                 <p>We really hope you are enjoying <strong>The Kicks Fix</strong> and all the cool Kicks 
@@ -45,7 +47,7 @@
                         </ul>
                   </ul>
                 <p>Please do not hesitate to contact us</p>
-
+                <!-- Contact Us Contact Details -->
                 <p class="contact-details">
                     <a href="mailto:help@thekicksfix.com" id="mailto" aria-label="Email us" target="_blank">help@thekicksfix.com </a>
                     <span class="d-block">+44 20 123 45678</span>

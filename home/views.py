@@ -1,11 +1,12 @@
+"""
+This module will render Home,
+Contact Us and KFC pages
+"""
 from django.shortcuts import render
 
 
-# Create your views here.
-
-
 def index(request):
-    """ A view to return the index page """
+    """ A view to return the home page """
 
     return render(request, 'home/index.html')
 
@@ -17,6 +18,6 @@ def contact_us(request):
 
 
 def kicks_club(request):
-    """ A view to return the Kicks Club page """
+    """ A view to return the kicks club page """
 
     return render(request, 'home/kicks_club.html')

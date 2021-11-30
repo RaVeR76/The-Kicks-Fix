@@ -1,8 +1,9 @@
+""" Models for Common App """
 from django.db import models
 
 
 class Category(models.Model):
-
+    """ This model will create Categories for Kicks / Accessories """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -17,6 +18,7 @@ class Category(models.Model):
 
 
 class Colour(models.Model):
+    """ This model will create Colours for Kicks / Accessories """
     name = models.CharField(max_length=50)
     friendly_name = models.CharField(max_length=50, null=True, blank=True)
 
@@ -28,6 +30,7 @@ class Colour(models.Model):
 
 
 class Size(models.Model):
+    """ This model will create Size Options for Kicks """
     name = models.CharField(max_length=50, default='size')
     friendly_name = models.CharField(max_length=50, null=True, blank=True)
     size = models.JSONField(default=list)
@@ -40,6 +43,7 @@ class Size(models.Model):
 
 
 class Sex(models.Model):
+    """ This model will create Sex for Kicks """
     name = models.CharField(max_length=50)
     friendly_name = models.CharField(max_length=50, null=True, blank=True)
 

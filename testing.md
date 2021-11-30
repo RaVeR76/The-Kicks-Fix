@@ -444,7 +444,9 @@ I then decided it was going to be Kicks Fix Care but I thought this would just b
 Obviously I would have to develop this membership scenario so so much more, if the user was to accumulate points and this would be added to their profile pages, also the special offers, discount codes and everything I said on the KFC page would have to have code written for it.
 This all evolved within my head in the space of about 5 minutes tonight if I am being honest but I am going to go with it just to finish the project off.  
 
-Overall, I think this was a better option than TLC which if you look at my *Git Commits* was there in the Navbar right until tonight so you know this last minute change wasn't even on the radar at all. Given that, with the right development I beleve this would be a much better attraction for the overall site and would make users want to join the club to earn some nice savings, as they purchase Kicks or Accessories.
+Overall, I think this was a better option than TLC which if you look at my *Git Commits* was there in the Navbar right until tonight so you know this last minute change wasn't even on the radar at all. Given that, with the right development I beleve this would be a much better attraction for the overall site and would make users want to join the club to earn some nice savings, as they purchase Kicks or Accessories.   
+
+***I know KFC is a trademark and I would have to call it by a different name but I just added for little fun to finish what has been quite an intense and stressful project***
 
 
 ### Overall Website Navigation, Functionality & Visual Experience

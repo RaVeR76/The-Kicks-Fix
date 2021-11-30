@@ -1,10 +1,9 @@
+""" Models for Home App """
 from django.db import models
-
-# Create your models here.
 
 
 class Home(models.Model):
-
+    """ This model will create site requirements """
     class Meta:
         verbose_name_plural = 'Home'
 
@@ -27,7 +26,7 @@ class Home(models.Model):
 
 
 class Social(models.Model):
-
+    """ This model will create Social Items """
     class Meta:
         verbose_name_plural = 'Social'
 
@@ -44,6 +43,7 @@ class Social(models.Model):
 
 
 class Discount(models.Model):
+    """ This model will create Discount / Delivery options """
 
     name = models.CharField(max_length=254, default='discount')
     discount_code = models.CharField(max_length=25)

@@ -7,6 +7,7 @@ from .models import Kicks, Brand, Style
 
 
 class KicksAdmin(admin.ModelAdmin):
+    """ Kicks list display with order """
     list_display = (
         'brand',
         'sku',
@@ -21,6 +22,7 @@ class KicksAdmin(admin.ModelAdmin):
 
 
 class BrandAdmin(admin.ModelAdmin):
+    """ Kicks Brands list display with order """
     list_display = (
         'friendly_name',
         'name',
@@ -30,6 +32,7 @@ class BrandAdmin(admin.ModelAdmin):
 
 
 class StyleAdmin(admin.ModelAdmin):
+    """ Kicks Styles list display with order """
     list_display = (
         'friendly_name',
         'name',

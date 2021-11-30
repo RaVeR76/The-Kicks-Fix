@@ -1,10 +1,14 @@
+"""
+This module contains Category and
+Size Admin's display choices and
+Registers Sex and Colour
+"""
 from django.contrib import admin
 from .models import Category, Colour, Size, Sex
 
 
-# Register your models here.
-
 class CategoryAdmin(admin.ModelAdmin):
+    """ Category list display with order """
     list_display = (
         'friendly_name',
         'name',
@@ -14,6 +18,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class SizeAdmin(admin.ModelAdmin):
+    """ Size list display with order """
     list_display = (
         'friendly_name',
         'name',

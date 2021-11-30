@@ -1,21 +1,25 @@
+""" Checkout App Views """
+import json
+import stripe
+
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
-from .models import Order, OrderLineItem
 from kicks.models import Kicks
 from accessories.models import Accessories
-from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 
-import stripe
-import json
+from .forms import OrderForm
+from .models import Order, OrderLineItem
+
 
 @require_POST
 def cache_checkout_data(request):
+    """ This function will cache existing bag content """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -32,6 +36,7 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """ A view to render checkout page """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -127,7 +132,7 @@ def checkout(request):
                     'postcode': profile.default_postcode,
                     'town_or_city': profile.default_town_or_city,
                     'street_address1': profile.default_street_address1,
-                    'street_address2': profile.default_street_address2,  # NEED TO FIX REST OF PROFILE NAMES FROM PROFILE ADDRESS ETC ETC
+                    'street_address2': profile.default_street_address2,
                     'county': profile.default_county,
                 })
             except UserProfile.DoesNotExist:

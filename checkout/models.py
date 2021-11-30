@@ -1,3 +1,4 @@
+""" Models for Checkout App """
 import uuid
 
 from django.db import models
@@ -12,6 +13,7 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """ This is the order model used to create orders """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True,
@@ -75,6 +77,9 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    This will create a single line item on order
+    """
     order = models.ForeignKey(Order, null=False, blank=False,
                               on_delete=models.CASCADE,
                               related_name='lineitems')

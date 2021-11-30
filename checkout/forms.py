@@ -1,8 +1,13 @@
+""" Order form for Checkout page """
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """
+    This is a order form which will be displayed
+    when user will proceed to secure checkout page
+    """
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',

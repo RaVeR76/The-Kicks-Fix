@@ -1,14 +1,17 @@
+""" Checkout app Admin """
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
+    """ Class to view a single orderin admin order view """
     model = OrderLineItem
 
     readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
+    """ Class to view a order in admin view """
     inlines = (OrderLineItemAdminInline,)
 
     readonly_fields = ('order_number', 'date',

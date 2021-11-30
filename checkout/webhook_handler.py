@@ -1,15 +1,16 @@
+""" Webhooks Handlers for Checkout App """
+import json
+import time
+
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 
-from .models import Order, OrderLineItem
 from kicks.models import Kicks
 from accessories.models import Accessories
 from profiles.models import UserProfile
-
-import json
-import time
+from .models import Order, OrderLineItem
 
 
 class StripeWH_Handler:
@@ -60,7 +61,7 @@ class StripeWH_Handler:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
-        
+
         # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
@@ -123,7 +124,7 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(bag).items():
                     if isinstance(item_data, int):
-                        accessory = Accessories.objects.get(sku=item_id) # I know Accessories has no sizes
+                        accessory = Accessories.objects.get(sku=item_id)
                         order_line_item = OrderLineItem(
                             order=order,
                             accessory=accessory,
@@ -131,7 +132,7 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        kicks = Kicks.objects.get(sku=item_id) # I know Kicks has sizes
+                        kicks = Kicks.objects.get(sku=item_id)
                         for size, quantity in item_data['kicks_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,

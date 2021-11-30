@@ -11,19 +11,21 @@
 {% endblock %}
 
 {% block content %}
+<!-- Bag Page -->
    <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
+            <!-- Page Title -->
             <div class="col">
                 <hr>
                 <h2 class="text-uppercase my-black-text mb-4">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
-
         <div class="row">
             <div class="col my-black-text">
                 {% if bag_items %}
+                <!-- Large Screen Placement -->
                     <div class="d-block d-md-none">
                         <div class="row">
                             <div class="col">
@@ -61,8 +63,8 @@
                             </a>	
                         </div>
                     </div>
+                    <!-- Small Screen Placement -->
                     <div class="table-responsive d-none d-md-block rounded my-black-text">
-                        
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
@@ -73,7 +75,6 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
-
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
@@ -104,12 +105,9 @@
                                 </td>
                             </tr>
                         </table>
-
-
-
-
                     </div>
                 {% else %}
+                <!-- Bag Empty Button -->
                     <p class="lead my-black-text mb-5">Your bag is empty.</p>
                     <a href="{% url 'kicks' %}" class="btn my-white-btn rounded-0 btn-lg">
                         <span class="icon">
@@ -125,6 +123,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- Back to top button JS -->
 <script type="text/javascript">
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)

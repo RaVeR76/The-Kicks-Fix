@@ -10,11 +10,13 @@
 {% endblock %}
 
 {% block content %}
+<!-- Individual Accessory Page -->
     <div class="overlay"></div>
     <div class="container-fluid my-black-text">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
+                    <!-- Accessory Image Carousel -->
                     {% if accessories.image1 and accessories.image2 and accessories.image3 %}
                     <div id="accessory_carousel" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -48,6 +50,7 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
+                    <!-- Default Image Option -->
                     {% else %}
                     <a href="#">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ accessories.name }}">
@@ -56,6 +59,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
+                <!-- Accessory Types & Links to ALL -->
                 <div class="accessory-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ accessories.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ accessories.price }}</p>
@@ -66,6 +70,7 @@
                         </a>
                     </p>
                     {% endif %}
+                    <!-- Edit / Delete Options For Superusers -->
                     {% if request.user.is_superuser %}
                     <p class="mt-2">
                         <small>
@@ -74,10 +79,12 @@
                         </small>
                     </p>
                     {% endif %}
+                    <!-- Accessory Description -->
                     <p class="mt-3">{{ accessories.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' accessories.sku %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+                            <!-- Accessory Quantity Selection -->
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -104,7 +111,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- Accessories Keep Shopping Button -->
                             <div class="col-12">
                                 <a href="{% url 'accessories' %}" class="btn my-white-btn rounded-0 mt-5">
                                     <span class="icon">

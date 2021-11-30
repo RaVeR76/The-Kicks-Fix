@@ -1,17 +1,16 @@
+""" Accessories App Views """
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.contrib import messages
 
-from .models import Accessories, Type
 from common.models import Category
+from .models import Accessories, Type
 from .forms import AccessoriesForm
-
-# Create your views here.
 
 
 def all_accessories(request):
-    """ A view to show all accessories, including sorting and search queries """
+    """ A view to show all accessories, including sorting and queries """
 
     accessories = Accessories.objects.all()
     types = Type.objects.all()
@@ -36,8 +35,10 @@ def all_accessories(request):
         # Filter ALL Accessories by the selected Category
         if 'category' in request.GET:
             chosen_category = request.GET['category'].split(',')
-            accessories = accessories.filter(category__name__in=chosen_category)
-            chosen_category = Category.objects.filter(name__in=chosen_category).first()
+            accessories = accessories.filter(
+                category__name__in=chosen_category)
+            chosen_category = Category.objects.filter(
+                name__in=chosen_category).first()
             accessories_title = f'{chosen_category.friendly_name} Accessories'
 
         # Filter ALL Accessories by the selected Type
@@ -85,7 +86,8 @@ def add_accessory(request):
             messages.success(request, 'Successfully added the Accessory !')
             return redirect(reverse('accessory_detail', args=[accessory.id]))
         else:
-            messages.error(request, 'Failed to add the Accessory. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add the Accessory. \
+                                     Please ensure the form is valid.')
     else:
         form = AccessoriesForm()
 
@@ -114,7 +116,8 @@ def edit_accessory(request, accessories_id):
             messages.success(request, 'Successfully updated Accessory !')
             return redirect(reverse('accessory_detail', args=[accessory.id]))
         else:
-            messages.error(request, 'Failed to add the Accessory. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add the Accessory. \
+                                     Please ensure the form is valid.')
     else:
         form = AccessoriesForm(instance=accessory)
         messages.info(request, f'You are editing {accessory.name}')

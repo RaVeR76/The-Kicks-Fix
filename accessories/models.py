@@ -1,9 +1,10 @@
+""" Models for Accessories App """
 from django.db import models
 from common.models import Category, Colour
 
 
 class Accessories(models.Model):
-
+    """ This model is used to create an Accessory """
     class Meta:
         verbose_name_plural = 'Accessories'
 
@@ -29,6 +30,7 @@ class Accessories(models.Model):
 
 
 class Type(models.Model):
+    """ Type Model for Accessories """
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 

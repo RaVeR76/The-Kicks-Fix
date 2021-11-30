@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+""" Bag App Views """
+from django.shortcuts import (render, redirect,
+                              reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages
 
 from kicks.models import Kicks
 from accessories.models import Accessories
-
-# Create your views here.
 
 
 def view_bag(request):
@@ -54,7 +54,7 @@ def add_to_bag(request, item_id):
 
 
 def update_bag(request, item_id):
-    """ Update the quantity of selected item to the shopping bag by the selected amount """
+    """ Update the quantity of item to the bag by the selected amount """
 
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
@@ -63,7 +63,6 @@ def update_bag(request, item_id):
         size = request.POST['kicks_size']
 
     if size:
-        #kicks = get_object_or_404(Kicks, sku=item_id)
         if quantity > 0:
             bag[item_id]['kicks_by_size'][size] = quantity
         else:
@@ -71,7 +70,6 @@ def update_bag(request, item_id):
             if not bag[item_id]['kicks_by_size']:
                 bag.pop(item_id)
     else:
-       # accessory = get_object_or_404(Accessories, sku=item_id)
         if quantity > 0:
             bag[item_id] = quantity
         else:
@@ -91,12 +89,10 @@ def remove_from_bag(request, item_id):
             size = request.POST['kicks_size']
 
         if size:
-            #kicks = get_object_or_404(Kicks, sku=item_id)
             del bag[item_id]['kicks_by_size'][size]
             if not bag[item_id]['kicks_by_size']:
                 bag.pop(item_id)
         else:
-            #accessory = get_object_or_404(Accessories, sku=item_id)
             bag.pop(item_id)
 
         request.session['bag'] = bag

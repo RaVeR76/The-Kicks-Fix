@@ -1,4 +1,4 @@
-from decimal import Decimal
+""" Shopping Bag Contexts """
 from django.shortcuts import get_object_or_404
 from home.models import Discount
 from kicks.models import Kicks
@@ -6,8 +6,12 @@ from accessories.models import Accessories
 
 
 def bag_contents(request):
-
-    site_discounts = Discount.objects.get(name='discount') # Utilise Django admin for discounts & delivery costs
+    """
+    This function calculates bag totals,
+    minus delivery and shows
+    contents 'bag' on whole application
+    """
+    site_discounts = Discount.objects.get(name='discount')
     bag_items = []
     total = 0
     product_count = 0
@@ -18,7 +22,7 @@ def bag_contents(request):
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
-            product = get_object_or_404(Accessories, sku=item_id) # I know Accessories has no sizes
+            product = get_object_or_404(Accessories, sku=item_id)
             total += item_data * product.price
             product_count += item_data
             bag_items.append({
@@ -27,7 +31,7 @@ def bag_contents(request):
                 'product': product,
             })
         else:
-            product = get_object_or_404(Kicks, sku=item_id) # I know Kicks has sizes
+            product = get_object_or_404(Kicks, sku=item_id)
             for size, quantity in item_data['kicks_by_size'].items():
                 total += quantity * product.price
                 product_count += quantity
@@ -37,36 +41,6 @@ def bag_contents(request):
                     'product': product,
                     'size': size,
                 })
-
-  #  for item_id, quantity in bag.items():
-   #     if "RAVE" not in item_id: # If No RAVE then it's a Kicks Item
-   #         product = get_object_or_404(Kicks, sku=item_id)
-   #         total += quantity * product.price
-   #         product_count += quantity
-   #         bag_items.append({
-   #             'item_id': item_id,
-   #             'quantity': quantity,
-   #             'product': product,
-   #         })
-    #    elif "RAVE" in item_id: # If RAVE then it's an Accessories Item
-    #        product = get_object_or_404(Accessories, sku=item_id)
-    #        total += quantity * product.price
-    #        product_count += quantity
-    #        bag_items.append({
-    #            'item_id': item_id,
-    #            'quantity': quantity,
-    #            'product': product,
-    #        })
-
-     #   elif "RAVE" in item_id: # If RAVE then it's an Accessories Item
-      #      product = get_object_or_404(Accessories, sku=item_id)
-         #   total += quantity * product.price
-         #   accessories_count += quantity
-         #   bag_items.append({
-         #   'item_id': item_id,
-         #   'quantity': quantity,
-         #   'product': product,
-         #   })
 
     if total < free_delivery_threshold:
         delivery = total * standard_delivery_percentage / 100

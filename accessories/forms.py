@@ -1,10 +1,15 @@
+"""
+This is a form which will be displayed in
+Account section when user is super user, and utilised
+to add and edit an Accessory without using admin page
+"""
 from django import forms
 from common.models import Category, Colour
 from .models import Accessories, Type
 
 
 class AccessoriesForm(forms.ModelForm):
-
+    """ Accessory form """
     class Meta:
         model = Accessories
         exclude = ('image1_url', 'image2_url', 'image3_url',)

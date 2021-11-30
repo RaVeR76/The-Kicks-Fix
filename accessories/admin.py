@@ -1,8 +1,13 @@
+"""
+This module contains Accessories and
+Types Admin's display choices
+"""
 from django.contrib import admin
 from .models import Accessories, Type
 
 
 class AccessoriesAdmin(admin.ModelAdmin):
+    """ Accessories list display with order """
     list_display = (
         'sku',
         'type',
@@ -16,6 +21,7 @@ class AccessoriesAdmin(admin.ModelAdmin):
 
 
 class TypeAdmin(admin.ModelAdmin):
+    """ Accessories Types list display with order """
     list_display = (
         'friendly_name',
         'name',

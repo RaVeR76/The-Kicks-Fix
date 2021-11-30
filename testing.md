@@ -3,28 +3,28 @@
 ## Table of contents
 ---
 
-- [**Testing**](#--testing--)
-    - [Manual Testing](#manual-testing)
-        - [Responsiveness](#responsiveness)
-        - [Navigation & Search Functions](#navigation---search-functions)
-        - [Home Page](#home-page)
-        - [Registration](#registration)
-        - [Login / Logout](#login---logout)
-        - [Main Products Pages](#main-products-pages)
-        - [Products Details Page](#products-details-page)
-        - [The Bag Area](#the-bag-area)
-        - [The Checkout](#the-checkout)
-        - [Profile](#profile)
-        - [Order History](#order-history)
-        - [Admin Functions](#admin-functions)
-        - [Contact Us and the KFC - Kicks Fix Club](#contact-us-and-the-kfc---kicks-fix-club)
-        - [Overall Website Navigation, Functionality & Visual Experience](#overall-website-navigation--functionality---visual-experience)
-    - [Validators](#validators)
-        - [HTML](#html)
-        - [CSS](#css)
-        - [JavaScript](#javascript)
-        - [Python](#python)
-        - [Debug = True](#debug---true)
+- [**Testing**](#testing)
+  - [Manual Testing](#manual-testing)
+    - [Responsiveness](#responsiveness)
+    - [Navigation & Search Functions](#navigation--search-functions)
+    - [Home Page](#home-page)
+    - [Registration](#registration)
+    - [Login / Logout](#login--logout)
+    - [Main Products Pages](#main-products-pages)
+    - [Products Details Page](#products-details-page)
+    - [The Bag Area](#the-bag-area)
+    - [The Checkout](#the-checkout)
+    - [Profile](#profile)
+    - [Order History](#order-history)
+    - [Admin Functions](#admin-functions)
+    - [Contact Us and the KFC - Kicks Fix Club](#contact-us-and-the-kfc---kicks-fix-club)
+    - [Overall Website Navigation, Functionality & Visual Experience](#overall-website-navigation-functionality--visual-experience)
+  - [Validators](#validators)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Python](#python)
+    - [Debug = True](#debug---true)*
 
 ## Manual Testing
 
@@ -33,7 +33,7 @@
 #### User Goals : The website will have to work well on all devices
 
 #### **Test**
-I utilised my own laptop connected to a large screen, my work laptop which has a failry small screen, my tablet, my mobile phone and of course Chrome DevTools to test reponsiveness across various platforms.  
+I utilised my own laptop connected to a large screen, my work laptop which has a fairly small screen, my tablet, my mobile phone and of course Chrome DevTools to test responsiveness across various platforms.  
 Firstly I noticed that my ```{{ kicks_title }}``` were still large on smaller screens so were wrapping round a lot so I added some CSS to reduce the size on smaller screens. I had to settle for a happy medium here so the larger titles in length may wrap a little on smaller screens but it means the smaller titles are not super small on the largest small screens, if you get what I mean. Below is the small piece of CSS code I used to fix this issue.
 
 ```
@@ -60,7 +60,7 @@ I also noticed that my Profile link was not working and there was NO order histo
 The joys of testing really comes to fruition when you are manually testing your website and trying it on all different sizes. I found minor issue after minor issue when I tried the smallest screen available but nothing that made me panic. I just applied a little CSS to adjust various sizes of titles or text. The biggest one was my dropdown menu submenus for kicks Brand, Style, Colour & Types within accessories. Again, I used the smallest screen approximately 320px x 568px for the iphone5 and added the CSS as mentioned above. I think it works well across ALL portrait modes now but it's hard to get it exactly perfect for ALL screens no matter how good you are. It's definitely a lot better than my first project when I hadn't even taken screen sizes into account building my website for HTML and CSS .... that was a shock to the system but a good learning point.
 
 #### **Verdict**
-After throughly going through my website with a fine tooth comb, I did find some issues with the responsiveness as logged above but overall, I think it looks well and works well on all devices. 
+After throughily going through my website with a fine tooth comb, I did find some issues with the responsiveness as logged above but overall, I think it looks well and works well on all devices. 
 
 
 ### Navigation & Search Functions
@@ -69,7 +69,7 @@ After throughly going through my website with a fine tooth comb, I did find some
 #### User Story : I want be able to search / filter the products by various options like male, female, kids, brands, styles and so on
 
 #### **Test**
-The various tests I carried out for the navaigation and search functions are listed below:
+The various tests I carried out for the navigation and search functions are listed below:
 
 - Click on the **Shop Now** button and make sure it takes the user to the ALL Kicks page
 - Click on each navigation link to make sure it directs the user to the correct page
@@ -104,11 +104,11 @@ All in all, I am very happy with everything apart from the quantity button issue
 #### User Goal : An enticing landing page that will make any user enthralled to delve deeper into my website
 
 #### **Test**
-To be honest there is nothing really to test here as the majorty of the testing was done previously with ALL the navigation links tested. Realistically, there is only a Hero Image, Slogan and an Enter the Shop button. These all test perfectly. The navbar and all links were tested above. 
+To be honest there is nothing really to test here as the majority of the testing was done previously with ALL the navigation links tested. Realistically, there is only a Hero Image, Slogan and an Enter the Shop button. These all test perfectly. The navbar and all links were tested above. 
 I tested the logo so that it would return the user to this homepage as well. I can change the slogan in Django admin and it will change on screen. I really wanted some site Admin to be able to make all these changes but again I have added this to future upgrades, as time is of the essence. 
 
 #### **Results**
-I had quite a few hero images downloaded from the internet for testing out on my homepage and I'm sure evreyone of them would've looked good here.   
+I had quite a few hero images downloaded from the internet for testing out on my homepage and I'm sure everyone of them would've looked good here.   
 But once I utilised two of my chosen colours from the start for this project, ***Eerie Black*** and ***Minion Yellow*** as my main navbar colours, I knew straight away that this was the image, that was to be my Hero ! It's simple, it's dark and mysterious and it says I need new pair of Kicks right now because let's face facts, we all have a few pairs of ropey, well used Kicks floating about the house .... just like the pair in the image !  
 I only had to adjust the hero image to make it smaller so it would display better but this was way at the start of the project.
 Although last night when I started looking at everything on the smaller screens, I noticed that the Kicks in the image were nowhere to be seen which kind of annoyed me. So I added a bit of CSS to fix this for the smaller screens and, I'll be honest, for such a small change it just makes the Homepage look so much better. I used CSS to position the Kicks part of the image as centrally as I could on smaller screens.  
@@ -124,7 +124,7 @@ Overall, I love The Kicks Fix homepage and as the User Story says, I am enthrall
 #### User Story : I want to be able to register for an account so that I can have access to unique promotions and discounts
 
 #### **Test**
-The folowing tests are listed below that I complied and carried out :
+The following tests are listed below that I complied and carried out :
 
 - Click on the *sign in* link and make sure it takes the user to login page (so that if the user has registered before)
 - Click on the Register link in Account dropdown
@@ -150,7 +150,7 @@ Tests passed, works as expected, no bugs were found during the testing. Function
 #### User Story : I want to be able to login and logout with ease
 
 #### **Test**
-The folowing tests are listed below that I complied and carried out :  
+The following tests are listed below that I complied and carried out :  
 
 - Click on the *sign up* link and make sure it takes the user to registration page (so if the user has NOT registered before)
 - Click on the Login link in Account dropdown
@@ -163,7 +163,7 @@ The folowing tests are listed below that I complied and carried out :
 
 #### **Results**
 For some reason the **reset password** isn't working. I can follow the reset password instructions but NO EMAIL arrives with a link for the user to reset the password.
-I've tried looking into it breifly but I will if I have time at the end, if not it will have to be put down as a BUG at this late stage.   
+I've tried looking into it briefly but I will if I have time at the end, if not it will have to be put down as a BUG at this late stage.   
 Everything else works but this has annoyed me a little.
 
 #### **Verdict**
@@ -205,7 +205,7 @@ I know that some of the descriptions aren't the best ( I haven't even read half 
 I know that some of the images I edited aren't the best but I spent a lot of time filtering through Kicks image after Kicks image just to get the selected three per Kicks set. I then had to edit these until the were a square shape and then resize them all until they were ALL 400px x 400px. In between that I located each Kick online and found a SKU, description and what style they are. The majority of these Kicks if not them all aren't available anymore which made even harder to locate any info on them at all. I'm sure I spent the guts of the first week of starting this project getting ALL that right before I even started into the coding part.  
 As regards the Accessories, I got a lot of them from Etsy and Ebay but still had a lot of editing to do as well.  
 I'm hoping you can see that within my website as there are 91 sets of Kicks and 22 accessories to select from …. so that’s 339 images I had to edit and 113 descriptions / SKUs / prices / Styles I had to find on the internet but you know what when I look through my wee website that pain was totally worth it.    
-Overall I am so so happy with each of the two main products pages and the way they look and feel. It actually looks like a proper Kicks site where me personnally, I could spend a lot of money as I am such a Kicks fanatic to be honest.
+Overall I am so so happy with each of the two main products pages and the way they look and feel. It actually looks like a proper Kicks site where me personally, I could spend a lot of money as I am such a Kicks fanatic to be honest.
 
 
 ### Products Details Page
@@ -285,7 +285,7 @@ Apart from the quantity button issues, everything else passed the above tests an
 
 
 #### **Verdict**
-All tests worked above so I am super happy again with the overall fucntionality of my bag page and it looks good on all devices. I did want to have Discount codes working so the user could input the special code at the bag area and a discount would be applied offering more reductions on the overall costs. I will have this option available for future implementation but for now I had to let it go !
+All tests worked above so I am super happy again with the overall functionality of my bag page and it looks good on all devices. I did want to have Discount codes working so the user could input the special code at the bag area and a discount would be applied offering more reductions on the overall costs. I will have this option available for future implementation but for now I had to let it go !
 
 
 ### The Checkout
@@ -320,7 +320,7 @@ All tests worked above so I am super happy again with the overall fucntionality 
 All tests passed with no issues.
 
 #### **Verdict**
-Very happy with how the checkout page looks and its overall functionality, although I would have liked the users name to have been added at Registration process so their name would be pre-populated here or at least the users full name to be saved at this point. I did look into this funtionality but I would have to had changed the regristration page to make this happen and preferably at the start of the project so for now the user will have to manually input their Full Name.  
+Very happy with how the checkout page looks and its overall functionality, although I would have liked the users name to have been added at Registration process so their name would be pre-populated here or at least the users full name to be saved at this point. I did look into this functionality but I would have to had changed the registration page to make this happen and preferably at the start of the project so for now the user will have to manually input their Full Name.  
 I have added names in Django Admin for some of my test user profiles so it deffo adds a little personal touch when it can be seen at checkout.
 
 
@@ -334,7 +334,7 @@ I have added names in Django Admin for some of my test user profiles so it deffo
 Nothing here to test really as it's just a Profile page. I wanted to do so much more to this but I never got round to it.
 At the minute there is the username and their email address. If the Django Admin can add their First Name and Last name then this will be populated as well.
 As I mentioned above, I wanted to add these but it says online that it's better to add these at the start of the build within the UserProfile models. I was going to add them in towards the end but I was scared in case I messed the UserProfiles up. In future Django projects I will deffo add this feature so that my projects can add that personal touch by using their first names through the project.  
-The users wishlist is my biggest let down by not getting it done. I never even got time to even start it if the truth be told but I have added this also to Features to be Implemented in the future. I would had this showing on the users profile page or added a heart onto the navbar that would have taken the user to their personal Wishlist page where their selected wishlist products would be displayed. Obviously, the wishlist heart would only appear if the user was authenicated but look, this is one for the future.   
+The users wishlist is my biggest let down by not getting it done. I never even got time to even start it if the truth be told but I have added this also to Features to be Implemented in the future. I would had this showing on the users profile page or added a heart onto the navbar that would have taken the user to their personal Wishlist page where their selected wishlist products would be displayed. Obviously, the wishlist heart would only appear if the user was authenticated but look, this is one for the future.   
 I also wanted to add the users Date of Birth because at the design part of my project, I really wanted to be able to offer registered users a Birthday treat every year on their birthday or in the weeks coming up to their birthdays. A simple automatic email would be sent out to the user, say 2 weeks before their birthdays, with a 10% discount code that they could use before their birthday date had passed. The email would be personal to them as would the discount code and they could have input it at the Bag or Checkout page and after my code validates the discount code, the discount would be calculated on their current total and subtracted from it .... giving them a special Birthday Treat.  
 I also wanted the user to be able to add a profile pic like in my last project but again this can be done at a later time.
 
@@ -391,7 +391,7 @@ Order history works well and does what it was designed to. It allows users to ac
 - See if a superuser / admin can access these functions through the urls
 - See if a superuser / admin has the options available to edit or remove any product on either their main page or individual details page
 - See if a superuser / admin can access the Add Kicks or Add Accessory forms from their Account dropdown in the navbar
-- See if a superuser / admin can add a product using the forms avalable
+- See if a superuser / admin can add a product using the forms available
 - See if a Success message appears on completion of Adding a new product and redirects them to the new products details page
 - Check that everything has been added to that new product and all looks well
 - See if the superuser / admin can edit this new product by clicking on the edit link
@@ -408,7 +408,7 @@ Order history works well and does what it was designed to. It allows users to ac
 
 
 #### **Results**
-All tests passed with flying colours ..... BUT .... there is always a BUT, I noticed that because of my carousel there has to be three images added so if I only added one then it would througn up an error. I love fixing code on the fly, it makes you feel so good .... so I did, see below.
+All tests passed with flying colours ..... BUT .... there is always a BUT, I noticed that because of my carousel there has to be three images added so if I only added one then it would threw up an error. I love fixing code on the fly, it makes you feel so good .... so I did, see below.
 
 Below is my code before the fix:
 
@@ -453,15 +453,15 @@ All in all I am super happy with ALL admin functions and there functionality :)
 - Check that the KFC membership email link opens an New Email for the user and populates the **To** section 
 
 #### **Results**
-All tests passed as expected but these were simple add ons at the end of the project just to finalise it and complete one last User Story.  
+All tests passed as expected but these were simple add-ons at the end of the project just to finalise it and complete one last User Story.  
 I had made the KFC available to all users but I have changed it to registered users ONLY, as it saved some code within the kicks_club page I was using, to display certain text depending on a users status.
 I also removed the KFC from superusers because they don't need to see it or join, more to the point.
-I also moved the Contact Us link so non registered user could see it in the Account dropdown as the site isn't just for registered ones and everyone should have the availabilty to Contact Us, at The Kicks Fix with issues.
+I also moved the Contact Us link so non registered user could see it in the Account dropdown as the site isn't just for registered ones and everyone should have the availability to Contact Us, at The Kicks Fix with issues.
 I also removed the Contact us from superusers as they do not require that either.
 
 #### **Verdict**
 I added the Contact Us page last night and it's fairly simple but at least it's there for a user to contact The Kicks Fix with any issues they have.  
-As for the KFC, the Kicks Fix Club, this just came to me at the end here, so bare with it as it's one of those spontanious ideas I sometimes have. It was orginally going to be TLC which stood for Trainer Loving Care but with the website being called Kicks and all, I thought this would just have been like a white elephant in the room and spoil the overall feel. The TLC page was just going to have some pointers / tips about how to keep you Kicks clean, fresh and looking good. I was going to have a few links to my maintenance products in Accessories too. I just thought this would have been a bit boring hence why I've went a totally different route at the last minute.   
+As for the KFC, the Kicks Fix Club, this just came to me at the end here, so bare with it as it's one of those spontanious ideas I sometimes have. It was originally going to be TLC which stood for Trainer Loving Care but with the website being called Kicks and all, I thought this would just have been like a white elephant in the room and spoil the overall feel. The TLC page was just going to have some pointers / tips about how to keep you Kicks clean, fresh and looking good. I was going to have a few links to my maintenance products in Accessories too. I just thought this would have been a bit boring hence why I've went a totally different route at the last minute.   
 I then decided it was going to be Kicks Fix Care but I thought this would just be like the Contact Us page so I've let my mind go here and came up with KFC - Kicks Fix Club, which as you know is play on letters so to speak. I'm super sorry if it seems cheesy and the fact I left this to the end but I think my website deserves a club, for all the Kicks Fanatics out there like moi !  
 Obviously I would have to develop this membership scenario so so much more, if the user was to accumulate points and this would be added to their profile pages, also the special offers, discount codes and everything I said on the KFC page would have to have code written for it.
 This all evolved within my head in the space of about 5 minutes tonight if I am being honest but I am going to go with it just to finish the project off.  
@@ -481,7 +481,7 @@ There aren't really any tests left to do as regards this, as I have already comp
 I believe that the above User Goals have been completed because the website has good navigation, good filtering as the per navbar options, the overall functionality ALL works bar a couple of bugs with the quantity buttons bug and the Reset email bug. The visual experience works well across ALL screens after a few minor adjustments and from the homepage to the checkout page everything looks really well.
 
 #### **Results**
-Overall, very happy with the final product and I really hope the user enjoys their experience trawling through The Kicks Fix for some hidden gems. As long as the price of some of the Premier Kicks doesn't scared them off (these were genuine prices by the way and in fact I had to reduce them, as some were unbelieveably extortionate)
+Overall, very happy with the final product and I really hope the user enjoys their experience trawling through The Kicks Fix for some hidden gems. As long as the price of some of the Premier Kicks doesn't scared them off (these were genuine prices by the way and in fact I had to reduce them, as some were unbelievably extortionate)
 
 #### **Verdict**
 Love my wee website and I super proud of my achievement in the short space of time .... I really hope you all love it too !

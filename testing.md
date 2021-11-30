@@ -162,16 +162,16 @@ The following tests are listed below that I complied and carried out :
 - Try to Login in with the wrong email address
 
 #### **Results**
-For some reason the **reset password** isn't working. I can follow the reset password instructions but NO EMAIL arrives with a link for the user to reset the password.
+For some reason the **password reset** isn't working. I can follow the reset password instructions but NO EMAIL arrives with a link for the user to reset the password.
 I've tried looking into it briefly but I will if I have time at the end, if not it will have to be put down as a BUG at this late stage.   
 Everything else works but this has annoyed me a little.
 
 #### **Verdict**
 All in all, everything works well apart from the Allauth reset password logic isn't sending an email, for the user to reset their password by clicking the link.
 
-***UPDATE - ON RESET PASSWORD ISSUE*** as of 30/11/21, right before I hand in my project .... **IT WORKS !!!**   
-To be honest, I think I maybe made an error and jumped the gun on this one ha ha .... I think I was testing the Reset Password in Development mode so therefore an email would not have been sent as I don't have one set up for this scenario.   
-I was just putting my website through it's last major testing before submission here, just in case I had made any errors tidying up the code, during Validation earlier (especially the Python as I did notice some errors with the messages earlier) and I gave the Reset Password another go and wowsers, I got the email to reset my password !  
+***UPDATE - ON THE PASSWORD RESET ISSUE*** as of 30/11/21, right before I hand in my project .... **IT WORKS !!!**   
+To be honest, I think I maybe made an error and jumped the gun on this one ha ha .... I think I was testing the Password Reset logic in Development mode so therefore an email would not have been sent as I don't have one set up for this scenario.   
+I was just putting my website through it's last major testing before submission here, just in case I had made any errors tidying up the code, during Validation earlier (especially the Python as I did notice some errors with the messages earlier) and I gave the Password Reset another go and wowsers, I got the email to reset my password !  
 So so happy right now, so we can wipe that bug of the small list I have ..... awesome hey !
 
 

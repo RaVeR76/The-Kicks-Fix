@@ -33,18 +33,24 @@ def add_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             if size in bag[item_id]['kicks_by_size'].keys():
                 bag[item_id]['kicks_by_size'][size] += quantity
-                messages.success(request, f'Updated size {size.upper()} {kicks.name} quantity to {bag[item_id]["kicks_by_size"][size]}')
+                messages.success(request, f'Updated size {size.upper()}'
+                                 f' {kicks.name} quantity to'
+                                 f' {bag[item_id]["kicks_by_size"][size]}')
             else:
                 bag[item_id]['kicks_by_size'][size] = quantity
-                messages.success(request, f'Added size {size.upper()} {kicks.name} to your bag')
+                messages.success(request, f'Added size'
+                                          f' {size.upper()} {kicks.name}'
+                                          f' to your bag')
         else:
             bag[item_id] = {'kicks_by_size': {size: quantity}}
-            messages.success(request, f'Added size {size.upper()} {kicks.name} to your bag')
+            messages.success(request, f'Added size {size.upper()}'
+                                      f' {kicks.name} to your bag')
     else:
         accessory = get_object_or_404(Accessories, sku=item_id)
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
-            messages.success(request, f'Updated {accessory.name} quantity to {bag[item_id]}')
+            messages.success(request, f'Updated {accessory.name}'
+                                      f' quantity to {bag[item_id]}')
         else:
             bag[item_id] = quantity
             messages.success(request, f'Added {accessory.name} to your bag')

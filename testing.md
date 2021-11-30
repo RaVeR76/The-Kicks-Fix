@@ -505,3 +505,14 @@ Overall though, the JavaScript looks good and works well within my site.
 
 
 ### Python
+
+All Python files were validated by using an online code validator [Pep8](http://pep8online.com).
+File changes were made to make the code PEP8 compliant where possible.  
+I think there are about three or four lines that aren't PEP8 compliant through the whole project and these are within the *webhooks* so that's not to bad.  
+Other than that, it ALL looks good.
+
+### Debug = True
+
+While developing an app, the local debugger: `debug=True` was on.
+Every time when the application has an error, the debugger was displaying an error message page.
+Thanks to that I could catch all errors and fix them straight away.

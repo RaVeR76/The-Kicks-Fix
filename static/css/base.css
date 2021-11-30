@@ -84,7 +84,6 @@ body {
 }
 
 /* Card animation */
-
 .card{
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     cursor: pointer;
@@ -95,7 +94,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
-
+/* Dropdown submenu CSS */
 .dropdown-submenu {
     position: relative;
 }
@@ -114,6 +113,7 @@ body {
     margin-right: .1rem;
 }
 
+/* My Button Colors */
 .my-black-btn {
     background: black;
     color: white;
@@ -128,7 +128,7 @@ body {
 
 .my-white-btn {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
     border: 1px solid black;
 }
 
@@ -138,7 +138,6 @@ body {
     background: black;
     color: white !important;
 }
-
 
 .btt-button {
     height: 42px;
@@ -155,7 +154,6 @@ body {
 }
 
 /* Bootstrap Toasts */
-
 .message-container {
     position: fixed;
     top: 105px;
@@ -233,7 +231,6 @@ body {
   }
 
 /* Allauth form formatting */
-
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -304,16 +301,13 @@ body {
 /* Adjust navbar for mobile view */
 @media (max-width: 991px) {
 
-    body {
-        background-position: 14% 80%; /* So Kicks part of image stays more central on smaller screens */
-    }
-
     .header-container {
         padding-top: 116px;
     }
 
     body {
-        height: calc(100vh - 116px);  /* Make sure you keep your offers small or this will affect navbar position */
+        height: calc(100vh - 116px);   /* Make sure you keep your offers small or this will affect navbar position */
+        background-position: 14% 80%;  /* So Kicks part of image stays more central on smaller screens */
     }
 
     .text-uppercase.display-4 {
@@ -368,6 +362,4 @@ body {
     p.lead.my-black-text.mt-5.mb-5 {
         text-align: center;
     }
-
-
 }

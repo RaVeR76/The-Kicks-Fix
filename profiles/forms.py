@@ -1,6 +1,9 @@
+"""
+This is a User Profile Details form which will be
+displayed in Account page - details section
+"""
 from django import forms
 from .models import UserProfile
-from django.contrib.auth.models import User
 
 
 class UserProfileForm(forms.ModelForm):
@@ -31,5 +34,6 @@ class UserProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-dark rounded-0 profile-form-input'
+            self.fields[field].widget.attrs['class'] = (
+                'border-dark rounded-0 profile-form-input')
             self.fields[field].label = False

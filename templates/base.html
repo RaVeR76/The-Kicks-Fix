@@ -52,6 +52,7 @@
             </div>
         </div>
         <div id="mainnav" class="row my-black-back pt-lg-2 d-none d-lg-flex">
+            <!-- Main Navbar Search Bar -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'kicks' %}">
                     <div class="input-group w-75">
@@ -66,13 +67,13 @@
                     </div>
                 </form>
             </div>
-
+            <!-- Main Navbar Logo -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-center">
                 <a href="{% url 'home' %}" class="nav-link">
                     <img src="{{ main_logo }}" alt="Logo Image">
                 </a>
             </div>
-
+            <!-- Main Navbar Account & Bag -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -127,7 +128,7 @@
             </nav>
         </div>
     </header>
-
+    <!-- Toasts -->
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}

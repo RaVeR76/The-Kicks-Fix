@@ -1,5 +1,6 @@
+<!-- Search Icon & Search Bar Dropdown For Small Screens -->
 <li class="list-inline-item">
-    <a href="" class="nav-link d-block d-lg-none" href="#" id="mob-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a href="#" class="nav-link d-block d-lg-none" id="mob-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center my-yellow-text">
             <div><i class="fas fa-search fa-lg"></i></div>
             <p class="my-0">Search</p>
@@ -20,6 +21,7 @@
         </form>
     </div>
 </li>
+<!-- Account Icon & Dropdown For Small Screens -->
 <li class="list-inline-item dropdown">
     <a href="#" class="nav-link d-block d-lg-none" id="user-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center my-yellow-text">
@@ -42,6 +44,7 @@
         {% endif %}
     </div>
 </li>
+<!-- Bag Icon & Link For Small Screens -->
 <li class="list-inline-item">
     <a href="{% url 'view_bag' %}" class="{% if grand_total %}text-primary font-weight-bold{% else %}my-yellow-text{% endif %} nav-link d-block d-lg-none">
         <div class="text-center">

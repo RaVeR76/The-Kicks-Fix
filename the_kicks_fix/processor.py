@@ -1,16 +1,23 @@
+"""
+This module is for image testing
+and passing variables through site context
+"""
 from django.conf import settings
 from home.models import Home
 from kicks.models import Brand, Style
 from accessories.models import Type
 from common.models import Colour
 
-# Available for testing images and links if required (tip from my mentor)
+
 def context(request):
+    """ Site Image Testing """
+
     debug_flag = settings.DEBUG
     return{"debug_flag": debug_flag}
 
 
 def site_context(request):
+    """ Main Site Context """
 
     home = Home.objects.get(name='home')
     brands = Brand.objects.all()

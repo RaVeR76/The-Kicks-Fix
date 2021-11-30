@@ -10,8 +10,10 @@
 {% endblock %}
 
 {% block content %}
+<!-- Main Kicks Page -->
     <div class="overlay"></div>
     <div class="container-fluid my-black-text">
+        <!-- Kicks Page Title -->
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="text-uppercase product-title">{{ kicks_title }}</h2>
@@ -23,6 +25,7 @@
             <div class="kicks-container col-10 offset-1">
                 {% if kicks %}
                     <div class="row mt-1 mb-2">
+                        <!-- Quick Options Sorting Selector -->
                         <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                             <div class="sort-select-wrapper w-50">
                                 <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}primary{% else %}dark{% endif %}">
@@ -48,6 +51,7 @@
                         </div>
                     </div>
                     <div class="row">
+                        <!-- Individual Kicks Cards For Displaying -->
                         {% for kicks in kicks %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                                 <div class="card h-100 border-1 shadow">
@@ -104,6 +108,7 @@
                         {% endfor %}
                     </div>
                 {% else %}
+                <!-- Alternative Display if no Kicks -->
                 <p class="lead my-black-text mt-5 mb-5">Sorry, no {{ kicks_title }} available!</p>
                 <a href="{% url 'kicks' %}" class="btn my-white-btn rounded-0 btn-lg">
                     <span class="icon">
@@ -125,12 +130,13 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Scroll to Top Button JS -->
     <script type="text/javascript">
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
-    
+    <!-- Sort Selector For Kicks JS -->
     <script type="text/javascript">
         $('#sort-selector').change(function() {
             let selector = $(this);

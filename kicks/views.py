@@ -1,11 +1,16 @@
+"""
+This module will render ALL Kicks requirements
+diplaying, details, filtering, Admin ADD,
+Admin Edit and Admin Delete
+"""
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Kicks, Brand, Style
 from common.models import Category, Sex, Size, Colour
+from .models import Kicks, Brand, Style
 from .forms import KicksForm
 
 # Create your views here.
@@ -40,7 +45,8 @@ def all_kicks(request):
         if 'category' in request.GET:
             chosen_category = request.GET['category'].split(',')
             kicks = kicks.filter(category__name__in=chosen_category)
-            chosen_category = Category.objects.filter(name__in=chosen_category).first()
+            chosen_category = Category.objects.filter(
+                name__in=chosen_category).first()
             kicks_title = f'All {chosen_category.friendly_name} Kicks'
 
             # Filter Navbar Sex from the Category filtered Kicks above
@@ -102,9 +108,9 @@ def all_kicks(request):
                         if 'sex' in request.GET:
                             chosen_sex = request.GET['sex'].split(',')
                             kicks = kicks.filter(sex__name__in=chosen_sex)
-                            chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
+                            chosen_sex = Sex.objects.filter(
+                                name__in=chosen_sex).first()
                             kicks_title = f"All {chosen_sex.friendly_name}'s Kicks"
-
 
         # Filter ALL Kicks by name or description using tye search bar
         if 'q' in request.GET:
@@ -126,6 +132,7 @@ def all_kicks(request):
     }
 
     return render(request, 'kicks/kicks.html', context)
+
 
 # Get selected pair of Kicks for displaying more info
 def kicks_detail(request, kicks_id):

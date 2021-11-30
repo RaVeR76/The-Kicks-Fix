@@ -1,9 +1,10 @@
+""" Models for Kicks App """
 from django.db import models
 from common.models import Category, Colour, Size, Sex
 
 
 class Kicks(models.Model):
-
+    """ This model will create some Kicks """
     class Meta:
         verbose_name_plural = 'Kicks'
 
@@ -33,6 +34,7 @@ class Kicks(models.Model):
 
 
 class Brand(models.Model):
+    """ Brand Model for Kicks """
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -44,6 +46,7 @@ class Brand(models.Model):
 
 
 class Style(models.Model):
+    """ Style Model for Kicks """
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 

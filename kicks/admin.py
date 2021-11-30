@@ -1,7 +1,9 @@
+"""
+This module contains Kicks, Brands and
+Styles Admin's display choices
+"""
 from django.contrib import admin
 from .models import Kicks, Brand, Style
-
-# Register your models here.
 
 
 class KicksAdmin(admin.ModelAdmin):

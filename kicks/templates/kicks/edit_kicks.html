@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- Edit Kicks Page -->
    <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -20,7 +21,7 @@
                 <hr>
             </div>
         </div>
-
+        <!-- Kicks Form For Editing Selected Kicks -->
         <div class="row">
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'edit_kicks' kicks.id %}" class="form mb-2 text-dark" enctype="multipart/form-data">

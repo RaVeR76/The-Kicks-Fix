@@ -1,10 +1,15 @@
+"""
+This is a form which will be displayed in
+Account section when user is super user, and utilised
+to add and edit Kicks without using admin page
+"""
 from django import forms
-from .models import Kicks, Brand, Style
 from common.models import Category, Sex, Colour
+from .models import Kicks, Brand, Style
 
 
 class KicksForm(forms.ModelForm):
-
+    """ Kicks form """
     class Meta:
         model = Kicks
         exclude = ('image1_url', 'image2_url', 'image3_url',)
@@ -26,7 +31,6 @@ class KicksForm(forms.ModelForm):
 
         colour = Colour.objects.all()
         colour_friend_names = [(c.id, c.get_friendly_name()) for c in colour]
-
 
         self.fields['category'].choices = cat_friend_names
         self.fields['sex'].choices = sex_friend_names

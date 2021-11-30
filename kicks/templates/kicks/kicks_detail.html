@@ -10,11 +10,13 @@
 {% endblock %}
 
 {% block content %}
+<!-- Individual Kicks Page -->
     <div class="overlay"></div>
     <div class="container-fluid my-black-text">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
+                    <!-- Kicks Image Carousel -->
                     {% if kicks.image1 and kicks.image2 and kicks.image3 %}
                     <div id="kicks_carousel" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -49,13 +51,15 @@
                         </a>
                     </div>
                     {% else %}
-                    <a href="">
+                    <!-- Default Image Option -->
+                    <a href="#">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ kicks.name }}">
                     </a>
                     {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
+                <!-- Various Kicks Details & Links to ALL -->
                 <div class="kicks-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ kicks.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ kicks.price }}</p>
@@ -73,7 +77,6 @@
                             </a>
                         </p>
                     {% endif %}
-
                     {% if kicks.sex %}
                         <p class="small mt-1 mb-0">
                             <a href="{% url 'kicks' %}?sex={{ kicks.sex.name }}" class="text-muted">
@@ -87,7 +90,7 @@
                             </a>
                         </p>
                     {% endif %}
-
+                    <!-- Edit / Delete Options For Superusers -->
                     {% if request.user.is_superuser %}
                         <p class="mt-1">
                             <small>
@@ -96,15 +99,14 @@
                             </small>
                         </p>
                     {% endif %}
-
+                    <!-- Kicks Description -->
                     <p class="mt-3">{{ kicks.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' kicks.sku %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-
+                            <!-- Kicks Size Selection -->
                             <div class="col-12">
-                                <p class="mb-2"><strong>Size:</strong></p>
-                               
+                                <p class="mb-2"><strong>Size:</strong></p>                        
                                 <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
                                     <label class="btn btn-dark active">
                                     <input type="radio" name="uk_size" id="uk_size" value="uk_size" checked>UK
@@ -116,9 +118,7 @@
                                     <input type="radio" name="us_size" id="us_size" value="us_size">US
                                     </label>
                                 </div>
-
-                                    <select class="form-control rounded-0 w-50 border-dark" name="{{ kicks.sex }}_size" id='kicks_size'>
-                                        
+                                    <select class="form-control rounded-0 w-50 border-dark" name="{{ kicks.sex }}_size" id='kicks_size'>   
                                         {% if kicks.sex|lower == 'kids' %}
                                             {% for size in kids_sizes_uk %}
                                                 <option value="uk {{ size }}">{{ size }}</option>
@@ -132,11 +132,9 @@
                                                 <option value="uk {{ size }}">{{ size }}</option>
                                             {% endfor %}
                                         {% endif %}
-                         
                                     </select>
-
                             </div>
-                            
+                            <!-- Kicks Quantity Selection -->
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -163,7 +161,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- Kicks Keep Shopping Button -->
                             <div class="col-12">
                                 <a href="{% url 'kicks' %}" class="btn my-white-btn rounded-0 mt-5">
                                     <span class="icon">

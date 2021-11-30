@@ -20,9 +20,6 @@ def all_kicks(request):
     """ A view to show all kicks, including sorting and search queries """
 
     kicks = Kicks.objects.all()
-    brands = Brand.objects.all()
-    styles = Style.objects.all()
-    colours = Colour.objects.all()
     query = None
     sort = None
     direction = None
@@ -54,7 +51,8 @@ def all_kicks(request):
                 chosen_sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=chosen_sex)
                 chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
-                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_category.friendly_name} Kicks"
+                kicks_title = f"{chosen_sex.friendly_name}'s"\
+                              f" {chosen_category.friendly_name} Kicks"
 
         # Filter ALL Kicks by the selected Brand
         if 'brand' in request.GET:
@@ -67,7 +65,8 @@ def all_kicks(request):
                 chosen_sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=chosen_sex)
                 chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
-                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_brand.friendly_name} Kicks"
+                kicks_title = f"{chosen_sex.friendly_name}'s"\
+                              f" {chosen_brand.friendly_name} Kicks"
 
         # Filter ALL Kicks by the selected Style
         if 'style' in request.GET:
@@ -80,20 +79,23 @@ def all_kicks(request):
                 chosen_sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=chosen_sex)
                 chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
-                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_style.friendly_name} Kicks"
+                kicks_title = f"{chosen_sex.friendly_name}'s"\
+                              f" {chosen_style.friendly_name} Kicks"
 
         # Filter ALL Kicks by the selected Colour
         if 'colour' in request.GET:
             chosen_colour = request.GET['colour'].split(',')
             kicks = kicks.filter(colour__name__in=chosen_colour)
-            chosen_colour = Colour.objects.filter(name__in=chosen_colour).first()
+            chosen_colour = Colour.objects.filter(
+                name__in=chosen_colour).first()
             kicks_title = f"All {chosen_colour.friendly_name} Kicks"
             # Filter Navbar Sex from the Colour filtered Kicks above
             if 'sex' in request.GET:
                 chosen_sex = request.GET['sex'].split(',')
                 kicks = kicks.filter(sex__name__in=chosen_sex)
                 chosen_sex = Sex.objects.filter(name__in=chosen_sex).first()
-                kicks_title = f"{chosen_sex.friendly_name}'s {chosen_colour.friendly_name} Kicks"
+                kicks_title = f"{chosen_sex.friendly_name}'s"\
+                              f" {chosen_colour.friendly_name} Kicks"
 
         # Filter ALL Kicks by Sex only
         if 'category' not in request.GET:
@@ -110,16 +112,19 @@ def all_kicks(request):
                             kicks = kicks.filter(sex__name__in=chosen_sex)
                             chosen_sex = Sex.objects.filter(
                                 name__in=chosen_sex).first()
-                            kicks_title = f"All {chosen_sex.friendly_name}'s Kicks"
+                            kicks_title = f"All"\
+                                f" {chosen_sex.friendly_name}'s Kicks"
 
         # Filter ALL Kicks by name or description using tye search bar
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter"
+                                        " any search criteria!")
                 return redirect(reverse('kicks'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             kicks = kicks.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -186,7 +191,8 @@ def add_kicks(request):
             messages.success(request, 'Successfully added the Kicks !')
             return redirect(reverse('kicks_detail', args=[kicks.id]))
         else:
-            messages.error(request, 'Failed to add the Kicks. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add the Kicks.'
+                                    ' Please ensure the form is valid.')
     else:
         form = KicksForm()
 
@@ -215,7 +221,8 @@ def edit_kicks(request, kicks_id):
             messages.success(request, 'Successfully updated the Kicks !')
             return redirect(reverse('kicks_detail', args=[kicks.id]))
         else:
-            messages.error(request, 'Failed to update Kicks. Please ensure the form is valid')
+            messages.error(request, 'Failed to update Kicks.'
+                                    ' Please ensure the form is valid')
     else:
         form = KicksForm(instance=kicks)
         messages.info(request, f'You are editing {kicks.name}')

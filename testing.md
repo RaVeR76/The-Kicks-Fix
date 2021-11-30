@@ -466,3 +466,42 @@ Love my wee website and I super proud of my achievement in the short space of ti
 
 
 # Validators
+
+### HTML
+
+All the HTML files were validated by using online code validator [W3C HTML Validation Service](https://validator.w3.org).  
+99% of the errors and *BAD Values* were as regards template variables and logic but I knew this would happen anyway because the Course material told me this.  
+A lot of errors were missing ```<!DOCTYPE html>```, ```lang``` and ```html``` errors but again I knew this would happen.
+Although I did find two stupid errors which I have now corrected, see below:
+
+![Missing Container Closing Tag](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/missing-closing-contain-div.png)
+
+
+![Two losing p tags](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/two-closing-p-tags.png)
+
+Overall with a few warnings and the errors mentioned above, the code was validated HTML page by HTML page and ALL passed.  
+
+### CSS
+
+All CSS files were validated by using an online code validator [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
+```profile.css``` passed fine with no warnings.   
+```checkout.css``` passed fine with one ```-webkit-transition ``` warning.  
+```base.css``` passed fine but with six warnings but nothing major (see images below).  
+
+![Base CSS Passed Validation](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/css-base-validation.png)
+
+![Base CSS Minor Warnings](https://github.com/RaVeR76/The-Kicks-Fix/raw/main/docs/screenshots/css-base-warnings.png)
+
+
+Overall, really happy with my CSS and that ALL CSS files passed validation with no major issues.
+
+
+### JavaScript
+
+All the JavaScript files were validated by using an online code validator [Beautifytools.com](http://beautifytools.com/javascript-validator.php).
+Missing semicolons were some errors and these were added at the end of functions.  
+A few **'$' is not defined** errors arose but after checking online I'm assuming that's because there is no jQuery plugin which utilises '$' to declare any variable.  
+Overall though, the JavaScript looks good and works well within my site.
+
+
+### Python

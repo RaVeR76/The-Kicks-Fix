@@ -24,30 +24,31 @@
                     <hr>
                 </div>
             </div>      
-        <!-- User Profile Information -->
-        <div class="row text-dark">
-            <div class="col-12 col-lg-6">
-                <p class="text-muted">Personal Information</p>
-                    <div class="col-12">
-                        <table class="table">
-                            <tr>
-                                <td><strong>User :</strong></td>
-                                <td>{{ user }}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Email :</strong></td>
-                                <td>{{ user.email }}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>First Name :</strong></td>
-                                <td>{{ user.first_name }}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Last Name :</strong></td>
-                                <td>{{ user.last_name }}</td>
-                            </tr>
-                        </table>
-                    </div>
-            </div>
-        </div>                   
+            <!-- User Profile Information -->
+            <div class="row text-dark">
+                <div class="col-12 col-lg-6">
+                    <p class="text-muted">Personal Information</p>
+                        <div class="col-12">
+                            <table class="table">
+                                <tr>
+                                    <td><strong>User :</strong></td>
+                                    <td>{{ user }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Email :</strong></td>
+                                    <td>{{ user.email }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>First Name :</strong></td>
+                                    <td>{{ user.first_name }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Last Name :</strong></td>
+                                    <td>{{ user.last_name }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+            </div> 
+        </div>                  
 {% endblock %}
